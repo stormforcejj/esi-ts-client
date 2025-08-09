@@ -6,6 +6,7 @@ node_modules
 
 # Replace as required with your build location
 /build
+/src/generated/
 
 # Deal with environment files
 .env

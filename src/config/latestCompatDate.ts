@@ -1,0 +1,1 @@
+export const BUILD_COMPATABILITY_DATE = "2020-01-01";

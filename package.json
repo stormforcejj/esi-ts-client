@@ -1,23 +1,29 @@
 {
-  "name": "esi-ts-client",
-  "version": "1.0.0",
-  "description": "A typescript client for the EvE Online ESI API with caching and rate limiting. Intended for backend use.",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "stormforcejj",
-  "license": "ISC",
-  "dependencies": {
-    "bottleneck": "^2.19.5",
-    "lru-cache": "^11.1.0"
-  },
-  "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.21.4",
-    "@types/node": "^24.2.1",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "eslint": "^9.33.0",
-    "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
-  }
+    "name": "esi-ts-client",
+    "version": "1.0.0",
+    "description": "A typescript client for the EvE Online ESI API with caching and rate limiting. Intended for backend use.",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "generate:api": "openapi-generator-cli generate -i ./esi.json -g typescript-fetch -o ./src/generated -t ./templates",
+        "fetch-esi": "ts-node scripts/fetchEsiSpec",
+        "prebuild": "ts-node scripts/fetchBuildDate"
+    },
+    "author": "stormforcejj",
+    "license": "ISC",
+    "dependencies": {
+        "bottleneck": "^2.19.5",
+        "lru-cache": "^11.1.0"
+    },
+    "devDependencies": {
+        "@openapitools/openapi-generator-cli": "^2.21.4",
+        "@types/node": "^24.2.1",
+        "@types/node-fetch": "^2.6.13",
+        "@typescript-eslint/eslint-plugin": "^8.39.0",
+        "eslint": "^9.33.0",
+        "node-fetch": "^2.7.0",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.2"
+    }
 }
