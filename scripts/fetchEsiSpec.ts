@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs";
 import path from "path";
 
-async function fetchEsiSpec() {
+export async function fetchEsiSpec() {
     const url = "https://esi.evetech.net/meta/openapi.json";
     try {
         const res = await fetch(url);

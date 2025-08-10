@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "generate:api": "openapi-generator-cli generate -i ./esi.json -g typescript-fetch -o ./src/generated -t ./templates",
         "fetch-esi": "ts-node scripts/fetchEsiSpec",
-        "prebuild": "ts-node scripts/fetchBuildDate"
+        "prebuild": "ts-node scripts/prebuild"
     },
     "author": "stormforcejj",
     "license": "ISC",

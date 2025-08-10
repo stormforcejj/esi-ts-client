@@ -9582,15 +9582,6 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "RouteOriginDestinationGet": {
-        "description": "Solar systems in route",
-        "items": {
-          "description": "Solar system in route",
-          "format": "int64",
-          "type": "integer"
-        },
-        "type": "array"
-      },
       "SolarSystemID": {
         "examples": [
           30000001
@@ -11480,9 +11471,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -11546,9 +11534,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -11624,9 +11609,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -11708,9 +11690,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -11783,9 +11762,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -11851,9 +11827,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -11907,9 +11880,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -11994,9 +11964,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -12060,9 +12027,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -12147,9 +12111,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -12227,9 +12188,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -12320,9 +12278,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -12411,9 +12366,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -12494,9 +12446,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -12587,9 +12536,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -12672,9 +12618,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -12753,9 +12696,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -12860,9 +12800,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -12933,9 +12870,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -13025,9 +12959,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13103,9 +13034,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -13215,9 +13143,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -13337,9 +13262,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13425,9 +13347,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13508,9 +13427,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -13602,9 +13518,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13687,9 +13600,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13762,9 +13672,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13828,9 +13735,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -13921,9 +13825,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13996,9 +13897,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14067,9 +13965,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14253,9 +14148,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14323,9 +14215,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14400,9 +14289,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14472,9 +14358,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14555,9 +14438,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14642,9 +14522,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14724,9 +14601,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14797,9 +14671,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14898,9 +14769,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14969,9 +14837,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -15100,9 +14965,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15171,9 +15033,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -15299,9 +15158,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15369,9 +15225,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -15456,9 +15309,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15534,9 +15384,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -15617,9 +15464,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -15717,9 +15561,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15802,9 +15643,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15884,9 +15722,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15957,9 +15792,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16034,9 +15866,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16107,9 +15936,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16194,9 +16020,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16274,9 +16097,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16361,9 +16181,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16435,9 +16252,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16500,9 +16314,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16623,9 +16434,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16701,9 +16509,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16774,9 +16579,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16851,9 +16653,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16924,9 +16723,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17001,9 +16797,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17074,9 +16867,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17159,9 +16949,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17252,9 +17039,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17336,9 +17120,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17433,9 +17214,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17528,9 +17306,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17611,9 +17386,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17706,9 +17478,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17813,9 +17582,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17889,9 +17655,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17954,9 +17717,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18022,9 +17782,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18100,9 +17857,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18185,9 +17939,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18279,9 +18030,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18385,9 +18133,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18480,9 +18225,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18560,9 +18302,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18645,9 +18384,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18740,9 +18476,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -18844,9 +18577,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18936,9 +18666,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19019,9 +18746,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -19106,9 +18830,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19182,9 +18903,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -19262,9 +18980,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19334,9 +19049,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -19421,9 +19133,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -19518,9 +19227,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19613,9 +19319,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19705,9 +19408,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19790,9 +19490,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19863,9 +19560,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -19943,9 +19637,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20019,9 +19710,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -20107,9 +19795,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -20205,9 +19890,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20291,9 +19973,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20374,9 +20053,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -20471,9 +20147,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20566,9 +20239,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20656,9 +20326,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -20763,9 +20430,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20849,9 +20513,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -20939,9 +20600,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21015,9 +20673,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -21114,9 +20769,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -21221,9 +20873,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21291,9 +20940,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21357,9 +21003,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -21435,9 +21078,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21491,9 +21131,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -21561,9 +21198,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21627,9 +21261,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -21701,9 +21332,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -21795,9 +21423,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21870,9 +21495,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -21993,9 +21615,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22072,9 +21691,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -22189,9 +21805,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22268,9 +21881,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -22360,9 +21970,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22435,9 +22042,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -22522,9 +22126,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22601,9 +22202,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -22703,9 +22301,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22768,9 +22363,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22824,9 +22416,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -22884,9 +22473,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22942,9 +22528,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22998,9 +22581,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23059,9 +22639,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23115,9 +22692,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23176,9 +22750,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23235,9 +22806,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23292,9 +22860,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23375,9 +22940,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23443,9 +23005,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23499,9 +23058,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23569,9 +23125,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23628,9 +23181,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23707,9 +23257,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23800,9 +23347,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23904,9 +23448,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23990,9 +23531,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24044,132 +23582,6 @@
         "x-compatibility-date": "2020-01-01"
       }
     },
-    "/route/{origin}/{destination}": {
-      "get": {
-        "description": "Get the systems between origin and destination",
-        "operationId": "GetRouteOriginDestination",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "avoid",
-            "schema": {
-              "description": "avoid solar system ID(s)",
-              "items": {
-                "format": "int64",
-                "type": "integer"
-              },
-              "maxItems": 100,
-              "type": "array",
-              "uniqueItems": true
-            }
-          },
-          {
-            "in": "query",
-            "name": "connections",
-            "schema": {
-              "description": "connected solar system pairs",
-              "items": {
-                "items": {
-                  "format": "int64",
-                  "type": "integer"
-                },
-                "maxItems": 2,
-                "minItems": 2,
-                "type": "array"
-              },
-              "maxItems": 100,
-              "type": "array",
-              "uniqueItems": true
-            }
-          },
-          {
-            "in": "path",
-            "name": "destination",
-            "required": true,
-            "schema": {
-              "description": "destination solar system ID",
-              "format": "int64",
-              "type": "integer"
-            }
-          },
-          {
-            "in": "query",
-            "name": "flag",
-            "schema": {
-              "default": "shortest",
-              "description": "route security preference",
-              "enum": [
-                "shortest",
-                "secure",
-                "insecure"
-              ],
-              "type": "string"
-            }
-          },
-          {
-            "in": "path",
-            "name": "origin",
-            "required": true,
-            "schema": {
-              "description": "origin solar system ID",
-              "format": "int64",
-              "type": "integer"
-            }
-          },
-          {
-            "$ref": "#/components/parameters/AcceptLanguage"
-          },
-          {
-            "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
-            "$ref": "#/components/parameters/Tenant"
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RouteOriginDestinationGet"
-                }
-              }
-            },
-            "description": "OK",
-            "headers": {
-              "Cache-Control": {
-                "$ref": "#/components/headers/CacheControl"
-              },
-              "ETag": {
-                "$ref": "#/components/headers/ETag"
-              },
-              "Last-Modified": {
-                "$ref": "#/components/headers/LastModified"
-              }
-            }
-          },
-          "default": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            },
-            "description": "Error"
-          }
-        },
-        "summary": "Get route",
-        "tags": [
-          "Routes"
-        ],
-        "x-cache-age": 86400,
-        "x-compatibility-date": "2020-01-01"
-      }
-    },
     "/sovereignty/campaigns": {
       "get": {
         "description": "Shows sovereignty data for campaigns.",
@@ -24180,9 +23592,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24241,9 +23650,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24300,9 +23706,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24357,9 +23760,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24448,9 +23848,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24519,9 +23916,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24594,9 +23988,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24667,9 +24058,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24728,9 +24116,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24834,9 +24219,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24904,9 +24286,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24960,9 +24339,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25021,9 +24397,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25091,9 +24464,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25150,9 +24520,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25219,9 +24586,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25280,9 +24644,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25339,9 +24700,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25408,9 +24766,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25474,9 +24829,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25551,9 +24903,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25610,9 +24959,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25698,9 +25044,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25754,9 +25097,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25840,9 +25180,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25896,9 +25233,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25957,9 +25291,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26024,9 +25355,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26097,9 +25425,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26163,9 +25488,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26232,9 +25554,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26297,9 +25616,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26369,9 +25685,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26438,9 +25751,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26504,9 +25814,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26563,9 +25870,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26620,9 +25924,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26687,9 +25988,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26758,9 +26056,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26835,9 +26130,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26905,9 +26197,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26972,9 +26261,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -27051,9 +26337,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -27176,9 +26459,6 @@
     },
     {
       "name": "Planetary Interaction"
-    },
-    {
-      "name": "Routes"
     },
     {
       "name": "Search"

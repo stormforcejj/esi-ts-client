@@ -13,7 +13,7 @@ function loadEsiSpec() {
     }
 }
 
-async function main() {
+export async function setBuildDate() {
     try {
         const esiSpec = loadEsiSpec();
         if (esiSpec) {
@@ -31,4 +31,4 @@ async function main() {
     }
 }
 
-main();
+setBuildDate();

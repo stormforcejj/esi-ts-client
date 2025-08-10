@@ -107,7 +107,7 @@ export class {{classname}} extends runtime.BaseAPI {
      * @deprecated
      {{/isDeprecated}}
      */
-    async {{nickname}}Raw({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request,{{#hasAuthMethods}}accessToken: string,{{/hasAuthMethods}} ,{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<{{{returnType}}}{{^returnType}}void{{/returnType}}>> {
+    async {{nickname}}Raw({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<{{{returnType}}}{{^returnType}}void{{/returnType}}>> {
         {{#allParams}}
         {{^isXCompatibilityDate}}
         {{#required}}
@@ -209,16 +209,21 @@ export class {{classname}} extends runtime.BaseAPI {
         if (this.configuration && this.configuration.apiKey) {
             queryParameters["{{keyParamName}}"] = await this.configuration.apiKey("{{keyParamName}}"); // {{name}} authentication
         }
-
         {{/isKeyInQuery}}
         {{/isApiKey}}
-        {{#isOAuth}}
-        if (this.configuration && this.configuration.accessToken) {
-            // oauth required
-            headerParameters["Authorization"] = await this.configuration.accessToken("{{name}}", [{{#scopes}}"{{{scope}}}"{{^-last}}, {{/-last}}{{/scopes}}]);
-        }
+        
 
-        {{/isOAuth}}
+        {{#comment}}
+                {{#isOAuth}}
+                if (this.configuration && this.configuration.accessToken) {
+                    // oauth required
+                    headerParameters["Authorization"] = await this.configuration.accessToken("{{name}}", [{{#scopes}}"{{{scope}}}"{{^-last}}, {{/-last}}{{/scopes}}]);
+                }
+
+                {{/isOAuth}}
+                
+
+        {{/comment}}
         {{/authMethods}}
         {{#hasFormParams}}
         const consumes: runtime.Consume[] = [
@@ -285,7 +290,11 @@ export class {{classname}} extends runtime.BaseAPI {
         {{/formParams}}
         {{/hasFormParams}}
 
-        headerParameters['X-Compatibility-Date'] = this.defaultCompatibilityDate;
+        {{#hasAuthMethods}}
+        if (accessToken) {
+            headerParameters['Authorization'] = `Bearer ${accessToken}`;
+        }
+        {{/hasAuthMethods}}
 
         let urlPath = `{{{path}}}`;
         {{#pathParams}}
@@ -397,9 +406,9 @@ export class {{classname}} extends runtime.BaseAPI {
      {{/isDeprecated}}
      */
     {{^useSingleRequestParameter}}
-    async {{nickname}}({{#allParams}}{{^isXCompatibilityDate}}{{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{/isXCompatibilityDate}}{{/allParams}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<{{{returnType}}}{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+    async {{nickname}}({{#allParams}}{{^isXCompatibilityDate}}{{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/isXCompatibilityDate}}{{/allParams}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<{{{returnType}}}{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
         {{#returnType}}
-        const response = await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}initOverrides);
+        const response = await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
         {{#isResponseOptional}}
         switch (response.raw.status) {
             {{#responses}}
@@ -422,9 +431,9 @@ export class {{classname}} extends runtime.BaseAPI {
     }
     {{/useSingleRequestParameter}}
     {{#useSingleRequestParameter}}
-    async {{nickname}}({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request{{^hasRequiredParams}} = {}{{/hasRequiredParams}}, {{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<{{{returnType}}}{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+    async {{nickname}}({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request{{^hasRequiredParams}} = {}{{/hasRequiredParams}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<{{{returnType}}}{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
         {{#returnType}}
-        const response = await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}initOverrides);
+        const response = await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
         {{#isResponseOptional}}
         switch (response.raw.status) {
             {{#responses}}
