@@ -4,6 +4,7 @@
 
 
 import * as runtime from '../runtime{{importFileExtension}}';
+import { EsiResponse, EsiError } from '../../types/responses';
 {{#imports.0}}
 import type {
   {{#imports}}
@@ -59,7 +60,7 @@ export interface {{classname}}Interface {
      * @throws {RequiredError}
      * @memberof {{classname}}Interface
      */
-    {{nickname}}Raw({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request, {{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<{{{returnType}}}{{^returnType}}void{{/returnType}}>>;
+    private {{nickname}}Raw({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request, {{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<{{{returnType}}}{{^returnType}}void{{/returnType}}>>;
 
     /**
      {{#notes}}
@@ -107,7 +108,7 @@ export class {{classname}} extends runtime.BaseAPI {
      * @deprecated
      {{/isDeprecated}}
      */
-    async {{nickname}}Raw({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<{{{returnType}}}{{^returnType}}void{{/returnType}}>> {
+    private async {{nickname}}Raw({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<{{{returnType}}}{{^returnType}}void{{/returnType}}>> {
         {{#allParams}}
         {{^isXCompatibilityDate}}
         {{#required}}
@@ -406,53 +407,121 @@ export class {{classname}} extends runtime.BaseAPI {
      {{/isDeprecated}}
      */
     {{^useSingleRequestParameter}}
-    async {{nickname}}({{#allParams}}{{^isXCompatibilityDate}}{{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/isXCompatibilityDate}}{{/allParams}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<{{{returnType}}}{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+    async {{nickname}}({{#allParams}}{{^isXCompatibilityDate}}{{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/isXCompatibilityDate}}{{/allParams}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EsiResponse<{{{returnType}}}>{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+        try {
         {{#returnType}}
-        const response = await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
-        {{#isResponseOptional}}
-        switch (response.raw.status) {
-            {{#responses}}
-            {{#is2xx}}
-            case {{code}}:
-                return {{#dataType}}await response.value(){{/dataType}}{{^dataType}}null{{/dataType}};
-            {{/is2xx}}
-            {{/responses}}
-            default:
-                return await response.value();
-        }
-        {{/isResponseOptional}}
-        {{^isResponseOptional}}
-        return await response.value();
+            const response = await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
+            {{#isResponseOptional}}
+            switch (response.raw.status) {
+                {{#responses}}
+                {{#is2xx}}
+                case {{code}}:
+                    {{#dataType}}
+                    const value = await response.value();
+                    const esiResponse : EsiResponse<{{{returnType}}}> = {
+                        data: value,
+                        headers: Object.fromEntries(response.raw.headers.entries()),
+                        status: response.raw.status,
+                    }
+                    return esiResponse;
+                    {{/dataType}}
+                    {{^dataType}}return null{{/dataType}};
+                {{/is2xx}}
+                {{/responses}}
+                default:
+                    const value = await response.value();
+                    const esiResponse : EsiResponse<{{{returnType}}}> = {
+                        data: value,
+                        headers: Object.fromEntries(response.raw.headers.entries()),
+                        status: response.raw.status,
+                    }
+                    return esiResponse;
+            }
+            {{/isResponseOptional}}
+            {{^isResponseOptional}}
+
+            const value = await response.value();
+            const esiResponse : EsiResponse<{{{returnType}}}> = {
+                data: value,
+                headers: Object.fromEntries(response.raw.headers.entries()),
+                status: response.raw.status,
+            }
+            return esiResponse;
+        
         {{/isResponseOptional}}
         {{/returnType}}
         {{^returnType}}
-        await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}initOverrides);
+            await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}initOverrides);
         {{/returnType}}
+        } catch (err : any) {
+            if(err instanceof runtime.ResponseError) {
+                const esiError : EsiError = {
+                    error: err.message,
+                    response: err.response,
+                    status: err.response.status
+                }
+                throw esiError;
+            }
+            throw err;
+        }
     }
     {{/useSingleRequestParameter}}
     {{#useSingleRequestParameter}}
-    async {{nickname}}({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request{{^hasRequiredParams}} = {}{{/hasRequiredParams}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<{{{returnType}}}{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+    async {{nickname}}({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request{{^hasRequiredParams}} = {}{{/hasRequiredParams}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EsiResponse<{{{returnType}}}>{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+        try {
         {{#returnType}}
-        const response = await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
-        {{#isResponseOptional}}
-        switch (response.raw.status) {
-            {{#responses}}
-            {{#is2xx}}
-            case {{code}}:
-                return {{#dataType}}await response.value(){{/dataType}}{{^dataType}}null{{/dataType}};
-            {{/is2xx}}
-            {{/responses}}
-            default:
-                return await response.value();
-        }
+            const response = await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
+            {{#isResponseOptional}}
+            switch (response.raw.status) {
+                {{#responses}}
+                {{#is2xx}}
+                case {{code}}:
+                    {{#dataType}}
+                    const value = await response.value();
+                    const esiResponse : EsiResponse<{{{returnType}}}> = {
+                        data: value,
+                        headers: Object.fromEntries(response.raw.headers.entries()),
+                        status: response.raw.status,
+                    }
+                    return esiResponse;{{/dataType}}{{^dataType}}return null{{/dataType}};
+                {{/is2xx}}
+                {{/responses}}
+                default:
+                    const value = await response.value();
+                    const esiResponse : EsiResponse<{{{returnType}}}> = {
+                        data: value,
+                        headers: Object.fromEntries(response.raw.headers.entries()),
+                        status: response.raw.status,
+                    }
+                    return esiResponse;
+            }
         {{/isResponseOptional}}
         {{^isResponseOptional}}
-        return await response.value();
+            const value = await response.value();
+            const esiResponse : EsiResponse<{{{returnType}}}> = {
+                data: value,
+                headers: Object.fromEntries(response.raw.headers.entries()),
+                status: response.raw.status,
+            }
+            return esiResponse;
+        
         {{/isResponseOptional}}
         {{/returnType}}
         {{^returnType}}
-        await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}initOverrides);
+            await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}initOverrides);
         {{/returnType}}
+        } catch (err : any) {
+            if(err instanceof runtime.ResponseError) {
+                const esiError : EsiError = {
+                    error: err.message,
+                    response: err.response,
+                    status: err.response.status
+                }
+                throw esiError;
+            }
+
+            throw err;
+        }
     }
     {{/useSingleRequestParameter}}
 

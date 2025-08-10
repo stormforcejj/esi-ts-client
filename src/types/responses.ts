@@ -2,13 +2,15 @@
 // Licensed under the ISC License
 // Copyright (c) 2025 localisprimary
 
-export interface EsiResponse<TData, THeaders = Record<string, string>> {
+export interface EsiResponse<TData> {
     data: TData;
-    headers: THeaders;
+    // headers: THeaders;
+    headers: Record<string, string>;
     status: number;
 }
 
 export interface EsiError {
     error: string;
+    response: Response;
     status: number;
 }
