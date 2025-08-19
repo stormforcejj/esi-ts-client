@@ -105,7 +105,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "AlliancesAllianceIdContactsGet": {
+      "AllianceContactsGet": {
         "items": {
           "properties": {
             "contact_id": {
@@ -144,7 +144,7 @@
         },
         "type": "array"
       },
-      "AlliancesAllianceIdContactsLabelsGet": {
+      "AllianceContactsLabelsGet": {
         "items": {
           "properties": {
             "label_id": {
@@ -163,7 +163,7 @@
         },
         "type": "array"
       },
-      "AlliancesAllianceIdCorporationsGet": {
+      "AllianceCorporationsGet": {
         "items": {
           "format": "int64",
           "type": "integer"
@@ -171,7 +171,7 @@
         "type": "array",
         "uniqueItems": true
       },
-      "AlliancesAllianceIdGet": {
+      "AllianceGet": {
         "properties": {
           "creator_corporation_id": {
             "description": "ID of the corporation that created the alliance",
@@ -215,7 +215,7 @@
         ],
         "type": "object"
       },
-      "AlliancesAllianceIdIconsGet": {
+      "AllianceIconsGet": {
         "properties": {
           "px128x128": {
             "type": "string"
@@ -290,7 +290,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAgentsResearchGet": {
+      "CharacterAgentsResearchGet": {
         "items": {
           "properties": {
             "agent_id": {
@@ -325,7 +325,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAssetsGet": {
+      "CharacterAssetsGet": {
         "items": {
           "properties": {
             "is_blueprint_copy": {
@@ -343,7 +343,6 @@
                 "AssetSafety",
                 "AutoFit",
                 "BoosterBay",
-                "CapsuleerDeliveries",
                 "Cargo",
                 "CorporationGoalDeliveries",
                 "CorpseBay",
@@ -466,7 +465,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAssetsLocationsPost": {
+      "CharacterAssetsLocationsPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -504,7 +503,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAssetsNamesPost": {
+      "CharacterAssetsNamesPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -523,7 +522,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAttributesGet": {
+      "CharacterAttributesGet": {
         "properties": {
           "accrued_remap_cooldown_date": {
             "description": "Neural remapping cooldown after a character uses remap accrued over time",
@@ -570,7 +569,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdBlueprintsGet": {
+      "CharacterBlueprintsGet": {
         "items": {
           "properties": {
             "item_id": {
@@ -704,7 +703,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCalendarEventIdAttendeesGet": {
+      "CharacterCalendarEventAttendeesGet": {
         "description": "List of attendees for a given event",
         "items": {
           "description": "character_id and response of an attendee",
@@ -727,7 +726,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCalendarEventIdGet": {
+      "CharacterCalendarEventGet": {
         "description": "Full details of a specific event",
         "properties": {
           "date": {
@@ -788,7 +787,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdCalendarGet": {
+      "CharacterCalendarGet": {
         "description": "Up to 50 events from now or the event you requested",
         "items": {
           "description": "event",
@@ -822,7 +821,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdClonesGet": {
+      "CharacterClonesGet": {
         "properties": {
           "home_location": {
             "properties": {
@@ -895,7 +894,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdContactsGet": {
+      "CharacterContactsGet": {
         "items": {
           "properties": {
             "contact_id": {
@@ -942,7 +941,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContactsLabelsGet": {
+      "CharacterContactsLabelsGet": {
         "items": {
           "properties": {
             "label_id": {
@@ -961,7 +960,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContactsPost": {
+      "CharacterContactsPost": {
         "description": "201 created array",
         "items": {
           "description": "201 created integer",
@@ -970,7 +969,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContractsContractIdBidsGet": {
+      "CharacterContractBidsGet": {
         "items": {
           "properties": {
             "amount": {
@@ -1004,7 +1003,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContractsContractIdItemsGet": {
+      "CharacterContractItemsGet": {
         "items": {
           "properties": {
             "is_included": {
@@ -1046,7 +1045,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContractsGet": {
+      "CharacterContractsGet": {
         "items": {
           "properties": {
             "acceptor_id": {
@@ -1196,7 +1195,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCorporationhistoryGet": {
+      "CharacterCorporationhistoryGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -1226,12 +1225,12 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCspaPost": {
+      "CharacterCspaPost": {
         "description": "201 created number",
         "format": "double",
         "type": "number"
       },
-      "CharactersCharacterIdFatigueGet": {
+      "CharacterFatigueGet": {
         "properties": {
           "jump_fatigue_expire_date": {
             "description": "Character's jump fatigue expiry",
@@ -1251,7 +1250,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdFittingsGet": {
+      "CharacterFittingsGet": {
         "items": {
           "properties": {
             "description": {
@@ -1350,7 +1349,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdFittingsPost": {
+      "CharacterFittingsPost": {
         "description": "201 created object",
         "properties": {
           "fitting_id": {
@@ -1363,7 +1362,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdFleetGet": {
+      "CharacterFleetGet": {
         "properties": {
           "fleet_boss_id": {
             "description": "Character ID of the current fleet boss",
@@ -1405,7 +1404,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdFwStatsGet": {
+      "CharacterFwStatsGet": {
         "properties": {
           "current_rank": {
             "description": "The given character's current faction rank",
@@ -1486,7 +1485,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdGet": {
+      "CharacterGet": {
         "properties": {
           "alliance_id": {
             "description": "The character's alliance ID",
@@ -1548,14 +1547,14 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdImplantsGet": {
+      "CharacterImplantsGet": {
         "items": {
           "format": "int64",
           "type": "integer"
         },
         "type": "array"
       },
-      "CharactersCharacterIdIndustryJobsGet": {
+      "CharacterIndustryJobsGet": {
         "items": {
           "properties": {
             "activity_id": {
@@ -1693,7 +1692,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdKillmailsRecentGet": {
+      "CharacterKillmailsRecentGet": {
         "items": {
           "properties": {
             "killmail_hash": {
@@ -1714,7 +1713,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdLocationGet": {
+      "CharacterLocationGet": {
         "properties": {
           "solar_system_id": {
             "format": "int64",
@@ -1734,7 +1733,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdLoyaltyPointsGet": {
+      "CharacterLoyaltyPointsGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -1754,7 +1753,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMailGet": {
+      "CharacterMailGet": {
         "items": {
           "properties": {
             "from": {
@@ -1820,7 +1819,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMailLabelsGet": {
+      "CharacterMailLabelsGet": {
         "properties": {
           "labels": {
             "items": {
@@ -1873,12 +1872,12 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdMailLabelsPost": {
+      "CharacterMailLabelsPost": {
         "description": "Label ID",
         "format": "int64",
         "type": "integer"
       },
-      "CharactersCharacterIdMailListsGet": {
+      "CharacterMailListsGet": {
         "items": {
           "properties": {
             "mailing_list_id": {
@@ -1898,7 +1897,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMailMailIdGet": {
+      "CharacterMailMailGet": {
         "properties": {
           "body": {
             "description": "Mail's body",
@@ -1963,12 +1962,12 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdMailPost": {
+      "CharacterMailPost": {
         "description": "Mail ID",
         "format": "int64",
         "type": "integer"
       },
-      "CharactersCharacterIdMedalsGet": {
+      "CharacterMedalsGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -2048,7 +2047,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMiningGet": {
+      "CharacterMiningGet": {
         "items": {
           "properties": {
             "date": {
@@ -2078,7 +2077,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdNotificationsContactsGet": {
+      "CharacterNotificationsContactsGet": {
         "items": {
           "properties": {
             "message": {
@@ -2113,7 +2112,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdNotificationsGet": {
+      "CharacterNotificationsGet": {
         "items": {
           "properties": {
             "is_read": {
@@ -2407,7 +2406,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdOnlineGet": {
+      "CharacterOnlineGet": {
         "properties": {
           "last_login": {
             "description": "Timestamp of the last login",
@@ -2434,7 +2433,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdOrdersGet": {
+      "CharacterOrdersGet": {
         "items": {
           "properties": {
             "duration": {
@@ -2536,7 +2535,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdOrdersHistoryGet": {
+      "CharacterOrdersHistoryGet": {
         "items": {
           "properties": {
             "duration": {
@@ -2647,7 +2646,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdPlanetsGet": {
+      "CharacterPlanetsGet": {
         "items": {
           "properties": {
             "last_update": {
@@ -2701,7 +2700,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdPlanetsPlanetIdGet": {
+      "CharacterPlanetGet": {
         "properties": {
           "links": {
             "items": {
@@ -2913,7 +2912,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdPortraitGet": {
+      "CharacterPortraitGet": {
         "properties": {
           "px128x128": {
             "type": "string"
@@ -2930,7 +2929,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdRolesGet": {
+      "CharacterRolesGet": {
         "properties": {
           "roles": {
             "items": {
@@ -3191,7 +3190,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdSearchGet": {
+      "CharacterSearchGet": {
         "properties": {
           "agent": {
             "items": {
@@ -3284,7 +3283,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdShipGet": {
+      "CharacterShipGet": {
         "properties": {
           "ship_item_id": {
             "description": "Item id's are unique to a ship and persist until it is repackaged. This value can be used to track repeated uses of a ship, or detect when a pilot changes into a different instance of the same ship type.",
@@ -3306,7 +3305,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdSkillqueueGet": {
+      "CharacterSkillqueueGet": {
         "items": {
           "properties": {
             "finish_date": {
@@ -3353,7 +3352,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdSkillsGet": {
+      "CharacterSkillsGet": {
         "properties": {
           "skills": {
             "items": {
@@ -3402,7 +3401,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdStandingsGet": {
+      "CharacterStandingsGet": {
         "items": {
           "properties": {
             "from_id": {
@@ -3431,7 +3430,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdTitlesGet": {
+      "CharacterTitlesGet": {
         "items": {
           "properties": {
             "name": {
@@ -3446,12 +3445,12 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdWalletGet": {
+      "CharacterWalletGet": {
         "description": "Wallet balance",
         "format": "double",
         "type": "number"
       },
-      "CharactersCharacterIdWalletJournalGet": {
+      "CharacterWalletJournalGet": {
         "description": "Wallet journal entries",
         "items": {
           "properties": {
@@ -3528,7 +3527,6 @@
                 "agent_security_services",
                 "agent_services_rendered",
                 "agents_preward",
-                "air_career_program_reward",
                 "alliance_maintainance_fee",
                 "alliance_registration_fee",
                 "allignment_based_gate_toll",
@@ -3602,14 +3600,7 @@
                 "flux_tax",
                 "flux_ticket_repayment",
                 "flux_ticket_sale",
-                "freelance_jobs_broadcasting_fee",
-                "freelance_jobs_duration_fee",
-                "freelance_jobs_escrow_refund",
-                "freelance_jobs_reward",
-                "freelance_jobs_reward_corporation_tax",
-                "freelance_jobs_reward_escrow",
                 "gm_cash_transfer",
-                "gm_plex_fee_refund",
                 "industry_job_tax",
                 "infrastructure_hub_maintenance",
                 "inheritance",
@@ -3658,7 +3649,6 @@
                 "security_processing_fee",
                 "shares",
                 "skill_purchase",
-                "skyhook_claim_fee",
                 "sovereignity_bill",
                 "store_purchase",
                 "store_purchase_refund",
@@ -3698,7 +3688,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdWalletTransactionsGet": {
+      "CharacterWalletTransactionsGet": {
         "description": "Wallet transactions",
         "items": {
           "description": "wallet transaction",
@@ -3769,7 +3759,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "ContractsPublicBidsContractIdGet": {
+      "ContractsPublicBidsContractGet": {
         "items": {
           "properties": {
             "amount": {
@@ -3797,7 +3787,7 @@
         },
         "type": "array"
       },
-      "ContractsPublicItemsContractIdGet": {
+      "ContractsPublicItemsContractGet": {
         "items": {
           "properties": {
             "is_blueprint_copy": {
@@ -3853,7 +3843,7 @@
         },
         "type": "array"
       },
-      "ContractsPublicRegionIdGet": {
+      "ContractsPublicRegionGet": {
         "items": {
           "properties": {
             "buyout": {
@@ -3952,7 +3942,7 @@
         },
         "type": "array"
       },
-      "CorporationCorporationIdMiningExtractionsGet": {
+      "CorporationCorporationMiningExtractionsGet": {
         "items": {
           "properties": {
             "chunk_arrival_time": {
@@ -3990,7 +3980,7 @@
         },
         "type": "array"
       },
-      "CorporationCorporationIdMiningObserversGet": {
+      "CorporationCorporationMiningObserversGet": {
         "items": {
           "properties": {
             "last_updated": {
@@ -4019,7 +4009,7 @@
         },
         "type": "array"
       },
-      "CorporationCorporationIdMiningObserversObserverIdGet": {
+      "CorporationCorporationMiningObserverGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -4064,7 +4054,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "CorporationsCorporationIdAlliancehistoryGet": {
+      "CorporationAlliancehistoryGet": {
         "items": {
           "properties": {
             "alliance_id": {
@@ -4093,7 +4083,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdAssetsGet": {
+      "CorporationAssetsGet": {
         "items": {
           "properties": {
             "is_blueprint_copy": {
@@ -4114,7 +4104,6 @@
                 "Booster",
                 "BoosterBay",
                 "Capsule",
-                "CapsuleerDeliveries",
                 "Cargo",
                 "CorpDeliveries",
                 "CorpSAG1",
@@ -4270,7 +4259,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdAssetsLocationsPost": {
+      "CorporationAssetsLocationsPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -4308,7 +4297,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdAssetsNamesPost": {
+      "CorporationAssetsNamesPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -4327,7 +4316,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdBlueprintsGet": {
+      "CorporationBlueprintsGet": {
         "items": {
           "properties": {
             "item_id": {
@@ -4344,7 +4333,6 @@
                 "Booster",
                 "BoosterBay",
                 "Capsule",
-                "CapsuleerDeliveries",
                 "Cargo",
                 "CorpDeliveries",
                 "CorpSAG1",
@@ -4509,7 +4497,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContactsGet": {
+      "CorporationContactsGet": {
         "items": {
           "properties": {
             "contact_id": {
@@ -4552,7 +4540,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContactsLabelsGet": {
+      "CorporationContactsLabelsGet": {
         "items": {
           "properties": {
             "label_id": {
@@ -4571,7 +4559,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContainersLogsGet": {
+      "CorporationContainersLogsGet": {
         "items": {
           "properties": {
             "action": {
@@ -4612,7 +4600,6 @@
                 "Booster",
                 "BoosterBay",
                 "Capsule",
-                "CapsuleerDeliveries",
                 "Cargo",
                 "CorpDeliveries",
                 "CorpSAG1",
@@ -4782,7 +4769,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContractsContractIdBidsGet": {
+      "CorporationContractBidsGet": {
         "items": {
           "properties": {
             "amount": {
@@ -4816,7 +4803,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContractsContractIdItemsGet": {
+      "CorporationContractItemsGet": {
         "items": {
           "properties": {
             "is_included": {
@@ -4858,7 +4845,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContractsGet": {
+      "CorporationContractsGet": {
         "items": {
           "properties": {
             "acceptor_id": {
@@ -5008,7 +4995,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdCustomsOfficesGet": {
+      "CorporationCustomsOfficesGet": {
         "items": {
           "properties": {
             "alliance_tax_rate": {
@@ -5091,7 +5078,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdDivisionsGet": {
+      "CorporationDivisionsGet": {
         "properties": {
           "hangar": {
             "items": {
@@ -5128,7 +5115,7 @@
         },
         "type": "object"
       },
-      "CorporationsCorporationIdFacilitiesGet": {
+      "CorporationFacilitiesGet": {
         "items": {
           "properties": {
             "facility_id": {
@@ -5153,7 +5140,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdFwStatsGet": {
+      "CorporationFwStatsGet": {
         "properties": {
           "enlisted_on": {
             "description": "The enlistment date of the given corporation into faction warfare. Will not be included if corporation is not enlisted in faction warfare",
@@ -5229,7 +5216,7 @@
         ],
         "type": "object"
       },
-      "CorporationsCorporationIdGet": {
+      "CorporationGet": {
         "properties": {
           "alliance_id": {
             "description": "ID of the alliance that corporation is a member of, if any",
@@ -5296,7 +5283,7 @@
         ],
         "type": "object"
       },
-      "CorporationsCorporationIdIconsGet": {
+      "CorporationIconsGet": {
         "properties": {
           "px128x128": {
             "type": "string"
@@ -5310,7 +5297,7 @@
         },
         "type": "object"
       },
-      "CorporationsCorporationIdIndustryJobsGet": {
+      "CorporationIndustryJobsGet": {
         "items": {
           "properties": {
             "activity_id": {
@@ -5448,7 +5435,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdKillmailsRecentGet": {
+      "CorporationKillmailsRecentGet": {
         "items": {
           "properties": {
             "killmail_hash": {
@@ -5469,7 +5456,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMedalsGet": {
+      "CorporationMedalsGet": {
         "items": {
           "properties": {
             "created_at": {
@@ -5503,7 +5490,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMedalsIssuedGet": {
+      "CorporationMedalsIssuedGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -5547,7 +5534,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMembersGet": {
+      "CorporationMembersGet": {
         "description": "A list of character IDs",
         "items": {
           "format": "int64",
@@ -5555,11 +5542,11 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMembersLimitGet": {
+      "CorporationMembersLimitGet": {
         "format": "int64",
         "type": "integer"
       },
-      "CorporationsCorporationIdMembersTitlesGet": {
+      "CorporationMembersTitlesGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -5584,7 +5571,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMembertrackingGet": {
+      "CorporationMembertrackingGet": {
         "items": {
           "properties": {
             "base_id": {
@@ -5623,7 +5610,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdOrdersGet": {
+      "CorporationOrdersGet": {
         "items": {
           "properties": {
             "duration": {
@@ -5732,7 +5719,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdOrdersHistoryGet": {
+      "CorporationOrdersHistoryGet": {
         "items": {
           "properties": {
             "duration": {
@@ -5849,7 +5836,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdRolesGet": {
+      "CorporationRolesGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -6376,7 +6363,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdRolesHistoryGet": {
+      "CorporationRolesHistoryGet": {
         "items": {
           "properties": {
             "changed_at": {
@@ -6547,7 +6534,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdShareholdersGet": {
+      "CorporationShareholdersGet": {
         "description": "List of shareholders",
         "items": {
           "properties": {
@@ -6576,7 +6563,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdStandingsGet": {
+      "CorporationStandingsGet": {
         "items": {
           "properties": {
             "from_id": {
@@ -6605,7 +6592,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdStarbasesGet": {
+      "CorporationStarbasesGet": {
         "items": {
           "properties": {
             "moon_id": {
@@ -6663,7 +6650,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdStarbasesStarbaseIdGet": {
+      "CorporationStarbaseGet": {
         "properties": {
           "allow_alliance_members": {
             "type": "boolean"
@@ -6789,7 +6776,7 @@
         ],
         "type": "object"
       },
-      "CorporationsCorporationIdStructuresGet": {
+      "CorporationStructuresGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -6912,7 +6899,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdTitlesGet": {
+      "CorporationTitlesGet": {
         "items": {
           "properties": {
             "grantable_roles": {
@@ -7439,7 +7426,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdWalletsDivisionJournalGet": {
+      "CorporationWalletsDivisionJournalGet": {
         "description": "Journal entries",
         "items": {
           "properties": {
@@ -7516,7 +7503,6 @@
                 "agent_security_services",
                 "agent_services_rendered",
                 "agents_preward",
-                "air_career_program_reward",
                 "alliance_maintainance_fee",
                 "alliance_registration_fee",
                 "allignment_based_gate_toll",
@@ -7590,14 +7576,7 @@
                 "flux_tax",
                 "flux_ticket_repayment",
                 "flux_ticket_sale",
-                "freelance_jobs_broadcasting_fee",
-                "freelance_jobs_duration_fee",
-                "freelance_jobs_escrow_refund",
-                "freelance_jobs_reward",
-                "freelance_jobs_reward_corporation_tax",
-                "freelance_jobs_reward_escrow",
                 "gm_cash_transfer",
-                "gm_plex_fee_refund",
                 "industry_job_tax",
                 "infrastructure_hub_maintenance",
                 "inheritance",
@@ -7646,7 +7625,6 @@
                 "security_processing_fee",
                 "shares",
                 "skill_purchase",
-                "skyhook_claim_fee",
                 "sovereignity_bill",
                 "store_purchase",
                 "store_purchase_refund",
@@ -7686,7 +7664,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdWalletsDivisionTransactionsGet": {
+      "CorporationWalletsDivisionTransactionsGet": {
         "description": "Wallet transactions",
         "items": {
           "description": "wallet transaction",
@@ -7746,7 +7724,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdWalletsGet": {
+      "CorporationWalletsGet": {
         "items": {
           "properties": {
             "balance": {
@@ -7773,7 +7751,7 @@
         },
         "type": "array"
       },
-      "DogmaAttributesAttributeIdGet": {
+      "DogmaAttributeGet": {
         "properties": {
           "attribute_id": {
             "format": "int64",
@@ -7822,7 +7800,7 @@
         },
         "type": "array"
       },
-      "DogmaDynamicItemsTypeIdItemIdGet": {
+      "DogmaDynamicItemsTypeItemGet": {
         "properties": {
           "created_by": {
             "description": "The ID of the character who created the item",
@@ -7890,7 +7868,7 @@
         ],
         "type": "object"
       },
-      "DogmaEffectsEffectIdGet": {
+      "DogmaEffectGet": {
         "properties": {
           "description": {
             "type": "string"
@@ -8057,7 +8035,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "FleetsFleetIdGet": {
+      "FleetGet": {
         "properties": {
           "is_free_move": {
             "description": "Is free-move enabled",
@@ -8084,7 +8062,7 @@
         ],
         "type": "object"
       },
-      "FleetsFleetIdMembersGet": {
+      "FleetMembersGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -8153,7 +8131,7 @@
         },
         "type": "array"
       },
-      "FleetsFleetIdWingsGet": {
+      "FleetWingsGet": {
         "items": {
           "properties": {
             "id": {
@@ -8193,7 +8171,7 @@
         },
         "type": "array"
       },
-      "FleetsFleetIdWingsPost": {
+      "FleetWingsPost": {
         "description": "201 created object",
         "properties": {
           "wing_id": {
@@ -8207,7 +8185,7 @@
         ],
         "type": "object"
       },
-      "FleetsFleetIdWingsWingIdSquadsPost": {
+      "FleetWingSquadsPost": {
         "description": "201 created object",
         "properties": {
           "squad_id": {
@@ -9020,7 +8998,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "KillmailsKillmailIdKillmailHashGet": {
+      "KillmailKillmailHashGet": {
         "properties": {
           "attackers": {
             "items": {
@@ -9239,7 +9217,7 @@
         ],
         "type": "object"
       },
-      "LoyaltyStoresCorporationIdOffersGet": {
+      "LoyaltyStoresCorporationOffersGet": {
         "items": {
           "properties": {
             "ak_cost": {
@@ -9308,7 +9286,7 @@
         },
         "type": "array"
       },
-      "MarketsGroupsMarketGroupIdGet": {
+      "MarketsGroupsMarketGroupGet": {
         "properties": {
           "description": {
             "type": "string"
@@ -9364,7 +9342,7 @@
         },
         "type": "array"
       },
-      "MarketsRegionIdHistoryGet": {
+      "MarketsRegionHistoryGet": {
         "items": {
           "properties": {
             "average": {
@@ -9407,7 +9385,7 @@
         },
         "type": "array"
       },
-      "MarketsRegionIdOrdersGet": {
+      "MarketsRegionOrdersGet": {
         "items": {
           "properties": {
             "duration": {
@@ -9490,14 +9468,14 @@
         },
         "type": "array"
       },
-      "MarketsRegionIdTypesGet": {
+      "MarketsRegionTypesGet": {
         "items": {
           "format": "int64",
           "type": "integer"
         },
         "type": "array"
       },
-      "MarketsStructuresStructureIdGet": {
+      "MarketsStructureGet": {
         "items": {
           "properties": {
             "duration": {
@@ -9850,7 +9828,7 @@
         },
         "type": "array"
       },
-      "UniverseAsteroidBeltsAsteroidBeltIdGet": {
+      "UniverseAsteroidBeltsAsteroidBeltGet": {
         "properties": {
           "name": {
             "type": "string"
@@ -9953,7 +9931,7 @@
         },
         "type": "array"
       },
-      "UniverseCategoriesCategoryIdGet": {
+      "UniverseCategoriesCategoryGet": {
         "properties": {
           "category_id": {
             "format": "int64",
@@ -9989,7 +9967,7 @@
         },
         "type": "array"
       },
-      "UniverseConstellationsConstellationIdGet": {
+      "UniverseConstellationGet": {
         "properties": {
           "constellation_id": {
             "format": "int64",
@@ -10111,7 +10089,7 @@
         },
         "type": "array"
       },
-      "UniverseGraphicsGraphicIdGet": {
+      "UniverseGraphicGet": {
         "properties": {
           "collision_file": {
             "type": "string"
@@ -10151,7 +10129,7 @@
         },
         "type": "array"
       },
-      "UniverseGroupsGroupIdGet": {
+      "UniverseGroupGet": {
         "properties": {
           "category_id": {
             "format": "int64",
@@ -10350,7 +10328,7 @@
         },
         "type": "object"
       },
-      "UniverseMoonsMoonIdGet": {
+      "UniverseMoonGet": {
         "properties": {
           "moon_id": {
             "format": "int64",
@@ -10429,7 +10407,7 @@
         },
         "type": "array"
       },
-      "UniversePlanetsPlanetIdGet": {
+      "UniversePlanetGet": {
         "properties": {
           "name": {
             "type": "string"
@@ -10515,7 +10493,7 @@
         },
         "type": "array"
       },
-      "UniverseRegionsRegionIdGet": {
+      "UniverseRegionGet": {
         "properties": {
           "constellations": {
             "items": {
@@ -10543,7 +10521,7 @@
         ],
         "type": "object"
       },
-      "UniverseSchematicsSchematicIdGet": {
+      "UniverseSchematicGet": {
         "properties": {
           "cycle_time": {
             "description": "Time in seconds to process a run",
@@ -10560,7 +10538,7 @@
         ],
         "type": "object"
       },
-      "UniverseStargatesStargateIdGet": {
+      "UniverseStargateGet": {
         "properties": {
           "destination": {
             "properties": {
@@ -10630,7 +10608,7 @@
         ],
         "type": "object"
       },
-      "UniverseStarsStarIdGet": {
+      "UniverseStarGet": {
         "properties": {
           "age": {
             "description": "Age of star in years",
@@ -10767,7 +10745,7 @@
         ],
         "type": "object"
       },
-      "UniverseStationsStationIdGet": {
+      "UniverseStationGet": {
         "properties": {
           "max_dockable_ship_volume": {
             "format": "double",
@@ -10891,7 +10869,7 @@
         "type": "array",
         "uniqueItems": true
       },
-      "UniverseStructuresStructureIdGet": {
+      "UniverseStructureGet": {
         "properties": {
           "name": {
             "description": "The full name of the structure",
@@ -11001,7 +10979,7 @@
         },
         "type": "array"
       },
-      "UniverseSystemsSystemIdGet": {
+      "UniverseSystemGet": {
         "properties": {
           "constellation_id": {
             "description": "The constellation this solar system is in",
@@ -11113,7 +11091,7 @@
         },
         "type": "array"
       },
-      "UniverseTypesTypeIdGet": {
+      "UniverseTypeGet": {
         "properties": {
           "capacity": {
             "format": "double",
@@ -11227,7 +11205,7 @@
         },
         "type": "array"
       },
-      "WarsWarIdGet": {
+      "WarGet": {
         "properties": {
           "aggressor": {
             "description": "The aggressor corporation or alliance that declared this war, only contains either corporation_id or alliance_id",
@@ -11353,7 +11331,7 @@
         ],
         "type": "object"
       },
-      "WarsWarIdKillmailsGet": {
+      "WarKillmailsGet": {
         "items": {
           "properties": {
             "killmail_hash": {
@@ -11553,7 +11531,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdGet"
+                  "$ref": "#/components/schemas/AllianceGet"
                 }
               }
             },
@@ -11628,7 +11606,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdContactsGet"
+                  "$ref": "#/components/schemas/AllianceContactsGet"
                 }
               }
             },
@@ -11707,7 +11685,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdContactsLabelsGet"
+                  "$ref": "#/components/schemas/AllianceContactsLabelsGet"
                 }
               }
             },
@@ -11779,7 +11757,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdCorporationsGet"
+                  "$ref": "#/components/schemas/AllianceCorporationsGet"
                 }
               }
             },
@@ -11844,7 +11822,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdIconsGet"
+                  "$ref": "#/components/schemas/AllianceIconsGet"
                 }
               }
             },
@@ -11981,7 +11959,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdGet"
+                  "$ref": "#/components/schemas/CharacterGet"
                 }
               }
             },
@@ -12046,7 +12024,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAgentsResearchGet"
+                  "$ref": "#/components/schemas/CharacterAgentsResearchGet"
                 }
               }
             },
@@ -12128,7 +12106,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAssetsGet"
+                  "$ref": "#/components/schemas/CharacterAssetsGet"
                 }
               }
             },
@@ -12224,7 +12202,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAssetsLocationsPost"
+                  "$ref": "#/components/schemas/CharacterAssetsLocationsPost"
                 }
               }
             },
@@ -12312,7 +12290,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAssetsNamesPost"
+                  "$ref": "#/components/schemas/CharacterAssetsNamesPost"
                 }
               }
             },
@@ -12383,7 +12361,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAttributesGet"
+                  "$ref": "#/components/schemas/CharacterAttributesGet"
                 }
               }
             },
@@ -12465,7 +12443,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdBlueprintsGet"
+                  "$ref": "#/components/schemas/CharacterBlueprintsGet"
                 }
               }
             },
@@ -12553,7 +12531,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCalendarGet"
+                  "$ref": "#/components/schemas/CharacterCalendarGet"
                 }
               }
             },
@@ -12635,7 +12613,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCalendarEventIdGet"
+                  "$ref": "#/components/schemas/CharacterCalendarEventGet"
                 }
               }
             },
@@ -12817,7 +12795,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCalendarEventIdAttendeesGet"
+                  "$ref": "#/components/schemas/CharacterCalendarEventAttendeesGet"
                 }
               }
             },
@@ -12889,7 +12867,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdClonesGet"
+                  "$ref": "#/components/schemas/CharacterClonesGet"
                 }
               }
             },
@@ -13053,7 +13031,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContactsGet"
+                  "$ref": "#/components/schemas/CharacterContactsGet"
                 }
               }
             },
@@ -13178,7 +13156,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContactsPost"
+                  "$ref": "#/components/schemas/CharacterContactsPost"
                 }
               }
             },
@@ -13364,7 +13342,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContactsLabelsGet"
+                  "$ref": "#/components/schemas/CharacterContactsLabelsGet"
                 }
               }
             },
@@ -13446,7 +13424,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContractsGet"
+                  "$ref": "#/components/schemas/CharacterContractsGet"
                 }
               }
             },
@@ -13535,7 +13513,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContractsContractIdBidsGet"
+                  "$ref": "#/components/schemas/CharacterContractBidsGet"
                 }
               }
             },
@@ -13617,7 +13595,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContractsContractIdItemsGet"
+                  "$ref": "#/components/schemas/CharacterContractItemsGet"
                 }
               }
             },
@@ -13689,7 +13667,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCorporationhistoryGet"
+                  "$ref": "#/components/schemas/CharacterCorporationhistoryGet"
                 }
               }
             },
@@ -13771,7 +13749,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCspaPost"
+                  "$ref": "#/components/schemas/CharacterCspaPost"
                 }
               }
             },
@@ -13842,7 +13820,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFatigueGet"
+                  "$ref": "#/components/schemas/CharacterFatigueGet"
                 }
               }
             },
@@ -13914,7 +13892,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFittingsGet"
+                  "$ref": "#/components/schemas/CharacterFittingsGet"
                 }
               }
             },
@@ -14084,7 +14062,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFittingsPost"
+                  "$ref": "#/components/schemas/CharacterFittingsPost"
                 }
               }
             },
@@ -14234,7 +14212,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFleetGet"
+                  "$ref": "#/components/schemas/CharacterFleetGet"
                 }
               }
             },
@@ -14306,7 +14284,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFwStatsGet"
+                  "$ref": "#/components/schemas/CharacterFwStatsGet"
                 }
               }
             },
@@ -14377,7 +14355,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdImplantsGet"
+                  "$ref": "#/components/schemas/CharacterImplantsGet"
                 }
               }
             },
@@ -14457,7 +14435,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdIndustryJobsGet"
+                  "$ref": "#/components/schemas/CharacterIndustryJobsGet"
                 }
               }
             },
@@ -14539,7 +14517,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdKillmailsRecentGet"
+                  "$ref": "#/components/schemas/CharacterKillmailsRecentGet"
                 }
               }
             },
@@ -14618,7 +14596,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdLocationGet"
+                  "$ref": "#/components/schemas/CharacterLocationGet"
                 }
               }
             },
@@ -14690,7 +14668,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdLoyaltyPointsGet"
+                  "$ref": "#/components/schemas/CharacterLoyaltyPointsGet"
                 }
               }
             },
@@ -14786,7 +14764,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailGet"
+                  "$ref": "#/components/schemas/CharacterMailGet"
                 }
               }
             },
@@ -14911,7 +14889,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailPost"
+                  "$ref": "#/components/schemas/CharacterMailPost"
                 }
               }
             },
@@ -14982,7 +14960,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailLabelsGet"
+                  "$ref": "#/components/schemas/CharacterMailLabelsGet"
                 }
               }
             },
@@ -15094,7 +15072,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailLabelsPost"
+                  "$ref": "#/components/schemas/CharacterMailLabelsPost"
                 }
               }
             },
@@ -15244,7 +15222,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailListsGet"
+                  "$ref": "#/components/schemas/CharacterMailListsGet"
                 }
               }
             },
@@ -15403,7 +15381,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailMailIdGet"
+                  "$ref": "#/components/schemas/CharacterMailMailGet"
                 }
               }
             },
@@ -15578,7 +15556,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMedalsGet"
+                  "$ref": "#/components/schemas/CharacterMedalsGet"
                 }
               }
             },
@@ -15660,7 +15638,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMiningGet"
+                  "$ref": "#/components/schemas/CharacterMiningGet"
                 }
               }
             },
@@ -15739,7 +15717,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdNotificationsGet"
+                  "$ref": "#/components/schemas/CharacterNotificationsGet"
                 }
               }
             },
@@ -15811,7 +15789,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdNotificationsContactsGet"
+                  "$ref": "#/components/schemas/CharacterNotificationsContactsGet"
                 }
               }
             },
@@ -15883,7 +15861,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdOnlineGet"
+                  "$ref": "#/components/schemas/CharacterOnlineGet"
                 }
               }
             },
@@ -15955,7 +15933,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdOrdersGet"
+                  "$ref": "#/components/schemas/CharacterOrdersGet"
                 }
               }
             },
@@ -16037,7 +16015,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdOrdersHistoryGet"
+                  "$ref": "#/components/schemas/CharacterOrdersHistoryGet"
                 }
               }
             },
@@ -16116,7 +16094,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdPlanetsGet"
+                  "$ref": "#/components/schemas/CharacterPlanetsGet"
                 }
               }
             },
@@ -16198,7 +16176,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdPlanetsPlanetIdGet"
+                  "$ref": "#/components/schemas/CharacterPlanetGet"
                 }
               }
             },
@@ -16269,7 +16247,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdPortraitGet"
+                  "$ref": "#/components/schemas/CharacterPortraitGet"
                 }
               }
             },
@@ -16333,7 +16311,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdRolesGet"
+                  "$ref": "#/components/schemas/CharacterRolesGet"
                 }
               }
             },
@@ -16451,7 +16429,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdSearchGet"
+                  "$ref": "#/components/schemas/CharacterSearchGet"
                 }
               }
             },
@@ -16526,7 +16504,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdShipGet"
+                  "$ref": "#/components/schemas/CharacterShipGet"
                 }
               }
             },
@@ -16598,7 +16576,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdSkillqueueGet"
+                  "$ref": "#/components/schemas/CharacterSkillqueueGet"
                 }
               }
             },
@@ -16670,7 +16648,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdSkillsGet"
+                  "$ref": "#/components/schemas/CharacterSkillsGet"
                 }
               }
             },
@@ -16742,7 +16720,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdStandingsGet"
+                  "$ref": "#/components/schemas/CharacterStandingsGet"
                 }
               }
             },
@@ -16814,7 +16792,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdTitlesGet"
+                  "$ref": "#/components/schemas/CharacterTitlesGet"
                 }
               }
             },
@@ -16886,7 +16864,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdWalletGet"
+                  "$ref": "#/components/schemas/CharacterWalletGet"
                 }
               }
             },
@@ -16968,7 +16946,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdWalletJournalGet"
+                  "$ref": "#/components/schemas/CharacterWalletJournalGet"
                 }
               }
             },
@@ -17056,7 +17034,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdWalletTransactionsGet"
+                  "$ref": "#/components/schemas/CharacterWalletTransactionsGet"
                 }
               }
             },
@@ -17139,7 +17117,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContractsPublicBidsContractIdGet"
+                  "$ref": "#/components/schemas/ContractsPublicBidsContractGet"
                 }
               }
             },
@@ -17231,7 +17209,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContractsPublicItemsContractIdGet"
+                  "$ref": "#/components/schemas/ContractsPublicItemsContractGet"
                 }
               }
             },
@@ -17323,7 +17301,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContractsPublicRegionIdGet"
+                  "$ref": "#/components/schemas/ContractsPublicRegionGet"
                 }
               }
             },
@@ -17368,7 +17346,7 @@
     },
     "/corporation/{corporation_id}/mining/extractions": {
       "get": {
-        "description": "Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.\n\nRequires one of the following EVE corporation role(s): Station_Manager",
+        "description": "Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.",
         "operationId": "GetCorporationCorporationMiningExtractions",
         "parameters": [
           {
@@ -17405,7 +17383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationCorporationIdMiningExtractionsGet"
+                  "$ref": "#/components/schemas/CorporationCorporationMiningExtractionsGet"
                 }
               }
             },
@@ -17460,7 +17438,7 @@
     },
     "/corporation/{corporation_id}/mining/observers": {
       "get": {
-        "description": "Paginated list of all entities capable of observing and recording mining for a corporation\n\nRequires one of the following EVE corporation role(s): Accountant",
+        "description": "Paginated list of all entities capable of observing and recording mining for a corporation",
         "operationId": "GetCorporationCorporationMiningObservers",
         "parameters": [
           {
@@ -17497,7 +17475,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationCorporationIdMiningObserversGet"
+                  "$ref": "#/components/schemas/CorporationCorporationMiningObserversGet"
                 }
               }
             },
@@ -17552,7 +17530,7 @@
     },
     "/corporation/{corporation_id}/mining/observers/{observer_id}": {
       "get": {
-        "description": "Paginated record of all mining seen by an observer\n\nRequires one of the following EVE corporation role(s): Accountant",
+        "description": "Paginated record of all mining seen by an observer",
         "operationId": "GetCorporationCorporationMiningObserver",
         "parameters": [
           {
@@ -17599,7 +17577,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationCorporationIdMiningObserversObserverIdGet"
+                  "$ref": "#/components/schemas/CorporationCorporationMiningObserverGet"
                 }
               }
             },
@@ -17736,7 +17714,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdGet"
+                  "$ref": "#/components/schemas/CorporationGet"
                 }
               }
             },
@@ -17801,7 +17779,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAlliancehistoryGet"
+                  "$ref": "#/components/schemas/CorporationAlliancehistoryGet"
                 }
               }
             },
@@ -17839,7 +17817,7 @@
     },
     "/corporations/{corporation_id}/assets": {
       "get": {
-        "description": "Return a list of the corporation assets\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Return a list of the corporation assets",
         "operationId": "GetCorporationAssets",
         "parameters": [
           {
@@ -17876,7 +17854,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAssetsGet"
+                  "$ref": "#/components/schemas/CorporationAssetsGet"
                 }
               }
             },
@@ -17931,7 +17909,7 @@
     },
     "/corporations/{corporation_id}/assets/locations": {
       "post": {
-        "description": "Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)",
         "operationId": "PostCorporationAssetsLocations",
         "parameters": [
           {
@@ -17975,7 +17953,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAssetsLocationsPost"
+                  "$ref": "#/components/schemas/CorporationAssetsLocationsPost"
                 }
               }
             },
@@ -18022,7 +18000,7 @@
     },
     "/corporations/{corporation_id}/assets/names": {
       "post": {
-        "description": "Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships",
         "operationId": "PostCorporationAssetsNames",
         "parameters": [
           {
@@ -18066,7 +18044,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAssetsNamesPost"
+                  "$ref": "#/components/schemas/CorporationAssetsNamesPost"
                 }
               }
             },
@@ -18113,7 +18091,7 @@
     },
     "/corporations/{corporation_id}/blueprints": {
       "get": {
-        "description": "Returns a list of blueprints the corporation owns\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns a list of blueprints the corporation owns",
         "operationId": "GetCorporationBlueprints",
         "parameters": [
           {
@@ -18150,7 +18128,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdBlueprintsGet"
+                  "$ref": "#/components/schemas/CorporationBlueprintsGet"
                 }
               }
             },
@@ -18242,7 +18220,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContactsGet"
+                  "$ref": "#/components/schemas/CorporationContactsGet"
                 }
               }
             },
@@ -18321,7 +18299,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContactsLabelsGet"
+                  "$ref": "#/components/schemas/CorporationContactsLabelsGet"
                 }
               }
             },
@@ -18366,7 +18344,7 @@
     },
     "/corporations/{corporation_id}/containers/logs": {
       "get": {
-        "description": "Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation",
         "operationId": "GetCorporationContainersLogs",
         "parameters": [
           {
@@ -18403,7 +18381,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContainersLogsGet"
+                  "$ref": "#/components/schemas/CorporationContainersLogsGet"
                 }
               }
             },
@@ -18495,7 +18473,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContractsGet"
+                  "$ref": "#/components/schemas/CorporationContractsGet"
                 }
               }
             },
@@ -18594,7 +18572,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContractsContractIdBidsGet"
+                  "$ref": "#/components/schemas/CorporationContractBidsGet"
                 }
               }
             },
@@ -18683,7 +18661,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContractsContractIdItemsGet"
+                  "$ref": "#/components/schemas/CorporationContractItemsGet"
                 }
               }
             },
@@ -18728,7 +18706,7 @@
     },
     "/corporations/{corporation_id}/customs_offices": {
       "get": {
-        "description": "List customs offices owned by a corporation\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "List customs offices owned by a corporation",
         "operationId": "GetCorporationCustomsOffices",
         "parameters": [
           {
@@ -18765,7 +18743,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdCustomsOfficesGet"
+                  "$ref": "#/components/schemas/CorporationCustomsOfficesGet"
                 }
               }
             },
@@ -18820,7 +18798,7 @@
     },
     "/corporations/{corporation_id}/divisions": {
       "get": {
-        "description": "Return corporation hangar and wallet division names, only show if a division is not using the default name\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Return corporation hangar and wallet division names, only show if a division is not using the default name",
         "operationId": "GetCorporationDivisions",
         "parameters": [
           {
@@ -18847,7 +18825,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdDivisionsGet"
+                  "$ref": "#/components/schemas/CorporationDivisionsGet"
                 }
               }
             },
@@ -18895,7 +18873,7 @@
     },
     "/corporations/{corporation_id}/facilities": {
       "get": {
-        "description": "Return a corporation's facilities\n\nRequires one of the following EVE corporation role(s): Factory_Manager",
+        "description": "Return a corporation's facilities",
         "operationId": "GetCorporationFacilities",
         "parameters": [
           {
@@ -18922,7 +18900,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdFacilitiesGet"
+                  "$ref": "#/components/schemas/CorporationFacilitiesGet"
                 }
               }
             },
@@ -18997,7 +18975,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdFwStatsGet"
+                  "$ref": "#/components/schemas/CorporationFwStatsGet"
                 }
               }
             },
@@ -19068,7 +19046,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdIconsGet"
+                  "$ref": "#/components/schemas/CorporationIconsGet"
                 }
               }
             },
@@ -19106,7 +19084,7 @@
     },
     "/corporations/{corporation_id}/industry/jobs": {
       "get": {
-        "description": "List industry jobs run by a corporation\n\nRequires one of the following EVE corporation role(s): Factory_Manager",
+        "description": "List industry jobs run by a corporation",
         "operationId": "GetCorporationIndustryJobs",
         "parameters": [
           {
@@ -19152,7 +19130,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdIndustryJobsGet"
+                  "$ref": "#/components/schemas/CorporationIndustryJobsGet"
                 }
               }
             },
@@ -19207,7 +19185,7 @@
     },
     "/corporations/{corporation_id}/killmails/recent": {
       "get": {
-        "description": "Get a list of a corporation's kills and losses going back 90 days\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Get a list of a corporation's kills and losses going back 90 days",
         "operationId": "GetCorporationKillmailsRecent",
         "parameters": [
           {
@@ -19244,7 +19222,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdKillmailsRecentGet"
+                  "$ref": "#/components/schemas/CorporationKillmailsRecentGet"
                 }
               }
             },
@@ -19336,7 +19314,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMedalsGet"
+                  "$ref": "#/components/schemas/CorporationMedalsGet"
                 }
               }
             },
@@ -19388,7 +19366,7 @@
     },
     "/corporations/{corporation_id}/medals/issued": {
       "get": {
-        "description": "Returns medals issued by a corporation\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns medals issued by a corporation",
         "operationId": "GetCorporationMedalsIssued",
         "parameters": [
           {
@@ -19425,7 +19403,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMedalsIssuedGet"
+                  "$ref": "#/components/schemas/CorporationMedalsIssuedGet"
                 }
               }
             },
@@ -19507,7 +19485,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembersGet"
+                  "$ref": "#/components/schemas/CorporationMembersGet"
                 }
               }
             },
@@ -19552,7 +19530,7 @@
     },
     "/corporations/{corporation_id}/members/limit": {
       "get": {
-        "description": "Return a corporation's member limit, not including CEO himself\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Return a corporation's member limit, not including CEO himself",
         "operationId": "GetCorporationMembersLimit",
         "parameters": [
           {
@@ -19579,7 +19557,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembersLimitGet"
+                  "$ref": "#/components/schemas/CorporationMembersLimitGet"
                 }
               }
             },
@@ -19627,7 +19605,7 @@
     },
     "/corporations/{corporation_id}/members/titles": {
       "get": {
-        "description": "Returns a corporation's members' titles\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns a corporation's members' titles",
         "operationId": "GetCorporationMembersTitles",
         "parameters": [
           {
@@ -19654,7 +19632,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembersTitlesGet"
+                  "$ref": "#/components/schemas/CorporationMembersTitlesGet"
                 }
               }
             },
@@ -19702,7 +19680,7 @@
     },
     "/corporations/{corporation_id}/membertracking": {
       "get": {
-        "description": "Returns additional information about a corporation's members which helps tracking their activities\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns additional information about a corporation's members which helps tracking their activities",
         "operationId": "GetCorporationMembertracking",
         "parameters": [
           {
@@ -19729,7 +19707,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembertrackingGet"
+                  "$ref": "#/components/schemas/CorporationMembertrackingGet"
                 }
               }
             },
@@ -19777,7 +19755,7 @@
     },
     "/corporations/{corporation_id}/orders": {
       "get": {
-        "description": "List open market orders placed on behalf of a corporation\n\nRequires one of the following EVE corporation role(s): Accountant, Trader",
+        "description": "List open market orders placed on behalf of a corporation",
         "operationId": "GetCorporationOrders",
         "parameters": [
           {
@@ -19814,7 +19792,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdOrdersGet"
+                  "$ref": "#/components/schemas/CorporationOrdersGet"
                 }
               }
             },
@@ -19870,7 +19848,7 @@
     },
     "/corporations/{corporation_id}/orders/history": {
       "get": {
-        "description": "List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.\n\nRequires one of the following EVE corporation role(s): Accountant, Trader",
+        "description": "List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.",
         "operationId": "GetCorporationOrdersHistory",
         "parameters": [
           {
@@ -19907,7 +19885,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdOrdersHistoryGet"
+                  "$ref": "#/components/schemas/CorporationOrdersHistoryGet"
                 }
               }
             },
@@ -19990,7 +19968,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdRolesGet"
+                  "$ref": "#/components/schemas/CorporationRolesGet"
                 }
               }
             },
@@ -20035,7 +20013,7 @@
     },
     "/corporations/{corporation_id}/roles/history": {
       "get": {
-        "description": "Return how roles have changed for a coporation's members, up to a month\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Return how roles have changed for a coporation's members, up to a month",
         "operationId": "GetCorporationRolesHistory",
         "parameters": [
           {
@@ -20072,7 +20050,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdRolesHistoryGet"
+                  "$ref": "#/components/schemas/CorporationRolesHistoryGet"
                 }
               }
             },
@@ -20127,7 +20105,7 @@
     },
     "/corporations/{corporation_id}/shareholders": {
       "get": {
-        "description": "Return the current shareholders of a corporation.\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Return the current shareholders of a corporation.",
         "operationId": "GetCorporationShareholders",
         "parameters": [
           {
@@ -20164,7 +20142,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdShareholdersGet"
+                  "$ref": "#/components/schemas/CorporationShareholdersGet"
                 }
               }
             },
@@ -20256,7 +20234,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStandingsGet"
+                  "$ref": "#/components/schemas/CorporationStandingsGet"
                 }
               }
             },
@@ -20308,7 +20286,7 @@
     },
     "/corporations/{corporation_id}/starbases": {
       "get": {
-        "description": "Returns list of corporation starbases (POSes)\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns list of corporation starbases (POSes)",
         "operationId": "GetCorporationStarbases",
         "parameters": [
           {
@@ -20345,7 +20323,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStarbasesGet"
+                  "$ref": "#/components/schemas/CorporationStarbasesGet"
                 }
               }
             },
@@ -20400,7 +20378,7 @@
     },
     "/corporations/{corporation_id}/starbases/{starbase_id}": {
       "get": {
-        "description": "Returns various settings and fuels of a starbase (POS)\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns various settings and fuels of a starbase (POS)",
         "operationId": "GetCorporationStarbase",
         "parameters": [
           {
@@ -20447,7 +20425,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStarbasesStarbaseIdGet"
+                  "$ref": "#/components/schemas/CorporationStarbaseGet"
                 }
               }
             },
@@ -20495,7 +20473,7 @@
     },
     "/corporations/{corporation_id}/structures": {
       "get": {
-        "description": "Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th\n\nRequires one of the following EVE corporation role(s): Station_Manager",
+        "description": "Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th",
         "operationId": "GetCorporationStructures",
         "parameters": [
           {
@@ -20532,7 +20510,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStructuresGet"
+                  "$ref": "#/components/schemas/CorporationStructuresGet"
                 }
               }
             },
@@ -20590,7 +20568,7 @@
     },
     "/corporations/{corporation_id}/titles": {
       "get": {
-        "description": "Returns a corporation's titles\n\nRequires one of the following EVE corporation role(s): Director",
+        "description": "Returns a corporation's titles",
         "operationId": "GetCorporationTitles",
         "parameters": [
           {
@@ -20617,7 +20595,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdTitlesGet"
+                  "$ref": "#/components/schemas/CorporationTitlesGet"
                 }
               }
             },
@@ -20665,7 +20643,7 @@
     },
     "/corporations/{corporation_id}/wallets": {
       "get": {
-        "description": "Get a corporation's wallets\n\nRequires one of the following EVE corporation role(s): Accountant, Junior_Accountant",
+        "description": "Get a corporation's wallets",
         "operationId": "GetCorporationWallets",
         "parameters": [
           {
@@ -20692,7 +20670,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdWalletsGet"
+                  "$ref": "#/components/schemas/CorporationWalletsGet"
                 }
               }
             },
@@ -20741,7 +20719,7 @@
     },
     "/corporations/{corporation_id}/wallets/{division}/journal": {
       "get": {
-        "description": "Retrieve the given corporation's wallet journal for the given division going 30 days back\n\nRequires one of the following EVE corporation role(s): Accountant, Junior_Accountant",
+        "description": "Retrieve the given corporation's wallet journal for the given division going 30 days back",
         "operationId": "GetCorporationWalletsDivisionJournal",
         "parameters": [
           {
@@ -20788,7 +20766,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdWalletsDivisionJournalGet"
+                  "$ref": "#/components/schemas/CorporationWalletsDivisionJournalGet"
                 }
               }
             },
@@ -20844,7 +20822,7 @@
     },
     "/corporations/{corporation_id}/wallets/{division}/transactions": {
       "get": {
-        "description": "Get wallet transactions of a corporation\n\nRequires one of the following EVE corporation role(s): Accountant, Junior_Accountant",
+        "description": "Get wallet transactions of a corporation",
         "operationId": "GetCorporationWalletsDivisionTransactions",
         "parameters": [
           {
@@ -20890,7 +20868,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdWalletsDivisionTransactionsGet"
+                  "$ref": "#/components/schemas/CorporationWalletsDivisionTransactionsGet"
                 }
               }
             },
@@ -21022,7 +21000,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DogmaAttributesAttributeIdGet"
+                  "$ref": "#/components/schemas/DogmaAttributeGet"
                 }
               }
             },
@@ -21095,7 +21073,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DogmaDynamicItemsTypeIdItemIdGet"
+                  "$ref": "#/components/schemas/DogmaDynamicItemsTypeItemGet"
                 }
               }
             },
@@ -21215,7 +21193,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DogmaEffectsEffectIdGet"
+                  "$ref": "#/components/schemas/DogmaEffectGet"
                 }
               }
             },
@@ -21280,7 +21258,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdGet"
+                  "$ref": "#/components/schemas/FleetGet"
                 }
               }
             },
@@ -21440,7 +21418,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdMembersGet"
+                  "$ref": "#/components/schemas/FleetMembersGet"
                 }
               }
             },
@@ -21987,7 +21965,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdWingsGet"
+                  "$ref": "#/components/schemas/FleetWingsGet"
                 }
               }
             },
@@ -22061,7 +22039,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdWingsPost"
+                  "$ref": "#/components/schemas/FleetWingsPost"
                 }
               }
             },
@@ -22318,7 +22296,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdWingsWingIdSquadsPost"
+                  "$ref": "#/components/schemas/FleetWingSquadsPost"
                 }
               }
             },
@@ -22957,7 +22935,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/KillmailsKillmailIdKillmailHashGet"
+                  "$ref": "#/components/schemas/KillmailKillmailHashGet"
                 }
               }
             },
@@ -23022,7 +23000,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LoyaltyStoresCorporationIdOffersGet"
+                  "$ref": "#/components/schemas/LoyaltyStoresCorporationOffersGet"
                 }
               }
             },
@@ -23142,7 +23120,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsGroupsMarketGroupIdGet"
+                  "$ref": "#/components/schemas/MarketsGroupsMarketGroupGet"
                 }
               }
             },
@@ -23276,7 +23254,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsStructuresStructureIdGet"
+                  "$ref": "#/components/schemas/MarketsStructureGet"
                 }
               }
             },
@@ -23366,7 +23344,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsRegionIdHistoryGet"
+                  "$ref": "#/components/schemas/MarketsRegionHistoryGet"
                 }
               }
             },
@@ -23465,7 +23443,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsRegionIdOrdersGet"
+                  "$ref": "#/components/schemas/MarketsRegionOrdersGet"
                 }
               }
             },
@@ -23548,7 +23526,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsRegionIdTypesGet"
+                  "$ref": "#/components/schemas/MarketsRegionTypesGet"
                 }
               }
             },
@@ -24426,7 +24404,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseAsteroidBeltsAsteroidBeltIdGet"
+                  "$ref": "#/components/schemas/UniverseAsteroidBeltsAsteroidBeltGet"
                 }
               }
             },
@@ -24604,7 +24582,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseCategoriesCategoryIdGet"
+                  "$ref": "#/components/schemas/UniverseCategoriesCategoryGet"
                 }
               }
             },
@@ -24726,7 +24704,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseConstellationsConstellationIdGet"
+                  "$ref": "#/components/schemas/UniverseConstellationGet"
                 }
               }
             },
@@ -24906,7 +24884,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseGraphicsGraphicIdGet"
+                  "$ref": "#/components/schemas/UniverseGraphicGet"
                 }
               }
             },
@@ -25043,7 +25021,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseGroupsGroupIdGet"
+                  "$ref": "#/components/schemas/UniverseGroupGet"
                 }
               }
             },
@@ -25184,7 +25162,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseMoonsMoonIdGet"
+                  "$ref": "#/components/schemas/UniverseMoonGet"
                 }
               }
             },
@@ -25320,7 +25298,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniversePlanetsPlanetIdGet"
+                  "$ref": "#/components/schemas/UniversePlanetGet"
                 }
               }
             },
@@ -25497,7 +25475,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseRegionsRegionIdGet"
+                  "$ref": "#/components/schemas/UniverseRegionGet"
                 }
               }
             },
@@ -25565,7 +25543,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseSchematicsSchematicIdGet"
+                  "$ref": "#/components/schemas/UniverseSchematicGet"
                 }
               }
             },
@@ -25630,7 +25608,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStargatesStargateIdGet"
+                  "$ref": "#/components/schemas/UniverseStargateGet"
                 }
               }
             },
@@ -25694,7 +25672,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStarsStarIdGet"
+                  "$ref": "#/components/schemas/UniverseStarGet"
                 }
               }
             },
@@ -25758,7 +25736,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStationsStationIdGet"
+                  "$ref": "#/components/schemas/UniverseStationGet"
                 }
               }
             },
@@ -25891,7 +25869,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStructuresStructureIdGet"
+                  "$ref": "#/components/schemas/UniverseStructureGet"
                 }
               }
             },
@@ -26130,7 +26108,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseSystemsSystemIdGet"
+                  "$ref": "#/components/schemas/UniverseSystemGet"
                 }
               }
             },
@@ -26270,7 +26248,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseTypesTypeIdGet"
+                  "$ref": "#/components/schemas/UniverseTypeGet"
                 }
               }
             },
@@ -26403,7 +26381,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/WarsWarIdGet"
+                  "$ref": "#/components/schemas/WarGet"
                 }
               }
             },
@@ -26479,7 +26457,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/WarsWarIdKillmailsGet"
+                  "$ref": "#/components/schemas/WarKillmailsGet"
                 }
               }
             },

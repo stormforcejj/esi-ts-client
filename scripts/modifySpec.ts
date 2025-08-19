@@ -84,7 +84,27 @@ function replaceOperationIds(obj: any): void {
         for (const key of Object.keys(obj)) {
             if (key === "operationId" && typeof obj[key] === "string") {
                 obj[key] = improveOperationId(obj[key]);
-            } else {
+            } 
+            
+            if (key === "schemas" && typeof obj[key] === "object") {
+                const newSchemas: Record<string, any> = {};
+                for (const schemaKey of Object.keys(obj[key])) {
+                    const improvedKey = improveOperationId(schemaKey);
+                    newSchemas[improvedKey] = obj[key][schemaKey];
+                }
+                obj[key] = newSchemas;
+            } 
+            
+            if (key === "$ref" && typeof obj[key] === "string") {
+                const match = obj[key].match(/#\/components\/schemas\/(.+)$/);
+                if (match) {
+                    const refName = match[1];
+                    const improvedRef = improveOperationId(refName);
+                    obj[key] = `#/components/schemas/${improvedRef}`;
+                }
+            } 
+            
+            if (typeof obj[key] === "object") {
                 replaceOperationIds(obj[key]);
             }
         }

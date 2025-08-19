@@ -1,11 +1,22 @@
-import { EsiClient } from "./esi-client";
-import { AllianceApi, CharacterApi, ContractsApi, GetAlliancesRequest, ResponseError } from "./generated";
-import { EsiResponse } from "./types/responses";
+import { EsiClient, GetCharacterBlueprintsRequest } from "./index";
+import { EsiError, EsiResponse } from "./types/responses";
+
+const esi = new EsiClient({ userAgent: "Test" });
 
 
 async function test() {
-    const esi = new EsiClient({userAgent: "Test"});
+    
+    const params : GetCharacterBlueprintsRequest = {
+        characterId: 0
+    }
 
-    const alliance = new CharacterApi()
-    await alliance.withMiddleware().getCharacter({corporationId: 1},"").
+    try {
+        const alliance = await esi.contractsApi.getCorporationContracts(params, "")
+        alliance.data[0].acceptorId
+    } catch (err : EsiError) {
+        
+    } catch (err : any) {
+
+    }    
+    
 }

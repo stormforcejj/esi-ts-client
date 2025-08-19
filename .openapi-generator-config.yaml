@@ -1,0 +1,4 @@
+# "files" section allows you to inject custom files like EsiClient.ts
+files:
+  esi-client.mustache:
+    destinationFilename: esi-client.ts
