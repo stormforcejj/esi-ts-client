@@ -22,7 +22,7 @@ export class EsiClient {
 {{/apiInfo.apis}}
 
   constructor(config: EsiClientConfig) {
-    const packageJson = require("./package.json");
+    const packageJson = require("../../package.json");
     const fullUserAgent =
             config.userAgent +
             ` using stormforcejj/esi-ts-client/${
@@ -30,7 +30,7 @@ export class EsiClient {
             } (+https://github.com/stormforcejj/esi-ts-client discord:stormforcejj esi-client@stormforcejj.co.uk)`;
 
     const configuration = new Configuration({
-      middleware: [headersConfigMiddleware(fullUserAgent)],
+      middleware: [headersConfigMiddleware(fullUserAgent), ratelimitingMiddleware()],
     });
 
 {{#apiInfo.apis}}

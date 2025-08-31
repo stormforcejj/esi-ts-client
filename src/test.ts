@@ -1,22 +1,22 @@
 import { EsiClient, GetCharacterBlueprintsRequest } from "./index";
 import { EsiError, EsiResponse } from "./types/responses";
 
-const esi = new EsiClient({ userAgent: "Test" });
-
-
 async function test() {
     
-    const params : GetCharacterBlueprintsRequest = {
-        characterId: 0
+    let x = 10;
+
+    const start = Date.now()
+
+    const esi = new EsiClient({userAgent: ""})
+
+    while (x > 0) {
+        const res = await esi.statusApi.getStatus();
+        console.log(res.status)
+        x = x-1;
     }
 
-    try {
-        const alliance = await esi.contractsApi.getCorporationContracts(params, "")
-        alliance.data[0].acceptorId
-    } catch (err : EsiError) {
-        
-    } catch (err : any) {
-
-    }    
-    
+    const elapsed = Date.now() - start;
+    console.log(elapsed)
 }
+
+test()
