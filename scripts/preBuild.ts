@@ -3,7 +3,13 @@ import { fetchEsiSpec } from "./fetchEsiSpec";
 import { modifySpec } from "./modifySpec";
 
 async function main() {
-    await fetchEsiSpec();
+    try {
+        await fetchEsiSpec();
+    } catch {
+        console.error("Failed to fetch ESI Spec")
+        return;
+    }
+    
     await setBuildDate();
     await modifySpec();
 }

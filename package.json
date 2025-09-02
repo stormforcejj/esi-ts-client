@@ -12,8 +12,7 @@
     "author": "stormforcejj",
     "license": "ISC",
     "dependencies": {
-        "bottleneck": "^2.19.5",
-        "lru-cache": "^11.1.0"
+        "bottleneck": "^2.19.5"
     },
     "devDependencies": {
         "@openapitools/openapi-generator-cli": "^2.21.4",
