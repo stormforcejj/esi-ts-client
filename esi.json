@@ -105,7 +105,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "AlliancesAllianceIdContactsGet": {
+      "AllianceContactsGet": {
         "items": {
           "properties": {
             "contact_id": {
@@ -144,7 +144,7 @@
         },
         "type": "array"
       },
-      "AlliancesAllianceIdContactsLabelsGet": {
+      "AllianceContactsLabelsGet": {
         "items": {
           "properties": {
             "label_id": {
@@ -163,7 +163,7 @@
         },
         "type": "array"
       },
-      "AlliancesAllianceIdCorporationsGet": {
+      "AllianceCorporationsGet": {
         "items": {
           "format": "int64",
           "type": "integer"
@@ -171,7 +171,7 @@
         "type": "array",
         "uniqueItems": true
       },
-      "AlliancesAllianceIdGet": {
+      "AllianceGet": {
         "properties": {
           "creator_corporation_id": {
             "description": "ID of the corporation that created the alliance",
@@ -215,7 +215,7 @@
         ],
         "type": "object"
       },
-      "AlliancesAllianceIdIconsGet": {
+      "AllianceIconsGet": {
         "properties": {
           "px128x128": {
             "type": "string"
@@ -290,7 +290,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAgentsResearchGet": {
+      "CharacterAgentsResearchGet": {
         "items": {
           "properties": {
             "agent_id": {
@@ -325,7 +325,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAssetsGet": {
+      "CharacterAssetsGet": {
         "items": {
           "properties": {
             "is_blueprint_copy": {
@@ -466,7 +466,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAssetsLocationsPost": {
+      "CharacterAssetsLocationsPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -504,7 +504,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAssetsNamesPost": {
+      "CharacterAssetsNamesPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -523,7 +523,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdAttributesGet": {
+      "CharacterAttributesGet": {
         "properties": {
           "accrued_remap_cooldown_date": {
             "description": "Neural remapping cooldown after a character uses remap accrued over time",
@@ -570,7 +570,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdBlueprintsGet": {
+      "CharacterBlueprintsGet": {
         "items": {
           "properties": {
             "item_id": {
@@ -704,7 +704,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCalendarEventIdAttendeesGet": {
+      "CharacterCalendarEventAttendeesGet": {
         "description": "List of attendees for a given event",
         "items": {
           "description": "character_id and response of an attendee",
@@ -727,7 +727,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCalendarEventIdGet": {
+      "CharacterCalendarEventGet": {
         "description": "Full details of a specific event",
         "properties": {
           "date": {
@@ -788,7 +788,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdCalendarGet": {
+      "CharacterCalendarGet": {
         "description": "Up to 50 events from now or the event you requested",
         "items": {
           "description": "event",
@@ -822,7 +822,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdClonesGet": {
+      "CharacterClonesGet": {
         "properties": {
           "home_location": {
             "properties": {
@@ -895,7 +895,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdContactsGet": {
+      "CharacterContactsGet": {
         "items": {
           "properties": {
             "contact_id": {
@@ -942,7 +942,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContactsLabelsGet": {
+      "CharacterContactsLabelsGet": {
         "items": {
           "properties": {
             "label_id": {
@@ -961,7 +961,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContactsPost": {
+      "CharacterContactsPost": {
         "description": "201 created array",
         "items": {
           "description": "201 created integer",
@@ -970,7 +970,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContractsContractIdBidsGet": {
+      "CharacterContractBidsGet": {
         "items": {
           "properties": {
             "amount": {
@@ -1004,7 +1004,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContractsContractIdItemsGet": {
+      "CharacterContractItemsGet": {
         "items": {
           "properties": {
             "is_included": {
@@ -1046,7 +1046,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdContractsGet": {
+      "CharacterContractsGet": {
         "items": {
           "properties": {
             "acceptor_id": {
@@ -1196,7 +1196,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCorporationhistoryGet": {
+      "CharacterCorporationhistoryGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -1226,12 +1226,12 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdCspaPost": {
+      "CharacterCspaPost": {
         "description": "201 created number",
         "format": "double",
         "type": "number"
       },
-      "CharactersCharacterIdFatigueGet": {
+      "CharacterFatigueGet": {
         "properties": {
           "jump_fatigue_expire_date": {
             "description": "Character's jump fatigue expiry",
@@ -1251,7 +1251,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdFittingsGet": {
+      "CharacterFittingsGet": {
         "items": {
           "properties": {
             "description": {
@@ -1350,7 +1350,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdFittingsPost": {
+      "CharacterFittingsPost": {
         "description": "201 created object",
         "properties": {
           "fitting_id": {
@@ -1363,7 +1363,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdFleetGet": {
+      "CharacterFleetGet": {
         "properties": {
           "fleet_boss_id": {
             "description": "Character ID of the current fleet boss",
@@ -1405,7 +1405,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdFwStatsGet": {
+      "CharacterFwStatsGet": {
         "properties": {
           "current_rank": {
             "description": "The given character's current faction rank",
@@ -1486,7 +1486,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdGet": {
+      "CharacterGet": {
         "properties": {
           "alliance_id": {
             "description": "The character's alliance ID",
@@ -1548,14 +1548,14 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdImplantsGet": {
+      "CharacterImplantsGet": {
         "items": {
           "format": "int64",
           "type": "integer"
         },
         "type": "array"
       },
-      "CharactersCharacterIdIndustryJobsGet": {
+      "CharacterIndustryJobsGet": {
         "items": {
           "properties": {
             "activity_id": {
@@ -1693,7 +1693,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdKillmailsRecentGet": {
+      "CharacterKillmailsRecentGet": {
         "items": {
           "properties": {
             "killmail_hash": {
@@ -1714,7 +1714,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdLocationGet": {
+      "CharacterLocationGet": {
         "properties": {
           "solar_system_id": {
             "format": "int64",
@@ -1734,7 +1734,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdLoyaltyPointsGet": {
+      "CharacterLoyaltyPointsGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -1754,7 +1754,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMailGet": {
+      "CharacterMailGet": {
         "items": {
           "properties": {
             "from": {
@@ -1820,7 +1820,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMailLabelsGet": {
+      "CharacterMailLabelsGet": {
         "properties": {
           "labels": {
             "items": {
@@ -1873,12 +1873,12 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdMailLabelsPost": {
+      "CharacterMailLabelsPost": {
         "description": "Label ID",
         "format": "int64",
         "type": "integer"
       },
-      "CharactersCharacterIdMailListsGet": {
+      "CharacterMailListsGet": {
         "items": {
           "properties": {
             "mailing_list_id": {
@@ -1898,7 +1898,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMailMailIdGet": {
+      "CharacterMailMailGet": {
         "properties": {
           "body": {
             "description": "Mail's body",
@@ -1963,12 +1963,12 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdMailPost": {
+      "CharacterMailPost": {
         "description": "Mail ID",
         "format": "int64",
         "type": "integer"
       },
-      "CharactersCharacterIdMedalsGet": {
+      "CharacterMedalsGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -2048,7 +2048,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdMiningGet": {
+      "CharacterMiningGet": {
         "items": {
           "properties": {
             "date": {
@@ -2078,7 +2078,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdNotificationsContactsGet": {
+      "CharacterNotificationsContactsGet": {
         "items": {
           "properties": {
             "message": {
@@ -2113,7 +2113,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdNotificationsGet": {
+      "CharacterNotificationsGet": {
         "items": {
           "properties": {
             "is_read": {
@@ -2407,7 +2407,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdOnlineGet": {
+      "CharacterOnlineGet": {
         "properties": {
           "last_login": {
             "description": "Timestamp of the last login",
@@ -2434,7 +2434,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdOrdersGet": {
+      "CharacterOrdersGet": {
         "items": {
           "properties": {
             "duration": {
@@ -2536,7 +2536,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdOrdersHistoryGet": {
+      "CharacterOrdersHistoryGet": {
         "items": {
           "properties": {
             "duration": {
@@ -2647,7 +2647,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdPlanetsGet": {
+      "CharacterPlanetsGet": {
         "items": {
           "properties": {
             "last_update": {
@@ -2701,7 +2701,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdPlanetsPlanetIdGet": {
+      "CharacterPlanetGet": {
         "properties": {
           "links": {
             "items": {
@@ -2913,7 +2913,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdPortraitGet": {
+      "CharacterPortraitGet": {
         "properties": {
           "px128x128": {
             "type": "string"
@@ -2930,7 +2930,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdRolesGet": {
+      "CharacterRolesGet": {
         "properties": {
           "roles": {
             "items": {
@@ -3191,7 +3191,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdSearchGet": {
+      "CharacterSearchGet": {
         "properties": {
           "agent": {
             "items": {
@@ -3284,7 +3284,7 @@
         },
         "type": "object"
       },
-      "CharactersCharacterIdShipGet": {
+      "CharacterShipGet": {
         "properties": {
           "ship_item_id": {
             "description": "Item id's are unique to a ship and persist until it is repackaged. This value can be used to track repeated uses of a ship, or detect when a pilot changes into a different instance of the same ship type.",
@@ -3306,7 +3306,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdSkillqueueGet": {
+      "CharacterSkillqueueGet": {
         "items": {
           "properties": {
             "finish_date": {
@@ -3353,7 +3353,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdSkillsGet": {
+      "CharacterSkillsGet": {
         "properties": {
           "skills": {
             "items": {
@@ -3402,7 +3402,7 @@
         ],
         "type": "object"
       },
-      "CharactersCharacterIdStandingsGet": {
+      "CharacterStandingsGet": {
         "items": {
           "properties": {
             "from_id": {
@@ -3431,7 +3431,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdTitlesGet": {
+      "CharacterTitlesGet": {
         "items": {
           "properties": {
             "name": {
@@ -3446,12 +3446,12 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdWalletGet": {
+      "CharacterWalletGet": {
         "description": "Wallet balance",
         "format": "double",
         "type": "number"
       },
-      "CharactersCharacterIdWalletJournalGet": {
+      "CharacterWalletJournalGet": {
         "description": "Wallet journal entries",
         "items": {
           "properties": {
@@ -3698,7 +3698,7 @@
         },
         "type": "array"
       },
-      "CharactersCharacterIdWalletTransactionsGet": {
+      "CharacterWalletTransactionsGet": {
         "description": "Wallet transactions",
         "items": {
           "description": "wallet transaction",
@@ -3769,7 +3769,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "ContractsPublicBidsContractIdGet": {
+      "ContractsPublicBidsContractGet": {
         "items": {
           "properties": {
             "amount": {
@@ -3797,7 +3797,7 @@
         },
         "type": "array"
       },
-      "ContractsPublicItemsContractIdGet": {
+      "ContractsPublicItemsContractGet": {
         "items": {
           "properties": {
             "is_blueprint_copy": {
@@ -3853,7 +3853,7 @@
         },
         "type": "array"
       },
-      "ContractsPublicRegionIdGet": {
+      "ContractsPublicRegionGet": {
         "items": {
           "properties": {
             "buyout": {
@@ -3952,7 +3952,7 @@
         },
         "type": "array"
       },
-      "CorporationCorporationIdMiningExtractionsGet": {
+      "CorporationCorporationMiningExtractionsGet": {
         "items": {
           "properties": {
             "chunk_arrival_time": {
@@ -3990,7 +3990,7 @@
         },
         "type": "array"
       },
-      "CorporationCorporationIdMiningObserversGet": {
+      "CorporationCorporationMiningObserversGet": {
         "items": {
           "properties": {
             "last_updated": {
@@ -4019,7 +4019,7 @@
         },
         "type": "array"
       },
-      "CorporationCorporationIdMiningObserversObserverIdGet": {
+      "CorporationCorporationMiningObserverGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -4064,7 +4064,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "CorporationsCorporationIdAlliancehistoryGet": {
+      "CorporationAlliancehistoryGet": {
         "items": {
           "properties": {
             "alliance_id": {
@@ -4093,7 +4093,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdAssetsGet": {
+      "CorporationAssetsGet": {
         "items": {
           "properties": {
             "is_blueprint_copy": {
@@ -4270,7 +4270,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdAssetsLocationsPost": {
+      "CorporationAssetsLocationsPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -4308,7 +4308,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdAssetsNamesPost": {
+      "CorporationAssetsNamesPost": {
         "items": {
           "properties": {
             "item_id": {
@@ -4327,7 +4327,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdBlueprintsGet": {
+      "CorporationBlueprintsGet": {
         "items": {
           "properties": {
             "item_id": {
@@ -4509,7 +4509,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContactsGet": {
+      "CorporationContactsGet": {
         "items": {
           "properties": {
             "contact_id": {
@@ -4552,7 +4552,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContactsLabelsGet": {
+      "CorporationContactsLabelsGet": {
         "items": {
           "properties": {
             "label_id": {
@@ -4571,7 +4571,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContainersLogsGet": {
+      "CorporationContainersLogsGet": {
         "items": {
           "properties": {
             "action": {
@@ -4782,7 +4782,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContractsContractIdBidsGet": {
+      "CorporationContractBidsGet": {
         "items": {
           "properties": {
             "amount": {
@@ -4816,7 +4816,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContractsContractIdItemsGet": {
+      "CorporationContractItemsGet": {
         "items": {
           "properties": {
             "is_included": {
@@ -4858,7 +4858,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdContractsGet": {
+      "CorporationContractsGet": {
         "items": {
           "properties": {
             "acceptor_id": {
@@ -5008,7 +5008,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdCustomsOfficesGet": {
+      "CorporationCustomsOfficesGet": {
         "items": {
           "properties": {
             "alliance_tax_rate": {
@@ -5091,7 +5091,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdDivisionsGet": {
+      "CorporationDivisionsGet": {
         "properties": {
           "hangar": {
             "items": {
@@ -5128,7 +5128,7 @@
         },
         "type": "object"
       },
-      "CorporationsCorporationIdFacilitiesGet": {
+      "CorporationFacilitiesGet": {
         "items": {
           "properties": {
             "facility_id": {
@@ -5153,7 +5153,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdFwStatsGet": {
+      "CorporationFwStatsGet": {
         "properties": {
           "enlisted_on": {
             "description": "The enlistment date of the given corporation into faction warfare. Will not be included if corporation is not enlisted in faction warfare",
@@ -5229,7 +5229,7 @@
         ],
         "type": "object"
       },
-      "CorporationsCorporationIdGet": {
+      "CorporationGet": {
         "properties": {
           "alliance_id": {
             "description": "ID of the alliance that corporation is a member of, if any",
@@ -5296,7 +5296,7 @@
         ],
         "type": "object"
       },
-      "CorporationsCorporationIdIconsGet": {
+      "CorporationIconsGet": {
         "properties": {
           "px128x128": {
             "type": "string"
@@ -5310,7 +5310,7 @@
         },
         "type": "object"
       },
-      "CorporationsCorporationIdIndustryJobsGet": {
+      "CorporationIndustryJobsGet": {
         "items": {
           "properties": {
             "activity_id": {
@@ -5448,7 +5448,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdKillmailsRecentGet": {
+      "CorporationKillmailsRecentGet": {
         "items": {
           "properties": {
             "killmail_hash": {
@@ -5469,7 +5469,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMedalsGet": {
+      "CorporationMedalsGet": {
         "items": {
           "properties": {
             "created_at": {
@@ -5503,7 +5503,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMedalsIssuedGet": {
+      "CorporationMedalsIssuedGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -5547,7 +5547,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMembersGet": {
+      "CorporationMembersGet": {
         "description": "A list of character IDs",
         "items": {
           "format": "int64",
@@ -5555,11 +5555,11 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMembersLimitGet": {
+      "CorporationMembersLimitGet": {
         "format": "int64",
         "type": "integer"
       },
-      "CorporationsCorporationIdMembersTitlesGet": {
+      "CorporationMembersTitlesGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -5584,7 +5584,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdMembertrackingGet": {
+      "CorporationMembertrackingGet": {
         "items": {
           "properties": {
             "base_id": {
@@ -5623,7 +5623,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdOrdersGet": {
+      "CorporationOrdersGet": {
         "items": {
           "properties": {
             "duration": {
@@ -5732,7 +5732,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdOrdersHistoryGet": {
+      "CorporationOrdersHistoryGet": {
         "items": {
           "properties": {
             "duration": {
@@ -5849,7 +5849,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdRolesGet": {
+      "CorporationRolesGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -6376,7 +6376,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdRolesHistoryGet": {
+      "CorporationRolesHistoryGet": {
         "items": {
           "properties": {
             "changed_at": {
@@ -6547,7 +6547,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdShareholdersGet": {
+      "CorporationShareholdersGet": {
         "description": "List of shareholders",
         "items": {
           "properties": {
@@ -6576,7 +6576,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdStandingsGet": {
+      "CorporationStandingsGet": {
         "items": {
           "properties": {
             "from_id": {
@@ -6605,7 +6605,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdStarbasesGet": {
+      "CorporationStarbasesGet": {
         "items": {
           "properties": {
             "moon_id": {
@@ -6663,7 +6663,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdStarbasesStarbaseIdGet": {
+      "CorporationStarbaseGet": {
         "properties": {
           "allow_alliance_members": {
             "type": "boolean"
@@ -6789,7 +6789,7 @@
         ],
         "type": "object"
       },
-      "CorporationsCorporationIdStructuresGet": {
+      "CorporationStructuresGet": {
         "items": {
           "properties": {
             "corporation_id": {
@@ -6912,7 +6912,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdTitlesGet": {
+      "CorporationTitlesGet": {
         "items": {
           "properties": {
             "grantable_roles": {
@@ -7439,7 +7439,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdWalletsDivisionJournalGet": {
+      "CorporationWalletsDivisionJournalGet": {
         "description": "Journal entries",
         "items": {
           "properties": {
@@ -7686,7 +7686,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdWalletsDivisionTransactionsGet": {
+      "CorporationWalletsDivisionTransactionsGet": {
         "description": "Wallet transactions",
         "items": {
           "description": "wallet transaction",
@@ -7746,7 +7746,7 @@
         },
         "type": "array"
       },
-      "CorporationsCorporationIdWalletsGet": {
+      "CorporationWalletsGet": {
         "items": {
           "properties": {
             "balance": {
@@ -9637,7 +9637,7 @@
         },
         "type": "object"
       },
-      "DogmaAttributesAttributeIdGet": {
+      "DogmaAttributeGet": {
         "properties": {
           "attribute_id": {
             "format": "int64",
@@ -9686,7 +9686,7 @@
         },
         "type": "array"
       },
-      "DogmaDynamicItemsTypeIdItemIdGet": {
+      "DogmaDynamicItemsTypeItemGet": {
         "properties": {
           "created_by": {
             "description": "The ID of the character who created the item",
@@ -9754,7 +9754,7 @@
         ],
         "type": "object"
       },
-      "DogmaEffectsEffectIdGet": {
+      "DogmaEffectGet": {
         "properties": {
           "description": {
             "type": "string"
@@ -9921,7 +9921,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "FleetsFleetIdGet": {
+      "FleetGet": {
         "properties": {
           "is_free_move": {
             "description": "Is free-move enabled",
@@ -9948,7 +9948,7 @@
         ],
         "type": "object"
       },
-      "FleetsFleetIdMembersGet": {
+      "FleetMembersGet": {
         "items": {
           "properties": {
             "character_id": {
@@ -10017,7 +10017,7 @@
         },
         "type": "array"
       },
-      "FleetsFleetIdWingsGet": {
+      "FleetWingsGet": {
         "items": {
           "properties": {
             "id": {
@@ -10057,7 +10057,7 @@
         },
         "type": "array"
       },
-      "FleetsFleetIdWingsPost": {
+      "FleetWingsPost": {
         "description": "201 created object",
         "properties": {
           "wing_id": {
@@ -10071,7 +10071,7 @@
         ],
         "type": "object"
       },
-      "FleetsFleetIdWingsWingIdSquadsPost": {
+      "FleetWingSquadsPost": {
         "description": "201 created object",
         "properties": {
           "squad_id": {
@@ -10884,7 +10884,7 @@
         "type": "integer",
         "x-common-model": "true"
       },
-      "KillmailsKillmailIdKillmailHashGet": {
+      "KillmailKillmailHashGet": {
         "properties": {
           "attackers": {
             "items": {
@@ -11103,7 +11103,7 @@
         ],
         "type": "object"
       },
-      "LoyaltyStoresCorporationIdOffersGet": {
+      "LoyaltyStoresCorporationOffersGet": {
         "items": {
           "properties": {
             "ak_cost": {
@@ -11172,7 +11172,7 @@
         },
         "type": "array"
       },
-      "MarketsGroupsMarketGroupIdGet": {
+      "MarketsGroupsMarketGroupGet": {
         "properties": {
           "description": {
             "type": "string"
@@ -11228,7 +11228,7 @@
         },
         "type": "array"
       },
-      "MarketsRegionIdHistoryGet": {
+      "MarketsRegionHistoryGet": {
         "items": {
           "properties": {
             "average": {
@@ -11271,7 +11271,7 @@
         },
         "type": "array"
       },
-      "MarketsRegionIdOrdersGet": {
+      "MarketsRegionOrdersGet": {
         "items": {
           "properties": {
             "duration": {
@@ -11354,14 +11354,14 @@
         },
         "type": "array"
       },
-      "MarketsRegionIdTypesGet": {
+      "MarketsRegionTypesGet": {
         "items": {
           "format": "int64",
           "type": "integer"
         },
         "type": "array"
       },
-      "MarketsStructuresStructureIdGet": {
+      "MarketsStructureGet": {
         "items": {
           "properties": {
             "duration": {
@@ -11723,7 +11723,7 @@
         },
         "type": "array"
       },
-      "UniverseAsteroidBeltsAsteroidBeltIdGet": {
+      "UniverseAsteroidBeltsAsteroidBeltGet": {
         "properties": {
           "name": {
             "type": "string"
@@ -11826,7 +11826,7 @@
         },
         "type": "array"
       },
-      "UniverseCategoriesCategoryIdGet": {
+      "UniverseCategoriesCategoryGet": {
         "properties": {
           "category_id": {
             "format": "int64",
@@ -11862,7 +11862,7 @@
         },
         "type": "array"
       },
-      "UniverseConstellationsConstellationIdGet": {
+      "UniverseConstellationGet": {
         "properties": {
           "constellation_id": {
             "format": "int64",
@@ -11984,7 +11984,7 @@
         },
         "type": "array"
       },
-      "UniverseGraphicsGraphicIdGet": {
+      "UniverseGraphicGet": {
         "properties": {
           "collision_file": {
             "type": "string"
@@ -12024,7 +12024,7 @@
         },
         "type": "array"
       },
-      "UniverseGroupsGroupIdGet": {
+      "UniverseGroupGet": {
         "properties": {
           "category_id": {
             "format": "int64",
@@ -12223,7 +12223,7 @@
         },
         "type": "object"
       },
-      "UniverseMoonsMoonIdGet": {
+      "UniverseMoonGet": {
         "properties": {
           "moon_id": {
             "format": "int64",
@@ -12302,7 +12302,7 @@
         },
         "type": "array"
       },
-      "UniversePlanetsPlanetIdGet": {
+      "UniversePlanetGet": {
         "properties": {
           "name": {
             "type": "string"
@@ -12388,7 +12388,7 @@
         },
         "type": "array"
       },
-      "UniverseRegionsRegionIdGet": {
+      "UniverseRegionGet": {
         "properties": {
           "constellations": {
             "items": {
@@ -12416,7 +12416,7 @@
         ],
         "type": "object"
       },
-      "UniverseSchematicsSchematicIdGet": {
+      "UniverseSchematicGet": {
         "properties": {
           "cycle_time": {
             "description": "Time in seconds to process a run",
@@ -12433,7 +12433,7 @@
         ],
         "type": "object"
       },
-      "UniverseStargatesStargateIdGet": {
+      "UniverseStargateGet": {
         "properties": {
           "destination": {
             "properties": {
@@ -12503,7 +12503,7 @@
         ],
         "type": "object"
       },
-      "UniverseStarsStarIdGet": {
+      "UniverseStarGet": {
         "properties": {
           "age": {
             "description": "Age of star in years",
@@ -12640,7 +12640,7 @@
         ],
         "type": "object"
       },
-      "UniverseStationsStationIdGet": {
+      "UniverseStationGet": {
         "properties": {
           "max_dockable_ship_volume": {
             "format": "double",
@@ -12764,7 +12764,7 @@
         "type": "array",
         "uniqueItems": true
       },
-      "UniverseStructuresStructureIdGet": {
+      "UniverseStructureGet": {
         "properties": {
           "name": {
             "description": "The full name of the structure",
@@ -12874,7 +12874,7 @@
         },
         "type": "array"
       },
-      "UniverseSystemsSystemIdGet": {
+      "UniverseSystemGet": {
         "properties": {
           "constellation_id": {
             "description": "The constellation this solar system is in",
@@ -12986,7 +12986,7 @@
         },
         "type": "array"
       },
-      "UniverseTypesTypeIdGet": {
+      "UniverseTypeGet": {
         "properties": {
           "capacity": {
             "format": "double",
@@ -13100,7 +13100,7 @@
         },
         "type": "array"
       },
-      "WarsWarIdGet": {
+      "WarGet": {
         "properties": {
           "aggressor": {
             "description": "The aggressor corporation or alliance that declared this war, only contains either corporation_id or alliance_id",
@@ -13226,7 +13226,7 @@
         ],
         "type": "object"
       },
-      "WarsWarIdKillmailsGet": {
+      "WarKillmailsGet": {
         "items": {
           "properties": {
             "killmail_hash": {
@@ -13353,9 +13353,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13403,7 +13400,7 @@
     "/alliances/{alliance_id}": {
       "get": {
         "description": "Public information about an alliance",
-        "operationId": "GetAlliancesAllianceId",
+        "operationId": "GetAlliance",
         "parameters": [
           {
             "description": "The ID of the alliance",
@@ -13421,9 +13418,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13432,7 +13426,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdGet"
+                  "$ref": "#/components/schemas/AllianceGet"
                 }
               }
             },
@@ -13471,7 +13465,7 @@
     "/alliances/{alliance_id}/contacts": {
       "get": {
         "description": "Return contacts of an alliance",
-        "operationId": "GetAlliancesAllianceIdContacts",
+        "operationId": "GetAllianceContacts",
         "parameters": [
           {
             "description": "The ID of the alliance",
@@ -13499,9 +13493,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13510,7 +13501,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdContactsGet"
+                  "$ref": "#/components/schemas/AllianceContactsGet"
                 }
               }
             },
@@ -13563,7 +13554,7 @@
     "/alliances/{alliance_id}/contacts/labels": {
       "get": {
         "description": "Return custom labels for an alliance's contacts",
-        "operationId": "GetAlliancesAllianceIdContactsLabels",
+        "operationId": "GetAllianceContactsLabels",
         "parameters": [
           {
             "description": "The ID of the alliance",
@@ -13581,9 +13572,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13592,7 +13580,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdContactsLabelsGet"
+                  "$ref": "#/components/schemas/AllianceContactsLabelsGet"
                 }
               }
             },
@@ -13638,7 +13626,7 @@
     "/alliances/{alliance_id}/corporations": {
       "get": {
         "description": "List all current member corporations of an alliance",
-        "operationId": "GetAlliancesAllianceIdCorporations",
+        "operationId": "GetAllianceCorporations",
         "parameters": [
           {
             "description": "The ID of the alliance",
@@ -13656,9 +13644,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13667,7 +13652,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdCorporationsGet"
+                  "$ref": "#/components/schemas/AllianceCorporationsGet"
                 }
               }
             },
@@ -13706,7 +13691,7 @@
     "/alliances/{alliance_id}/icons": {
       "get": {
         "description": "Get the icon urls for a alliance\n\nThis route expires daily at 11:05",
-        "operationId": "GetAlliancesAllianceIdIcons",
+        "operationId": "GetAllianceIcons",
         "parameters": [
           {
             "description": "The ID of the alliance",
@@ -13724,9 +13709,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13735,7 +13717,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AlliancesAllianceIdIconsGet"
+                  "$ref": "#/components/schemas/AllianceIconsGet"
                 }
               }
             },
@@ -13780,9 +13762,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -13850,7 +13829,7 @@
     "/characters/{character_id}": {
       "get": {
         "description": "Public information about a character",
-        "operationId": "GetCharactersCharacterId",
+        "operationId": "GetCharacter",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -13868,9 +13847,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13879,7 +13855,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdGet"
+                  "$ref": "#/components/schemas/CharacterGet"
                 }
               }
             },
@@ -13918,7 +13894,7 @@
     "/characters/{character_id}/agents_research": {
       "get": {
         "description": "Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints = remainderPoints + pointsPerDay * days(currentTime - researchStartDate)",
-        "operationId": "GetCharactersCharacterIdAgentsResearch",
+        "operationId": "GetCharacterAgentsResearch",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -13936,9 +13912,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -13947,7 +13920,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAgentsResearchGet"
+                  "$ref": "#/components/schemas/CharacterAgentsResearchGet"
                 }
               }
             },
@@ -13993,7 +13966,7 @@
     "/characters/{character_id}/assets": {
       "get": {
         "description": "Return a list of the characters assets",
-        "operationId": "GetCharactersCharacterIdAssets",
+        "operationId": "GetCharacterAssets",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14021,9 +13994,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14032,7 +14002,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAssetsGet"
+                  "$ref": "#/components/schemas/CharacterAssetsGet"
                 }
               }
             },
@@ -14085,7 +14055,7 @@
     "/characters/{character_id}/assets/locations": {
       "post": {
         "description": "Return locations for a set of item ids, which you can get from character assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)",
-        "operationId": "PostCharactersCharacterIdAssetsLocations",
+        "operationId": "PostCharacterAssetsLocations",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14101,9 +14071,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14132,7 +14099,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAssetsLocationsPost"
+                  "$ref": "#/components/schemas/CharacterAssetsLocationsPost"
                 }
               }
             },
@@ -14177,7 +14144,7 @@
     "/characters/{character_id}/assets/names": {
       "post": {
         "description": "Return names for a set of item ids, which you can get from character assets endpoint. Typically used for items that can customize names, like containers or ships.",
-        "operationId": "PostCharactersCharacterIdAssetsNames",
+        "operationId": "PostCharacterAssetsNames",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14193,9 +14160,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14224,7 +14188,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAssetsNamesPost"
+                  "$ref": "#/components/schemas/CharacterAssetsNamesPost"
                 }
               }
             },
@@ -14269,7 +14233,7 @@
     "/characters/{character_id}/attributes": {
       "get": {
         "description": "Return attributes of a character",
-        "operationId": "GetCharactersCharacterIdAttributes",
+        "operationId": "GetCharacterAttributes",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14287,9 +14251,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14298,7 +14259,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdAttributesGet"
+                  "$ref": "#/components/schemas/CharacterAttributesGet"
                 }
               }
             },
@@ -14344,7 +14305,7 @@
     "/characters/{character_id}/blueprints": {
       "get": {
         "description": "Return a list of blueprints the character owns",
-        "operationId": "GetCharactersCharacterIdBlueprints",
+        "operationId": "GetCharacterBlueprints",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14372,9 +14333,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14383,7 +14341,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdBlueprintsGet"
+                  "$ref": "#/components/schemas/CharacterBlueprintsGet"
                 }
               }
             },
@@ -14436,7 +14394,7 @@
     "/characters/{character_id}/calendar": {
       "get": {
         "description": "Get 50 event summaries from the calendar. If no from_event ID is given, the resource will return the next 50 chronological event summaries from now. If a from_event ID is specified, it will return the next 50 chronological event summaries from after that event",
-        "operationId": "GetCharactersCharacterIdCalendar",
+        "operationId": "GetCharacterCalendar",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14463,9 +14421,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14474,7 +14429,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCalendarGet"
+                  "$ref": "#/components/schemas/CharacterCalendarGet"
                 }
               }
             },
@@ -14520,7 +14475,7 @@
     "/characters/{character_id}/calendar/{event_id}": {
       "get": {
         "description": "Get all the information for a specific event",
-        "operationId": "GetCharactersCharacterIdCalendarEventId",
+        "operationId": "GetCharacterCalendarEvent",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14548,9 +14503,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14559,7 +14511,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCalendarEventIdGet"
+                  "$ref": "#/components/schemas/CharacterCalendarEventGet"
                 }
               }
             },
@@ -14603,7 +14555,7 @@
       },
       "put": {
         "description": "Set your response status to an event",
-        "operationId": "PutCharactersCharacterIdCalendarEventId",
+        "operationId": "PutCharacterCalendarEvent",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14629,9 +14581,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14704,7 +14653,7 @@
     "/characters/{character_id}/calendar/{event_id}/attendees": {
       "get": {
         "description": "Get all invited attendees for a given event",
-        "operationId": "GetCharactersCharacterIdCalendarEventIdAttendees",
+        "operationId": "GetCharacterCalendarEventAttendees",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14732,9 +14681,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14743,7 +14689,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCalendarEventIdAttendeesGet"
+                  "$ref": "#/components/schemas/CharacterCalendarEventAttendeesGet"
                 }
               }
             },
@@ -14789,7 +14735,7 @@
     "/characters/{character_id}/clones": {
       "get": {
         "description": "A list of the character's clones",
-        "operationId": "GetCharactersCharacterIdClones",
+        "operationId": "GetCharacterClones",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14807,9 +14753,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14818,7 +14761,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdClonesGet"
+                  "$ref": "#/components/schemas/CharacterClonesGet"
                 }
               }
             },
@@ -14864,7 +14807,7 @@
     "/characters/{character_id}/contacts": {
       "delete": {
         "description": "Bulk delete contacts",
-        "operationId": "DeleteCharactersCharacterIdContacts",
+        "operationId": "DeleteCharacterContacts",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14895,9 +14838,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -14944,7 +14884,7 @@
       },
       "get": {
         "description": "Return contacts of a character",
-        "operationId": "GetCharactersCharacterIdContacts",
+        "operationId": "GetCharacterContacts",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -14972,9 +14912,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -14983,7 +14920,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContactsGet"
+                  "$ref": "#/components/schemas/CharacterContactsGet"
                 }
               }
             },
@@ -15034,7 +14971,7 @@
       },
       "post": {
         "description": "Bulk add contacts with same settings",
-        "operationId": "PostCharactersCharacterIdContacts",
+        "operationId": "PostCharacterContacts",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15084,9 +15021,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15112,7 +15046,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContactsPost"
+                  "$ref": "#/components/schemas/CharacterContactsPost"
                 }
               }
             },
@@ -15155,7 +15089,7 @@
       },
       "put": {
         "description": "Bulk edit contacts with same settings",
-        "operationId": "PutCharactersCharacterIdContacts",
+        "operationId": "PutCharacterContacts",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15203,9 +15137,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -15271,7 +15202,7 @@
     "/characters/{character_id}/contacts/labels": {
       "get": {
         "description": "Return custom labels for a character's contacts",
-        "operationId": "GetCharactersCharacterIdContactsLabels",
+        "operationId": "GetCharacterContactsLabels",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15289,9 +15220,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15300,7 +15228,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContactsLabelsGet"
+                  "$ref": "#/components/schemas/CharacterContactsLabelsGet"
                 }
               }
             },
@@ -15346,7 +15274,7 @@
     "/characters/{character_id}/contracts": {
       "get": {
         "description": "Returns contracts available to a character, only if the character is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \"in_progress\".",
-        "operationId": "GetCharactersCharacterIdContracts",
+        "operationId": "GetCharacterContracts",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15374,9 +15302,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15385,7 +15310,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContractsGet"
+                  "$ref": "#/components/schemas/CharacterContractsGet"
                 }
               }
             },
@@ -15438,7 +15363,7 @@
     "/characters/{character_id}/contracts/{contract_id}/bids": {
       "get": {
         "description": "Lists bids on a particular auction contract",
-        "operationId": "GetCharactersCharacterIdContractsContractIdBids",
+        "operationId": "GetCharacterContractBids",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15466,9 +15391,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15477,7 +15399,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContractsContractIdBidsGet"
+                  "$ref": "#/components/schemas/CharacterContractBidsGet"
                 }
               }
             },
@@ -15523,7 +15445,7 @@
     "/characters/{character_id}/contracts/{contract_id}/items": {
       "get": {
         "description": "Lists items of a particular contract",
-        "operationId": "GetCharactersCharacterIdContractsContractIdItems",
+        "operationId": "GetCharacterContractItems",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15551,9 +15473,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15562,7 +15481,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdContractsContractIdItemsGet"
+                  "$ref": "#/components/schemas/CharacterContractItemsGet"
                 }
               }
             },
@@ -15608,7 +15527,7 @@
     "/characters/{character_id}/corporationhistory": {
       "get": {
         "description": "Get a list of all the corporations a character has been a member of",
-        "operationId": "GetCharactersCharacterIdCorporationhistory",
+        "operationId": "GetCharacterCorporationhistory",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15626,9 +15545,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15637,7 +15553,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCorporationhistoryGet"
+                  "$ref": "#/components/schemas/CharacterCorporationhistoryGet"
                 }
               }
             },
@@ -15676,7 +15592,7 @@
     "/characters/{character_id}/cspa": {
       "post": {
         "description": "Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost",
-        "operationId": "PostCharactersCharacterIdCspa",
+        "operationId": "PostCharacterCspa",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15692,9 +15608,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -15723,7 +15636,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdCspaPost"
+                  "$ref": "#/components/schemas/CharacterCspaPost"
                 }
               }
             },
@@ -15768,7 +15681,7 @@
     "/characters/{character_id}/fatigue": {
       "get": {
         "description": "Return a character's jump activation and fatigue information",
-        "operationId": "GetCharactersCharacterIdFatigue",
+        "operationId": "GetCharacterFatigue",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15786,9 +15699,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15797,7 +15707,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFatigueGet"
+                  "$ref": "#/components/schemas/CharacterFatigueGet"
                 }
               }
             },
@@ -15843,7 +15753,7 @@
     "/characters/{character_id}/fittings": {
       "get": {
         "description": "Return fittings of a character",
-        "operationId": "GetCharactersCharacterIdFittings",
+        "operationId": "GetCharacterFittings",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15861,9 +15771,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -15872,7 +15779,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFittingsGet"
+                  "$ref": "#/components/schemas/CharacterFittingsGet"
                 }
               }
             },
@@ -15916,7 +15823,7 @@
       },
       "post": {
         "description": "Save a new fitting for a character",
-        "operationId": "PostCharactersCharacterIdFittings",
+        "operationId": "PostCharacterFittings",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -15932,9 +15839,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16049,7 +15953,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFittingsPost"
+                  "$ref": "#/components/schemas/CharacterFittingsPost"
                 }
               }
             },
@@ -16094,7 +15998,7 @@
     "/characters/{character_id}/fittings/{fitting_id}": {
       "delete": {
         "description": "Delete a fitting from a character",
-        "operationId": "DeleteCharactersCharacterIdFittingsFittingId",
+        "operationId": "DeleteCharacterFitting",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16120,9 +16024,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16171,7 +16072,7 @@
     "/characters/{character_id}/fleet": {
       "get": {
         "description": "Return the fleet ID the character is in, if any.",
-        "operationId": "GetCharactersCharacterIdFleet",
+        "operationId": "GetCharacterFleet",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16189,9 +16090,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16200,7 +16098,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFleetGet"
+                  "$ref": "#/components/schemas/CharacterFleetGet"
                 }
               }
             },
@@ -16246,7 +16144,7 @@
     "/characters/{character_id}/fw/stats": {
       "get": {
         "description": "Statistical overview of a character involved in faction warfare\n\nThis route expires daily at 11:05",
-        "operationId": "GetCharactersCharacterIdFwStats",
+        "operationId": "GetCharacterFwStats",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16264,9 +16162,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16275,7 +16170,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdFwStatsGet"
+                  "$ref": "#/components/schemas/CharacterFwStatsGet"
                 }
               }
             },
@@ -16320,7 +16215,7 @@
     "/characters/{character_id}/implants": {
       "get": {
         "description": "Return implants on the active clone of a character",
-        "operationId": "GetCharactersCharacterIdImplants",
+        "operationId": "GetCharacterImplants",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16338,9 +16233,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16349,7 +16241,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdImplantsGet"
+                  "$ref": "#/components/schemas/CharacterImplantsGet"
                 }
               }
             },
@@ -16395,7 +16287,7 @@
     "/characters/{character_id}/industry/jobs": {
       "get": {
         "description": "List industry jobs placed by a character",
-        "operationId": "GetCharactersCharacterIdIndustryJobs",
+        "operationId": "GetCharacterIndustryJobs",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16421,9 +16313,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16432,7 +16321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdIndustryJobsGet"
+                  "$ref": "#/components/schemas/CharacterIndustryJobsGet"
                 }
               }
             },
@@ -16478,7 +16367,7 @@
     "/characters/{character_id}/killmails/recent": {
       "get": {
         "description": "Return a list of a character's kills and losses going back 90 days",
-        "operationId": "GetCharactersCharacterIdKillmailsRecent",
+        "operationId": "GetCharacterKillmailsRecent",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16506,9 +16395,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16517,7 +16403,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdKillmailsRecentGet"
+                  "$ref": "#/components/schemas/CharacterKillmailsRecentGet"
                 }
               }
             },
@@ -16570,7 +16456,7 @@
     "/characters/{character_id}/location": {
       "get": {
         "description": "Information about the characters current location. Returns the current solar system id, and also the current station or structure ID if applicable",
-        "operationId": "GetCharactersCharacterIdLocation",
+        "operationId": "GetCharacterLocation",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16588,9 +16474,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16599,7 +16482,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdLocationGet"
+                  "$ref": "#/components/schemas/CharacterLocationGet"
                 }
               }
             },
@@ -16645,7 +16528,7 @@
     "/characters/{character_id}/loyalty/points": {
       "get": {
         "description": "Return a list of loyalty points for all corporations the character has worked for",
-        "operationId": "GetCharactersCharacterIdLoyaltyPoints",
+        "operationId": "GetCharacterLoyaltyPoints",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16663,9 +16546,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16674,7 +16554,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdLoyaltyPointsGet"
+                  "$ref": "#/components/schemas/CharacterLoyaltyPointsGet"
                 }
               }
             },
@@ -16720,7 +16600,7 @@
     "/characters/{character_id}/mail": {
       "get": {
         "description": "Return the 50 most recent mail headers belonging to the character that match the query criteria. Queries can be filtered by label, and last_mail_id can be used to paginate backwards",
-        "operationId": "GetCharactersCharacterIdMail",
+        "operationId": "GetCharacterMail",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16762,9 +16642,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16773,7 +16650,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailGet"
+                  "$ref": "#/components/schemas/CharacterMailGet"
                 }
               }
             },
@@ -16817,7 +16694,7 @@
       },
       "post": {
         "description": "Create and send a new mail",
-        "operationId": "PostCharactersCharacterIdMail",
+        "operationId": "PostCharacterMail",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16833,9 +16710,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -16904,7 +16778,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailPost"
+                  "$ref": "#/components/schemas/CharacterMailPost"
                 }
               }
             },
@@ -16949,7 +16823,7 @@
     "/characters/{character_id}/mail/labels": {
       "get": {
         "description": "Return a list of the users mail labels, unread counts for each label and a total unread count.",
-        "operationId": "GetCharactersCharacterIdMailLabels",
+        "operationId": "GetCharacterMailLabels",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -16967,9 +16841,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -16978,7 +16849,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailLabelsGet"
+                  "$ref": "#/components/schemas/CharacterMailLabelsGet"
                 }
               }
             },
@@ -17022,7 +16893,7 @@
       },
       "post": {
         "description": "Create a mail label",
-        "operationId": "PostCharactersCharacterIdMailLabels",
+        "operationId": "PostCharacterMailLabels",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17038,9 +16909,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17096,7 +16964,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailLabelsPost"
+                  "$ref": "#/components/schemas/CharacterMailLabelsPost"
                 }
               }
             },
@@ -17141,7 +17009,7 @@
     "/characters/{character_id}/mail/labels/{label_id}": {
       "delete": {
         "description": "Delete a mail label",
-        "operationId": "DeleteCharactersCharacterIdMailLabelsLabelId",
+        "operationId": "DeleteCharacterMailLabel",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17167,9 +17035,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17218,7 +17083,7 @@
     "/characters/{character_id}/mail/lists": {
       "get": {
         "description": "Return all mailing lists that the character is subscribed to",
-        "operationId": "GetCharactersCharacterIdMailLists",
+        "operationId": "GetCharacterMailLists",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17236,9 +17101,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17247,7 +17109,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailListsGet"
+                  "$ref": "#/components/schemas/CharacterMailListsGet"
                 }
               }
             },
@@ -17293,7 +17155,7 @@
     "/characters/{character_id}/mail/{mail_id}": {
       "delete": {
         "description": "Delete a mail",
-        "operationId": "DeleteCharactersCharacterIdMailMailId",
+        "operationId": "DeleteCharacterMailMail",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17319,9 +17181,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17368,7 +17227,7 @@
       },
       "get": {
         "description": "Return the contents of an EVE mail",
-        "operationId": "GetCharactersCharacterIdMailMailId",
+        "operationId": "GetCharacterMailMail",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17396,9 +17255,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17407,7 +17263,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMailMailIdGet"
+                  "$ref": "#/components/schemas/CharacterMailMailGet"
                 }
               }
             },
@@ -17451,7 +17307,7 @@
       },
       "put": {
         "description": "Update metadata about a mail",
-        "operationId": "PutCharactersCharacterIdMailMailId",
+        "operationId": "PutCharacterMailMail",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17477,9 +17333,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -17555,7 +17408,7 @@
     "/characters/{character_id}/medals": {
       "get": {
         "description": "Return a list of medals the character has",
-        "operationId": "GetCharactersCharacterIdMedals",
+        "operationId": "GetCharacterMedals",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17573,9 +17426,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17584,7 +17434,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMedalsGet"
+                  "$ref": "#/components/schemas/CharacterMedalsGet"
                 }
               }
             },
@@ -17630,7 +17480,7 @@
     "/characters/{character_id}/mining": {
       "get": {
         "description": "Paginated record of all mining done by a character for the past 30 days",
-        "operationId": "GetCharactersCharacterIdMining",
+        "operationId": "GetCharacterMining",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17658,9 +17508,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17669,7 +17516,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdMiningGet"
+                  "$ref": "#/components/schemas/CharacterMiningGet"
                 }
               }
             },
@@ -17722,7 +17569,7 @@
     "/characters/{character_id}/notifications": {
       "get": {
         "description": "Return character notifications",
-        "operationId": "GetCharactersCharacterIdNotifications",
+        "operationId": "GetCharacterNotifications",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17740,9 +17587,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17751,7 +17595,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdNotificationsGet"
+                  "$ref": "#/components/schemas/CharacterNotificationsGet"
                 }
               }
             },
@@ -17797,7 +17641,7 @@
     "/characters/{character_id}/notifications/contacts": {
       "get": {
         "description": "Return notifications about having been added to someone's contact list",
-        "operationId": "GetCharactersCharacterIdNotificationsContacts",
+        "operationId": "GetCharacterNotificationsContacts",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17815,9 +17659,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17826,7 +17667,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdNotificationsContactsGet"
+                  "$ref": "#/components/schemas/CharacterNotificationsContactsGet"
                 }
               }
             },
@@ -17872,7 +17713,7 @@
     "/characters/{character_id}/online": {
       "get": {
         "description": "Checks if the character is currently online",
-        "operationId": "GetCharactersCharacterIdOnline",
+        "operationId": "GetCharacterOnline",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17890,9 +17731,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17901,7 +17739,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdOnlineGet"
+                  "$ref": "#/components/schemas/CharacterOnlineGet"
                 }
               }
             },
@@ -17947,7 +17785,7 @@
     "/characters/{character_id}/orders": {
       "get": {
         "description": "List open market orders placed by a character",
-        "operationId": "GetCharactersCharacterIdOrders",
+        "operationId": "GetCharacterOrders",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -17965,9 +17803,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -17976,7 +17811,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdOrdersGet"
+                  "$ref": "#/components/schemas/CharacterOrdersGet"
                 }
               }
             },
@@ -18022,7 +17857,7 @@
     "/characters/{character_id}/orders/history": {
       "get": {
         "description": "List cancelled and expired market orders placed by a character up to 90 days in the past.",
-        "operationId": "GetCharactersCharacterIdOrdersHistory",
+        "operationId": "GetCharacterOrdersHistory",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18050,9 +17885,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18061,7 +17893,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdOrdersHistoryGet"
+                  "$ref": "#/components/schemas/CharacterOrdersHistoryGet"
                 }
               }
             },
@@ -18114,7 +17946,7 @@
     "/characters/{character_id}/planets": {
       "get": {
         "description": "Returns a list of all planetary colonies owned by a character.",
-        "operationId": "GetCharactersCharacterIdPlanets",
+        "operationId": "GetCharacterPlanets",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18132,9 +17964,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18143,7 +17972,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdPlanetsGet"
+                  "$ref": "#/components/schemas/CharacterPlanetsGet"
                 }
               }
             },
@@ -18189,7 +18018,7 @@
     "/characters/{character_id}/planets/{planet_id}": {
       "get": {
         "description": "Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information will not update until this criteria is met.",
-        "operationId": "GetCharactersCharacterIdPlanetsPlanetId",
+        "operationId": "GetCharacterPlanet",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18217,9 +18046,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18228,7 +18054,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdPlanetsPlanetIdGet"
+                  "$ref": "#/components/schemas/CharacterPlanetGet"
                 }
               }
             },
@@ -18273,7 +18099,7 @@
     "/characters/{character_id}/portrait": {
       "get": {
         "description": "Get portrait urls for a character\n\nThis route expires daily at 11:05",
-        "operationId": "GetCharactersCharacterIdPortrait",
+        "operationId": "GetCharacterPortrait",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18291,9 +18117,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18302,7 +18125,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdPortraitGet"
+                  "$ref": "#/components/schemas/CharacterPortraitGet"
                 }
               }
             },
@@ -18340,7 +18163,7 @@
     "/characters/{character_id}/roles": {
       "get": {
         "description": "Returns a character's corporation roles",
-        "operationId": "GetCharactersCharacterIdRoles",
+        "operationId": "GetCharacterRoles",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18358,9 +18181,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18369,7 +18189,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdRolesGet"
+                  "$ref": "#/components/schemas/CharacterRolesGet"
                 }
               }
             },
@@ -18415,7 +18235,7 @@
     "/characters/{character_id}/search": {
       "get": {
         "description": "Search for entities that match a given sub-string.",
-        "operationId": "GetCharactersCharacterIdSearch",
+        "operationId": "GetCharacterSearch",
         "parameters": [
           {
             "in": "query",
@@ -18480,9 +18300,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18491,7 +18308,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdSearchGet"
+                  "$ref": "#/components/schemas/CharacterSearchGet"
                 }
               }
             },
@@ -18540,7 +18357,7 @@
     "/characters/{character_id}/ship": {
       "get": {
         "description": "Get the current ship type, name and id",
-        "operationId": "GetCharactersCharacterIdShip",
+        "operationId": "GetCharacterShip",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18558,9 +18375,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18569,7 +18383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdShipGet"
+                  "$ref": "#/components/schemas/CharacterShipGet"
                 }
               }
             },
@@ -18615,7 +18429,7 @@
     "/characters/{character_id}/skillqueue": {
       "get": {
         "description": "List the configured skill queue for the given character",
-        "operationId": "GetCharactersCharacterIdSkillqueue",
+        "operationId": "GetCharacterSkillqueue",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18633,9 +18447,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18644,7 +18455,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdSkillqueueGet"
+                  "$ref": "#/components/schemas/CharacterSkillqueueGet"
                 }
               }
             },
@@ -18690,7 +18501,7 @@
     "/characters/{character_id}/skills": {
       "get": {
         "description": "List all trained skills for the given character",
-        "operationId": "GetCharactersCharacterIdSkills",
+        "operationId": "GetCharacterSkills",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18708,9 +18519,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18719,7 +18527,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdSkillsGet"
+                  "$ref": "#/components/schemas/CharacterSkillsGet"
                 }
               }
             },
@@ -18765,7 +18573,7 @@
     "/characters/{character_id}/standings": {
       "get": {
         "description": "Return character standings from agents, NPC corporations, and factions",
-        "operationId": "GetCharactersCharacterIdStandings",
+        "operationId": "GetCharacterStandings",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18783,9 +18591,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18794,7 +18599,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdStandingsGet"
+                  "$ref": "#/components/schemas/CharacterStandingsGet"
                 }
               }
             },
@@ -18840,7 +18645,7 @@
     "/characters/{character_id}/titles": {
       "get": {
         "description": "Returns a character's titles",
-        "operationId": "GetCharactersCharacterIdTitles",
+        "operationId": "GetCharacterTitles",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18858,9 +18663,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18869,7 +18671,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdTitlesGet"
+                  "$ref": "#/components/schemas/CharacterTitlesGet"
                 }
               }
             },
@@ -18915,7 +18717,7 @@
     "/characters/{character_id}/wallet": {
       "get": {
         "description": "Returns a character's wallet balance",
-        "operationId": "GetCharactersCharacterIdWallet",
+        "operationId": "GetCharacterWallet",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -18933,9 +18735,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -18944,7 +18743,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdWalletGet"
+                  "$ref": "#/components/schemas/CharacterWalletGet"
                 }
               }
             },
@@ -18990,7 +18789,7 @@
     "/characters/{character_id}/wallet/journal": {
       "get": {
         "description": "Retrieve the given character's wallet journal going 30 days back",
-        "operationId": "GetCharactersCharacterIdWalletJournal",
+        "operationId": "GetCharacterWalletJournal",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -19018,9 +18817,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19029,7 +18825,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdWalletJournalGet"
+                  "$ref": "#/components/schemas/CharacterWalletJournalGet"
                 }
               }
             },
@@ -19082,7 +18878,7 @@
     "/characters/{character_id}/wallet/transactions": {
       "get": {
         "description": "Get wallet transactions of a character",
-        "operationId": "GetCharactersCharacterIdWalletTransactions",
+        "operationId": "GetCharacterWalletTransactions",
         "parameters": [
           {
             "description": "The ID of the character",
@@ -19109,9 +18905,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19120,7 +18913,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CharactersCharacterIdWalletTransactionsGet"
+                  "$ref": "#/components/schemas/CharacterWalletTransactionsGet"
                 }
               }
             },
@@ -19166,7 +18959,7 @@
     "/contracts/public/bids/{contract_id}": {
       "get": {
         "description": "Lists bids on a public auction contract",
-        "operationId": "GetContractsPublicBidsContractId",
+        "operationId": "GetContractsPublicBidsContract",
         "parameters": [
           {
             "in": "path",
@@ -19195,9 +18988,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19206,7 +18996,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContractsPublicBidsContractIdGet"
+                  "$ref": "#/components/schemas/ContractsPublicBidsContractGet"
                 }
               }
             },
@@ -19261,7 +19051,7 @@
     "/contracts/public/items/{contract_id}": {
       "get": {
         "description": "Lists items of a public contract",
-        "operationId": "GetContractsPublicItemsContractId",
+        "operationId": "GetContractsPublicItemsContract",
         "parameters": [
           {
             "in": "path",
@@ -19290,9 +19080,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19301,7 +19088,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContractsPublicItemsContractIdGet"
+                  "$ref": "#/components/schemas/ContractsPublicItemsContractGet"
                 }
               }
             },
@@ -19356,7 +19143,7 @@
     "/contracts/public/{region_id}": {
       "get": {
         "description": "Returns a paginated list of all public contracts in the given region",
-        "operationId": "GetContractsPublicRegionId",
+        "operationId": "GetContractsPublicRegion",
         "parameters": [
           {
             "in": "query",
@@ -19385,9 +19172,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19396,7 +19180,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContractsPublicRegionIdGet"
+                  "$ref": "#/components/schemas/ContractsPublicRegionGet"
                 }
               }
             },
@@ -19442,7 +19226,7 @@
     "/corporation/{corporation_id}/mining/extractions": {
       "get": {
         "description": "Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.",
-        "operationId": "GetCorporationCorporationIdMiningExtractions",
+        "operationId": "GetCorporationCorporationMiningExtractions",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -19470,9 +19254,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19481,7 +19262,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationCorporationIdMiningExtractionsGet"
+                  "$ref": "#/components/schemas/CorporationCorporationMiningExtractionsGet"
                 }
               }
             },
@@ -19537,7 +19318,7 @@
     "/corporation/{corporation_id}/mining/observers": {
       "get": {
         "description": "Paginated list of all entities capable of observing and recording mining for a corporation",
-        "operationId": "GetCorporationCorporationIdMiningObservers",
+        "operationId": "GetCorporationCorporationMiningObservers",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -19565,9 +19346,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19576,7 +19354,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationCorporationIdMiningObserversGet"
+                  "$ref": "#/components/schemas/CorporationCorporationMiningObserversGet"
                 }
               }
             },
@@ -19632,7 +19410,7 @@
     "/corporation/{corporation_id}/mining/observers/{observer_id}": {
       "get": {
         "description": "Paginated record of all mining seen by an observer",
-        "operationId": "GetCorporationCorporationIdMiningObserversObserverId",
+        "operationId": "GetCorporationCorporationMiningObserver",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -19670,9 +19448,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19681,7 +19456,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationCorporationIdMiningObserversObserverIdGet"
+                  "$ref": "#/components/schemas/CorporationCorporationMiningObserverGet"
                 }
               }
             },
@@ -19746,9 +19521,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19795,7 +19567,7 @@
     "/corporations/{corporation_id}": {
       "get": {
         "description": "Public information about a corporation",
-        "operationId": "GetCorporationsCorporationId",
+        "operationId": "GetCorporation",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -19813,9 +19585,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19824,7 +19593,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdGet"
+                  "$ref": "#/components/schemas/CorporationGet"
                 }
               }
             },
@@ -19863,7 +19632,7 @@
     "/corporations/{corporation_id}/alliancehistory": {
       "get": {
         "description": "Get a list of all the alliances a corporation has been a member of",
-        "operationId": "GetCorporationsCorporationIdAlliancehistory",
+        "operationId": "GetCorporationAlliancehistory",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -19881,9 +19650,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19892,7 +19658,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAlliancehistoryGet"
+                  "$ref": "#/components/schemas/CorporationAlliancehistoryGet"
                 }
               }
             },
@@ -19931,7 +19697,7 @@
     "/corporations/{corporation_id}/assets": {
       "get": {
         "description": "Return a list of the corporation assets",
-        "operationId": "GetCorporationsCorporationIdAssets",
+        "operationId": "GetCorporationAssets",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -19959,9 +19725,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -19970,7 +19733,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAssetsGet"
+                  "$ref": "#/components/schemas/CorporationAssetsGet"
                 }
               }
             },
@@ -20026,7 +19789,7 @@
     "/corporations/{corporation_id}/assets/locations": {
       "post": {
         "description": "Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)",
-        "operationId": "PostCorporationsCorporationIdAssetsLocations",
+        "operationId": "PostCorporationAssetsLocations",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20042,9 +19805,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -20073,7 +19833,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAssetsLocationsPost"
+                  "$ref": "#/components/schemas/CorporationAssetsLocationsPost"
                 }
               }
             },
@@ -20121,7 +19881,7 @@
     "/corporations/{corporation_id}/assets/names": {
       "post": {
         "description": "Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships",
-        "operationId": "PostCorporationsCorporationIdAssetsNames",
+        "operationId": "PostCorporationAssetsNames",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20137,9 +19897,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -20168,7 +19925,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdAssetsNamesPost"
+                  "$ref": "#/components/schemas/CorporationAssetsNamesPost"
                 }
               }
             },
@@ -20216,7 +19973,7 @@
     "/corporations/{corporation_id}/blueprints": {
       "get": {
         "description": "Returns a list of blueprints the corporation owns",
-        "operationId": "GetCorporationsCorporationIdBlueprints",
+        "operationId": "GetCorporationBlueprints",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20244,9 +20001,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20255,7 +20009,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdBlueprintsGet"
+                  "$ref": "#/components/schemas/CorporationBlueprintsGet"
                 }
               }
             },
@@ -20311,7 +20065,7 @@
     "/corporations/{corporation_id}/contacts": {
       "get": {
         "description": "Return contacts of a corporation",
-        "operationId": "GetCorporationsCorporationIdContacts",
+        "operationId": "GetCorporationContacts",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20339,9 +20093,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20350,7 +20101,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContactsGet"
+                  "$ref": "#/components/schemas/CorporationContactsGet"
                 }
               }
             },
@@ -20403,7 +20154,7 @@
     "/corporations/{corporation_id}/contacts/labels": {
       "get": {
         "description": "Return custom labels for a corporation's contacts",
-        "operationId": "GetCorporationsCorporationIdContactsLabels",
+        "operationId": "GetCorporationContactsLabels",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20421,9 +20172,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20432,7 +20180,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContactsLabelsGet"
+                  "$ref": "#/components/schemas/CorporationContactsLabelsGet"
                 }
               }
             },
@@ -20478,7 +20226,7 @@
     "/corporations/{corporation_id}/containers/logs": {
       "get": {
         "description": "Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation",
-        "operationId": "GetCorporationsCorporationIdContainersLogs",
+        "operationId": "GetCorporationContainersLogs",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20506,9 +20254,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20517,7 +20262,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContainersLogsGet"
+                  "$ref": "#/components/schemas/CorporationContainersLogsGet"
                 }
               }
             },
@@ -20573,7 +20318,7 @@
     "/corporations/{corporation_id}/contracts": {
       "get": {
         "description": "Returns contracts available to a corporation, only if the corporation is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \"in_progress\".",
-        "operationId": "GetCorporationsCorporationIdContracts",
+        "operationId": "GetCorporationContracts",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20601,9 +20346,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20612,7 +20354,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContractsGet"
+                  "$ref": "#/components/schemas/CorporationContractsGet"
                 }
               }
             },
@@ -20665,7 +20407,7 @@
     "/corporations/{corporation_id}/contracts/{contract_id}/bids": {
       "get": {
         "description": "Lists bids on a particular auction contract",
-        "operationId": "GetCorporationsCorporationIdContractsContractIdBids",
+        "operationId": "GetCorporationContractBids",
         "parameters": [
           {
             "in": "path",
@@ -20703,9 +20445,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20714,7 +20453,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContractsContractIdBidsGet"
+                  "$ref": "#/components/schemas/CorporationContractBidsGet"
                 }
               }
             },
@@ -20767,7 +20506,7 @@
     "/corporations/{corporation_id}/contracts/{contract_id}/items": {
       "get": {
         "description": "Lists items of a particular contract",
-        "operationId": "GetCorporationsCorporationIdContractsContractIdItems",
+        "operationId": "GetCorporationContractItems",
         "parameters": [
           {
             "in": "path",
@@ -20795,9 +20534,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20806,7 +20542,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdContractsContractIdItemsGet"
+                  "$ref": "#/components/schemas/CorporationContractItemsGet"
                 }
               }
             },
@@ -20852,7 +20588,7 @@
     "/corporations/{corporation_id}/customs_offices": {
       "get": {
         "description": "List customs offices owned by a corporation",
-        "operationId": "GetCorporationsCorporationIdCustomsOffices",
+        "operationId": "GetCorporationCustomsOffices",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20880,9 +20616,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20891,7 +20624,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdCustomsOfficesGet"
+                  "$ref": "#/components/schemas/CorporationCustomsOfficesGet"
                 }
               }
             },
@@ -20947,7 +20680,7 @@
     "/corporations/{corporation_id}/divisions": {
       "get": {
         "description": "Return corporation hangar and wallet division names, only show if a division is not using the default name",
-        "operationId": "GetCorporationsCorporationIdDivisions",
+        "operationId": "GetCorporationDivisions",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -20965,9 +20698,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -20976,7 +20706,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdDivisionsGet"
+                  "$ref": "#/components/schemas/CorporationDivisionsGet"
                 }
               }
             },
@@ -21025,7 +20755,7 @@
     "/corporations/{corporation_id}/facilities": {
       "get": {
         "description": "Return a corporation's facilities",
-        "operationId": "GetCorporationsCorporationIdFacilities",
+        "operationId": "GetCorporationFacilities",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21043,9 +20773,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21054,7 +20781,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdFacilitiesGet"
+                  "$ref": "#/components/schemas/CorporationFacilitiesGet"
                 }
               }
             },
@@ -21103,7 +20830,7 @@
     "/corporations/{corporation_id}/fw/stats": {
       "get": {
         "description": "Statistics about a corporation involved in faction warfare\n\nThis route expires daily at 11:05",
-        "operationId": "GetCorporationsCorporationIdFwStats",
+        "operationId": "GetCorporationFwStats",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21121,9 +20848,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21132,7 +20856,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdFwStatsGet"
+                  "$ref": "#/components/schemas/CorporationFwStatsGet"
                 }
               }
             },
@@ -21177,7 +20901,7 @@
     "/corporations/{corporation_id}/icons": {
       "get": {
         "description": "Get the icon urls for a corporation",
-        "operationId": "GetCorporationsCorporationIdIcons",
+        "operationId": "GetCorporationIcons",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21195,9 +20919,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21206,7 +20927,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdIconsGet"
+                  "$ref": "#/components/schemas/CorporationIconsGet"
                 }
               }
             },
@@ -21245,7 +20966,7 @@
     "/corporations/{corporation_id}/industry/jobs": {
       "get": {
         "description": "List industry jobs run by a corporation",
-        "operationId": "GetCorporationsCorporationIdIndustryJobs",
+        "operationId": "GetCorporationIndustryJobs",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21282,9 +21003,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21293,7 +21011,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdIndustryJobsGet"
+                  "$ref": "#/components/schemas/CorporationIndustryJobsGet"
                 }
               }
             },
@@ -21349,7 +21067,7 @@
     "/corporations/{corporation_id}/killmails/recent": {
       "get": {
         "description": "Get a list of a corporation's kills and losses going back 90 days",
-        "operationId": "GetCorporationsCorporationIdKillmailsRecent",
+        "operationId": "GetCorporationKillmailsRecent",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21377,9 +21095,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21388,7 +21103,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdKillmailsRecentGet"
+                  "$ref": "#/components/schemas/CorporationKillmailsRecentGet"
                 }
               }
             },
@@ -21444,7 +21159,7 @@
     "/corporations/{corporation_id}/medals": {
       "get": {
         "description": "Returns a corporation's medals",
-        "operationId": "GetCorporationsCorporationIdMedals",
+        "operationId": "GetCorporationMedals",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21472,9 +21187,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21483,7 +21195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMedalsGet"
+                  "$ref": "#/components/schemas/CorporationMedalsGet"
                 }
               }
             },
@@ -21536,7 +21248,7 @@
     "/corporations/{corporation_id}/medals/issued": {
       "get": {
         "description": "Returns medals issued by a corporation",
-        "operationId": "GetCorporationsCorporationIdMedalsIssued",
+        "operationId": "GetCorporationMedalsIssued",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21564,9 +21276,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21575,7 +21284,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMedalsIssuedGet"
+                  "$ref": "#/components/schemas/CorporationMedalsIssuedGet"
                 }
               }
             },
@@ -21631,7 +21340,7 @@
     "/corporations/{corporation_id}/members": {
       "get": {
         "description": "Return the current member list of a corporation, the token's character need to be a member of the corporation.",
-        "operationId": "GetCorporationsCorporationIdMembers",
+        "operationId": "GetCorporationMembers",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21649,9 +21358,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21660,7 +21366,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembersGet"
+                  "$ref": "#/components/schemas/CorporationMembersGet"
                 }
               }
             },
@@ -21706,7 +21412,7 @@
     "/corporations/{corporation_id}/members/limit": {
       "get": {
         "description": "Return a corporation's member limit, not including CEO himself",
-        "operationId": "GetCorporationsCorporationIdMembersLimit",
+        "operationId": "GetCorporationMembersLimit",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21724,9 +21430,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21735,7 +21438,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembersLimitGet"
+                  "$ref": "#/components/schemas/CorporationMembersLimitGet"
                 }
               }
             },
@@ -21784,7 +21487,7 @@
     "/corporations/{corporation_id}/members/titles": {
       "get": {
         "description": "Returns a corporation's members' titles",
-        "operationId": "GetCorporationsCorporationIdMembersTitles",
+        "operationId": "GetCorporationMembersTitles",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21802,9 +21505,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21813,7 +21513,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembersTitlesGet"
+                  "$ref": "#/components/schemas/CorporationMembersTitlesGet"
                 }
               }
             },
@@ -21862,7 +21562,7 @@
     "/corporations/{corporation_id}/membertracking": {
       "get": {
         "description": "Returns additional information about a corporation's members which helps tracking their activities",
-        "operationId": "GetCorporationsCorporationIdMembertracking",
+        "operationId": "GetCorporationMembertracking",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21880,9 +21580,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21891,7 +21588,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdMembertrackingGet"
+                  "$ref": "#/components/schemas/CorporationMembertrackingGet"
                 }
               }
             },
@@ -21940,7 +21637,7 @@
     "/corporations/{corporation_id}/orders": {
       "get": {
         "description": "List open market orders placed on behalf of a corporation",
-        "operationId": "GetCorporationsCorporationIdOrders",
+        "operationId": "GetCorporationOrders",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -21968,9 +21665,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -21979,7 +21673,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdOrdersGet"
+                  "$ref": "#/components/schemas/CorporationOrdersGet"
                 }
               }
             },
@@ -22036,7 +21730,7 @@
     "/corporations/{corporation_id}/orders/history": {
       "get": {
         "description": "List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.",
-        "operationId": "GetCorporationsCorporationIdOrdersHistory",
+        "operationId": "GetCorporationOrdersHistory",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -22064,9 +21758,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22075,7 +21766,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdOrdersHistoryGet"
+                  "$ref": "#/components/schemas/CorporationOrdersHistoryGet"
                 }
               }
             },
@@ -22204,9 +21895,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22303,9 +21991,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -22413,9 +22098,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -22546,9 +22228,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22618,7 +22297,7 @@
     "/corporations/{corporation_id}/roles": {
       "get": {
         "description": "Return the roles of all members if the character has the personnel manager role or any grantable role.",
-        "operationId": "GetCorporationsCorporationIdRoles",
+        "operationId": "GetCorporationRoles",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -22636,9 +22315,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22647,7 +22323,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdRolesGet"
+                  "$ref": "#/components/schemas/CorporationRolesGet"
                 }
               }
             },
@@ -22693,7 +22369,7 @@
     "/corporations/{corporation_id}/roles/history": {
       "get": {
         "description": "Return how roles have changed for a coporation's members, up to a month",
-        "operationId": "GetCorporationsCorporationIdRolesHistory",
+        "operationId": "GetCorporationRolesHistory",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -22721,9 +22397,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22732,7 +22405,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdRolesHistoryGet"
+                  "$ref": "#/components/schemas/CorporationRolesHistoryGet"
                 }
               }
             },
@@ -22788,7 +22461,7 @@
     "/corporations/{corporation_id}/shareholders": {
       "get": {
         "description": "Return the current shareholders of a corporation.",
-        "operationId": "GetCorporationsCorporationIdShareholders",
+        "operationId": "GetCorporationShareholders",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -22816,9 +22489,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22827,7 +22497,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdShareholdersGet"
+                  "$ref": "#/components/schemas/CorporationShareholdersGet"
                 }
               }
             },
@@ -22883,7 +22553,7 @@
     "/corporations/{corporation_id}/standings": {
       "get": {
         "description": "Return corporation standings from agents, NPC corporations, and factions",
-        "operationId": "GetCorporationsCorporationIdStandings",
+        "operationId": "GetCorporationStandings",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -22911,9 +22581,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -22922,7 +22589,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStandingsGet"
+                  "$ref": "#/components/schemas/CorporationStandingsGet"
                 }
               }
             },
@@ -22975,7 +22642,7 @@
     "/corporations/{corporation_id}/starbases": {
       "get": {
         "description": "Returns list of corporation starbases (POSes)",
-        "operationId": "GetCorporationsCorporationIdStarbases",
+        "operationId": "GetCorporationStarbases",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -23003,9 +22670,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23014,7 +22678,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStarbasesGet"
+                  "$ref": "#/components/schemas/CorporationStarbasesGet"
                 }
               }
             },
@@ -23070,7 +22734,7 @@
     "/corporations/{corporation_id}/starbases/{starbase_id}": {
       "get": {
         "description": "Returns various settings and fuels of a starbase (POS)",
-        "operationId": "GetCorporationsCorporationIdStarbasesStarbaseId",
+        "operationId": "GetCorporationStarbase",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -23108,9 +22772,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23119,7 +22780,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStarbasesStarbaseIdGet"
+                  "$ref": "#/components/schemas/CorporationStarbaseGet"
                 }
               }
             },
@@ -23168,7 +22829,7 @@
     "/corporations/{corporation_id}/structures": {
       "get": {
         "description": "Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th",
-        "operationId": "GetCorporationsCorporationIdStructures",
+        "operationId": "GetCorporationStructures",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -23196,9 +22857,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23207,7 +22865,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdStructuresGet"
+                  "$ref": "#/components/schemas/CorporationStructuresGet"
                 }
               }
             },
@@ -23266,7 +22924,7 @@
     "/corporations/{corporation_id}/titles": {
       "get": {
         "description": "Returns a corporation's titles",
-        "operationId": "GetCorporationsCorporationIdTitles",
+        "operationId": "GetCorporationTitles",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -23284,9 +22942,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23295,7 +22950,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdTitlesGet"
+                  "$ref": "#/components/schemas/CorporationTitlesGet"
                 }
               }
             },
@@ -23344,7 +22999,7 @@
     "/corporations/{corporation_id}/wallets": {
       "get": {
         "description": "Get a corporation's wallets",
-        "operationId": "GetCorporationsCorporationIdWallets",
+        "operationId": "GetCorporationWallets",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -23362,9 +23017,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23373,7 +23025,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdWalletsGet"
+                  "$ref": "#/components/schemas/CorporationWalletsGet"
                 }
               }
             },
@@ -23423,7 +23075,7 @@
     "/corporations/{corporation_id}/wallets/{division}/journal": {
       "get": {
         "description": "Retrieve the given corporation's wallet journal for the given division going 30 days back",
-        "operationId": "GetCorporationsCorporationIdWalletsDivisionJournal",
+        "operationId": "GetCorporationWalletsDivisionJournal",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -23461,9 +23113,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23472,7 +23121,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdWalletsDivisionJournalGet"
+                  "$ref": "#/components/schemas/CorporationWalletsDivisionJournalGet"
                 }
               }
             },
@@ -23529,7 +23178,7 @@
     "/corporations/{corporation_id}/wallets/{division}/transactions": {
       "get": {
         "description": "Get wallet transactions of a corporation",
-        "operationId": "GetCorporationsCorporationIdWalletsDivisionTransactions",
+        "operationId": "GetCorporationWalletsDivisionTransactions",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -23566,9 +23215,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23577,7 +23223,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorporationsCorporationIdWalletsDivisionTransactionsGet"
+                  "$ref": "#/components/schemas/CorporationWalletsDivisionTransactionsGet"
                 }
               }
             },
@@ -23636,9 +23282,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23685,7 +23328,7 @@
     "/dogma/attributes/{attribute_id}": {
       "get": {
         "description": "Get information on a dogma attribute\n\nThis route expires daily at 11:05",
-        "operationId": "GetDogmaAttributesAttributeId",
+        "operationId": "GetDogmaAttribute",
         "parameters": [
           {
             "in": "path",
@@ -23704,9 +23347,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23715,7 +23355,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DogmaAttributesAttributeIdGet"
+                  "$ref": "#/components/schemas/DogmaAttributeGet"
                 }
               }
             },
@@ -23753,7 +23393,7 @@
     "/dogma/dynamic/items/{type_id}/{item_id}": {
       "get": {
         "description": "Returns info about a dynamic item resulting from mutation with a mutaplasmid.\n\nThis route expires daily at 11:05",
-        "operationId": "GetDogmaDynamicItemsTypeIdItemId",
+        "operationId": "GetDogmaDynamicItemsTypeItem",
         "parameters": [
           {
             "in": "path",
@@ -23780,9 +23420,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23791,7 +23428,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DogmaDynamicItemsTypeIdItemIdGet"
+                  "$ref": "#/components/schemas/DogmaDynamicItemsTypeItemGet"
                 }
               }
             },
@@ -23836,9 +23473,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -23887,7 +23521,7 @@
     "/dogma/effects/{effect_id}": {
       "get": {
         "description": "Get information on a dogma effect\n\nThis route expires daily at 11:05",
-        "operationId": "GetDogmaEffectsEffectId",
+        "operationId": "GetDogmaEffect",
         "parameters": [
           {
             "in": "path",
@@ -23906,9 +23540,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23917,7 +23548,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DogmaEffectsEffectIdGet"
+                  "$ref": "#/components/schemas/DogmaEffectGet"
                 }
               }
             },
@@ -23955,7 +23586,7 @@
     "/fleets/{fleet_id}": {
       "get": {
         "description": "Return details about a fleet",
-        "operationId": "GetFleetsFleetId",
+        "operationId": "GetFleet",
         "parameters": [
           {
             "in": "path",
@@ -23974,9 +23605,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -23985,7 +23613,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdGet"
+                  "$ref": "#/components/schemas/FleetGet"
                 }
               }
             },
@@ -24029,7 +23657,7 @@
       },
       "put": {
         "description": "Update settings about a fleet",
-        "operationId": "PutFleetsFleetId",
+        "operationId": "PutFleet",
         "parameters": [
           {
             "in": "path",
@@ -24046,9 +23674,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24117,7 +23742,7 @@
     "/fleets/{fleet_id}/members": {
       "get": {
         "description": "Return information about fleet members",
-        "operationId": "GetFleetsFleetIdMembers",
+        "operationId": "GetFleetMembers",
         "parameters": [
           {
             "in": "path",
@@ -24136,9 +23761,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24147,7 +23769,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdMembersGet"
+                  "$ref": "#/components/schemas/FleetMembersGet"
                 }
               }
             },
@@ -24194,7 +23816,7 @@
       },
       "post": {
         "description": "Invite a character into the fleet. If a character has a CSPA charge set it is not possible to invite them to the fleet using ESI",
-        "operationId": "PostFleetsFleetIdMembers",
+        "operationId": "PostFleetMembers",
         "parameters": [
           {
             "in": "path",
@@ -24211,9 +23833,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24301,7 +23920,7 @@
     "/fleets/{fleet_id}/members/{member_id}": {
       "delete": {
         "description": "Kick a fleet member",
-        "operationId": "DeleteFleetsFleetIdMembersMemberId",
+        "operationId": "DeleteFleetMember",
         "parameters": [
           {
             "in": "path",
@@ -24328,9 +23947,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24377,7 +23993,7 @@
       },
       "put": {
         "description": "Move a fleet member around",
-        "operationId": "PutFleetsFleetIdMembersMemberId",
+        "operationId": "PutFleetMember",
         "parameters": [
           {
             "in": "path",
@@ -24404,9 +24020,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24488,7 +24101,7 @@
     "/fleets/{fleet_id}/squads/{squad_id}": {
       "delete": {
         "description": "Delete a fleet squad, only empty squads can be deleted",
-        "operationId": "DeleteFleetsFleetIdSquadsSquadId",
+        "operationId": "DeleteFleetSquad",
         "parameters": [
           {
             "in": "path",
@@ -24515,9 +24128,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24564,7 +24174,7 @@
       },
       "put": {
         "description": "Rename a fleet squad",
-        "operationId": "PutFleetsFleetIdSquadsSquadId",
+        "operationId": "PutFleetSquad",
         "parameters": [
           {
             "in": "path",
@@ -24591,9 +24201,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24661,7 +24268,7 @@
     "/fleets/{fleet_id}/wings": {
       "get": {
         "description": "Return information about wings in a fleet",
-        "operationId": "GetFleetsFleetIdWings",
+        "operationId": "GetFleetWings",
         "parameters": [
           {
             "in": "path",
@@ -24680,9 +24287,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24691,7 +24295,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdWingsGet"
+                  "$ref": "#/components/schemas/FleetWingsGet"
                 }
               }
             },
@@ -24738,7 +24342,7 @@
       },
       "post": {
         "description": "Create a new wing in a fleet",
-        "operationId": "PostFleetsFleetIdWings",
+        "operationId": "PostFleetWings",
         "parameters": [
           {
             "in": "path",
@@ -24757,9 +24361,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -24768,7 +24369,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdWingsPost"
+                  "$ref": "#/components/schemas/FleetWingsPost"
                 }
               }
             },
@@ -24813,7 +24414,7 @@
     "/fleets/{fleet_id}/wings/{wing_id}": {
       "delete": {
         "description": "Delete a fleet wing, only empty wings can be deleted. The wing may contain squads, but the squads must be empty",
-        "operationId": "DeleteFleetsFleetIdWingsWingId",
+        "operationId": "DeleteFleetWing",
         "parameters": [
           {
             "in": "path",
@@ -24840,9 +24441,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24889,7 +24487,7 @@
       },
       "put": {
         "description": "Rename a fleet wing",
-        "operationId": "PutFleetsFleetIdWingsWingId",
+        "operationId": "PutFleetWing",
         "parameters": [
           {
             "in": "path",
@@ -24916,9 +24514,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -24986,7 +24581,7 @@
     "/fleets/{fleet_id}/wings/{wing_id}/squads": {
       "post": {
         "description": "Create a new squad in a fleet",
-        "operationId": "PostFleetsFleetIdWingsWingIdSquads",
+        "operationId": "PostFleetWingSquads",
         "parameters": [
           {
             "in": "path",
@@ -25015,9 +24610,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25026,7 +24618,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FleetsFleetIdWingsWingIdSquadsPost"
+                  "$ref": "#/components/schemas/FleetWingSquadsPost"
                 }
               }
             },
@@ -25078,9 +24670,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25138,9 +24727,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25194,9 +24780,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25254,9 +24837,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25310,9 +24890,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25371,9 +24948,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25427,9 +25001,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25488,9 +25059,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25545,9 +25113,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25606,9 +25171,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25659,7 +25221,7 @@
     "/killmails/{killmail_id}/{killmail_hash}": {
       "get": {
         "description": "Return a single killmail from its ID and hash",
-        "operationId": "GetKillmailsKillmailIdKillmailHash",
+        "operationId": "GetKillmailKillmailHash",
         "parameters": [
           {
             "in": "path",
@@ -25687,9 +25249,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25698,7 +25257,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/KillmailsKillmailIdKillmailHashGet"
+                  "$ref": "#/components/schemas/KillmailKillmailHashGet"
                 }
               }
             },
@@ -25737,7 +25296,7 @@
     "/loyalty/stores/{corporation_id}/offers": {
       "get": {
         "description": "Return a list of offers from a specific corporation's loyalty store\n\nThis route expires daily at 11:05",
-        "operationId": "GetLoyaltyStoresCorporationIdOffers",
+        "operationId": "GetLoyaltyStoresCorporationOffers",
         "parameters": [
           {
             "description": "The ID of the corporation",
@@ -25755,9 +25314,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25766,7 +25322,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LoyaltyStoresCorporationIdOffersGet"
+                  "$ref": "#/components/schemas/LoyaltyStoresCorporationOffersGet"
                 }
               }
             },
@@ -25811,9 +25367,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -25862,7 +25415,7 @@
     "/markets/groups/{market_group_id}": {
       "get": {
         "description": "Get information on an item group\n\nThis route expires daily at 11:05",
-        "operationId": "GetMarketsGroupsMarketGroupId",
+        "operationId": "GetMarketsGroupsMarketGroup",
         "parameters": [
           {
             "in": "path",
@@ -25881,9 +25434,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25892,7 +25442,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsGroupsMarketGroupIdGet"
+                  "$ref": "#/components/schemas/MarketsGroupsMarketGroupGet"
                 }
               }
             },
@@ -25942,9 +25492,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -25992,7 +25539,7 @@
     "/markets/structures/{structure_id}": {
       "get": {
         "description": "Return all orders in a structure",
-        "operationId": "GetMarketsStructuresStructureId",
+        "operationId": "GetMarketsStructure",
         "parameters": [
           {
             "in": "query",
@@ -26021,9 +25568,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26032,7 +25576,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsStructuresStructureIdGet"
+                  "$ref": "#/components/schemas/MarketsStructureGet"
                 }
               }
             },
@@ -26085,7 +25629,7 @@
     "/markets/{region_id}/history": {
       "get": {
         "description": "Return a list of historical market statistics for the specified type in a region\n\nThis route expires daily at 11:05",
-        "operationId": "GetMarketsRegionIdHistory",
+        "operationId": "GetMarketsRegionHistory",
         "parameters": [
           {
             "in": "path",
@@ -26114,9 +25658,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26125,7 +25666,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsRegionIdHistoryGet"
+                  "$ref": "#/components/schemas/MarketsRegionHistoryGet"
                 }
               }
             },
@@ -26163,7 +25704,7 @@
     "/markets/{region_id}/orders": {
       "get": {
         "description": "Return a list of orders in a region",
-        "operationId": "GetMarketsRegionIdOrders",
+        "operationId": "GetMarketsRegionOrders",
         "parameters": [
           {
             "in": "query",
@@ -26216,9 +25757,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26227,7 +25765,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsRegionIdOrdersGet"
+                  "$ref": "#/components/schemas/MarketsRegionOrdersGet"
                 }
               }
             },
@@ -26273,7 +25811,7 @@
     "/markets/{region_id}/types": {
       "get": {
         "description": "Return a list of type IDs that have active orders in the region, for efficient market indexing.",
-        "operationId": "GetMarketsRegionIdTypes",
+        "operationId": "GetMarketsRegionTypes",
         "parameters": [
           {
             "in": "query",
@@ -26302,9 +25840,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26313,7 +25848,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarketsRegionIdTypesGet"
+                  "$ref": "#/components/schemas/MarketsRegionTypesGet"
                 }
               }
             },
@@ -26435,9 +25970,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26492,9 +26024,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26553,9 +26082,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26612,9 +26138,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26669,9 +26192,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26760,9 +26280,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26826,9 +26343,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -26896,9 +26410,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -26964,9 +26475,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27020,9 +26528,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -27124,9 +26629,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27176,7 +26678,7 @@
     "/universe/asteroid_belts/{asteroid_belt_id}": {
       "get": {
         "description": "Get information on an asteroid belt\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseAsteroidBeltsAsteroidBeltId",
+        "operationId": "GetUniverseAsteroidBeltsAsteroidBelt",
         "parameters": [
           {
             "in": "path",
@@ -27194,9 +26696,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27205,7 +26704,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseAsteroidBeltsAsteroidBeltIdGet"
+                  "$ref": "#/components/schemas/UniverseAsteroidBeltsAsteroidBeltGet"
                 }
               }
             },
@@ -27250,9 +26749,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -27313,9 +26809,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27362,7 +26855,7 @@
     "/universe/categories/{category_id}": {
       "get": {
         "description": "Get information of an item category\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseCategoriesCategoryId",
+        "operationId": "GetUniverseCategoriesCategory",
         "parameters": [
           {
             "in": "path",
@@ -27381,9 +26874,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27392,7 +26882,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseCategoriesCategoryIdGet"
+                  "$ref": "#/components/schemas/UniverseCategoriesCategoryGet"
                 }
               }
             },
@@ -27442,9 +26932,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27491,7 +26978,7 @@
     "/universe/constellations/{constellation_id}": {
       "get": {
         "description": "Get information on a constellation\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseConstellationsConstellationId",
+        "operationId": "GetUniverseConstellation",
         "parameters": [
           {
             "in": "path",
@@ -27509,9 +26996,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27520,7 +27004,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseConstellationsConstellationIdGet"
+                  "$ref": "#/components/schemas/UniverseConstellationGet"
                 }
               }
             },
@@ -27568,9 +27052,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -27631,9 +27112,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27680,7 +27158,7 @@
     "/universe/graphics/{graphic_id}": {
       "get": {
         "description": "Get information on a graphic\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseGraphicsGraphicId",
+        "operationId": "GetUniverseGraphic",
         "parameters": [
           {
             "in": "path",
@@ -27698,9 +27176,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27709,7 +27184,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseGraphicsGraphicIdGet"
+                  "$ref": "#/components/schemas/UniverseGraphicGet"
                 }
               }
             },
@@ -27766,9 +27241,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27822,7 +27294,7 @@
     "/universe/groups/{group_id}": {
       "get": {
         "description": "Get information on an item group\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseGroupsGroupId",
+        "operationId": "GetUniverseGroup",
         "parameters": [
           {
             "in": "path",
@@ -27841,9 +27313,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -27852,7 +27321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseGroupsGroupIdGet"
+                  "$ref": "#/components/schemas/UniverseGroupGet"
                 }
               }
             },
@@ -27900,9 +27369,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -27973,7 +27439,7 @@
     "/universe/moons/{moon_id}": {
       "get": {
         "description": "Get information on a moon\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseMoonsMoonId",
+        "operationId": "GetUniverseMoon",
         "parameters": [
           {
             "in": "path",
@@ -27991,9 +27457,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28002,7 +27465,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseMoonsMoonIdGet"
+                  "$ref": "#/components/schemas/UniverseMoonGet"
                 }
               }
             },
@@ -28047,9 +27510,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -28116,7 +27576,7 @@
     "/universe/planets/{planet_id}": {
       "get": {
         "description": "Get information on a planet\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniversePlanetsPlanetId",
+        "operationId": "GetUniversePlanet",
         "parameters": [
           {
             "in": "path",
@@ -28134,9 +27594,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28145,7 +27602,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniversePlanetsPlanetIdGet"
+                  "$ref": "#/components/schemas/UniversePlanetGet"
                 }
               }
             },
@@ -28190,9 +27647,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -28253,9 +27707,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28302,7 +27753,7 @@
     "/universe/regions/{region_id}": {
       "get": {
         "description": "Get information on a region\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseRegionsRegionId",
+        "operationId": "GetUniverseRegion",
         "parameters": [
           {
             "in": "path",
@@ -28320,9 +27771,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28331,7 +27779,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseRegionsRegionIdGet"
+                  "$ref": "#/components/schemas/UniverseRegionGet"
                 }
               }
             },
@@ -28372,7 +27820,7 @@
     "/universe/schematics/{schematic_id}": {
       "get": {
         "description": "Get information on a planetary factory schematic",
-        "operationId": "GetUniverseSchematicsSchematicId",
+        "operationId": "GetUniverseSchematic",
         "parameters": [
           {
             "in": "path",
@@ -28391,9 +27839,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28402,7 +27847,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseSchematicsSchematicIdGet"
+                  "$ref": "#/components/schemas/UniverseSchematicGet"
                 }
               }
             },
@@ -28441,7 +27886,7 @@
     "/universe/stargates/{stargate_id}": {
       "get": {
         "description": "Get information on a stargate\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseStargatesStargateId",
+        "operationId": "GetUniverseStargate",
         "parameters": [
           {
             "in": "path",
@@ -28459,9 +27904,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28470,7 +27912,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStargatesStargateIdGet"
+                  "$ref": "#/components/schemas/UniverseStargateGet"
                 }
               }
             },
@@ -28508,7 +27950,7 @@
     "/universe/stars/{star_id}": {
       "get": {
         "description": "Get information on a star\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseStarsStarId",
+        "operationId": "GetUniverseStar",
         "parameters": [
           {
             "in": "path",
@@ -28526,9 +27968,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28537,7 +27976,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStarsStarIdGet"
+                  "$ref": "#/components/schemas/UniverseStarGet"
                 }
               }
             },
@@ -28575,7 +28014,7 @@
     "/universe/stations/{station_id}": {
       "get": {
         "description": "Get information on a station\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseStationsStationId",
+        "operationId": "GetUniverseStation",
         "parameters": [
           {
             "in": "path",
@@ -28593,9 +28032,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28604,7 +28040,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStationsStationIdGet"
+                  "$ref": "#/components/schemas/UniverseStationGet"
                 }
               }
             },
@@ -28663,9 +28099,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28713,7 +28146,7 @@
     "/universe/structures/{structure_id}": {
       "get": {
         "description": "Returns information on requested structure if you are on the ACL. Otherwise, returns \"Forbidden\" for all inputs.",
-        "operationId": "GetUniverseStructuresStructureId",
+        "operationId": "GetUniverseStructure",
         "parameters": [
           {
             "in": "path",
@@ -28732,9 +28165,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28743,7 +28173,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseStructuresStructureIdGet"
+                  "$ref": "#/components/schemas/UniverseStructureGet"
                 }
               }
             },
@@ -28796,9 +28226,6 @@
           },
           {
             "$ref": "#/components/parameters/IfNoneMatch"
-          },
-          {
-            "$ref": "#/components/parameters/CompatibilityDate"
           },
           {
             "$ref": "#/components/parameters/Tenant"
@@ -28857,9 +28284,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28916,9 +28340,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28965,7 +28386,7 @@
     "/universe/systems/{system_id}": {
       "get": {
         "description": "Get information on a solar system.\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseSystemsSystemId",
+        "operationId": "GetUniverseSystem",
         "parameters": [
           {
             "in": "path",
@@ -28983,9 +28404,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -28994,7 +28412,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseSystemsSystemIdGet"
+                  "$ref": "#/components/schemas/UniverseSystemGet"
                 }
               }
             },
@@ -29054,9 +28472,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -29110,7 +28525,7 @@
     "/universe/types/{type_id}": {
       "get": {
         "description": "Get information on a type\n\nThis route expires daily at 11:05",
-        "operationId": "GetUniverseTypesTypeId",
+        "operationId": "GetUniverseType",
         "parameters": [
           {
             "in": "path",
@@ -29129,9 +28544,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -29140,7 +28552,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UniverseTypesTypeIdGet"
+                  "$ref": "#/components/schemas/UniverseTypeGet"
                 }
               }
             },
@@ -29199,9 +28611,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -29249,7 +28658,7 @@
     "/wars/{war_id}": {
       "get": {
         "description": "Return details about a war",
-        "operationId": "GetWarsWarId",
+        "operationId": "GetWar",
         "parameters": [
           {
             "in": "path",
@@ -29268,9 +28677,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -29279,7 +28685,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/WarsWarIdGet"
+                  "$ref": "#/components/schemas/WarGet"
                 }
               }
             },
@@ -29318,7 +28724,7 @@
     "/wars/{war_id}/killmails": {
       "get": {
         "description": "Return a list of kills related to a war",
-        "operationId": "GetWarsWarIdKillmails",
+        "operationId": "GetWarKillmails",
         "parameters": [
           {
             "in": "query",
@@ -29347,9 +28753,6 @@
             "$ref": "#/components/parameters/IfNoneMatch"
           },
           {
-            "$ref": "#/components/parameters/CompatibilityDate"
-          },
-          {
             "$ref": "#/components/parameters/Tenant"
           }
         ],
@@ -29358,7 +28761,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/WarsWarIdKillmailsGet"
+                  "$ref": "#/components/schemas/WarKillmailsGet"
                 }
               }
             },

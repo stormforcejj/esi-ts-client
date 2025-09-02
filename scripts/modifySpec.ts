@@ -126,5 +126,3 @@ export async function modifySpec() {
         JSON.stringify(cleaned, null, 2)
     );
 }
-
-modifySpec();

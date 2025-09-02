@@ -30,5 +30,3 @@ export async function setBuildDate() {
         process.exit(1);
     }
 }
-
-setBuildDate();
