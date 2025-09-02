@@ -34,3 +34,6 @@ yarn-error.log*
 /.svelte-kit
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+esi.json
+/src/config/latestCompatDate.ts
