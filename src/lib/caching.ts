@@ -16,11 +16,18 @@ function createRedisCache() {
     const port = process.env.ESI_REDIS_PORT || 6379;
     const useTls = process.env.ESI_REDIS_TLS === "true";
 
-    const auth = user ? `${user}:${password}` : `${password}`;
+    let auth = "";
+
+    if(user && user !== "" && password && password !== "") {
+        auth = `${user}:${password}@`;
+    } else if (password && password !== "") {
+        auth = `${password}@`
+    }
+
     const protocol = useTls ? "rediss" : "redis";
 
-    if(!host || !password) {
-        throw new Error("ESI Client: Redis connection details must be specified in .env to use the redis strategy")
+    if(!host) {
+        throw new Error("ESI Client: Redis host must be specified in .env to use the redis strategy")
     }
 
     const redisUrl = `${protocol}://${auth}@${host}:${port}`
