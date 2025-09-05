@@ -1,22 +1,22 @@
-import { EsiClient, GetCharacterBlueprintsRequest } from "./index";
-import { EsiError, EsiResponse } from "./types/responses";
+import { getEsiClient } from ".";
+import { EsiClient, GetCharacterBlueprintsRequest, GetCharacterRequest, GetStatusRequest } from "./generated/esi-client";
+import { getCache } from "./lib/caching";
+
 
 async function test() {
-    
-    let x = 10;
+    const esi = getEsiClient()
 
-    const start = Date.now()
+    const params: GetCharacterBlueprintsRequest = {
+        characterId: 2116858020,
+    };
 
-    const esi = new EsiClient({userAgent: ""})
-
-    while (x > 0) {
-        const res = await esi.statusApi.getStatus();
-        console.log(res.status)
-        x = x-1;
+    try {
+        await esi.universeApi.getUniverseRaces();
+        console.log(await esi.universeApi.getUniverseRaces());
+    } catch (err) {
+        console.error(err)
     }
-
-    const elapsed = Date.now() - start;
-    console.log(elapsed)
+    
 }
 
 test()

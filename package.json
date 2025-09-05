@@ -7,12 +7,16 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "generate:api": "openapi-generator-cli generate -i ./esi.json -g typescript-fetch -o ./src/generated -t ./templates -c .openapi-generator-config.yaml",
         "fetch-esi": "ts-node scripts/fetchEsiSpec",
-        "prebuild": "ts-node scripts/prebuild"
+        "prebuild": "ts-node scripts/prebuild",
+        "e": "ts-node src/test.ts"
     },
     "author": "stormforcejj",
     "license": "ISC",
     "dependencies": {
-        "bottleneck": "^2.19.5"
+        "@keyv/redis": "^5.1.1",
+        "bottleneck": "^2.19.5",
+        "dotenv": "^17.2.2",
+        "keyv": "^5.5.0"
     },
     "devDependencies": {
         "@openapitools/openapi-generator-cli": "^2.21.4",

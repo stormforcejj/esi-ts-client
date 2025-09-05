@@ -32,7 +32,7 @@ function {{classname}}FromJSONTyped(json: any, ignoreDiscriminator: boolean): {{
     switch (json['{{discriminator.propertyBaseName}}']) {
 {{#discriminator.mappedModels}}
         case '{{mappingName}}':
-            return Object.assign({}, {{modelName}}FromJSONTyped(json, true), { {{discriminator.propertyName}}: '{{mappingName}}' } as const);
+            return Object.assign({}, {{modelName}}FromJSON(json), { {{discriminator.propertyName}}: '{{mappingName}}' } as const);
 {{/discriminator.mappedModels}}
         default:
             return json;
@@ -46,7 +46,7 @@ function {{classname}}FromJSONTyped(json: any, ignoreDiscriminator: boolean): {{
     }
     {{/-first}}
     if (instanceOf{{{.}}}(json)) {
-        return {{{.}}}FromJSONTyped(json, true);
+        return {{{.}}}FromJSON(json);
     }
     {{/oneOfModels}}
     {{#oneOfArrays}}
@@ -55,7 +55,7 @@ function {{classname}}FromJSONTyped(json: any, ignoreDiscriminator: boolean): {{
         if (json.every(item => typeof item === 'object')) {
     {{/-first}}
             if (json.every(item => instanceOf{{{.}}}(item))) {
-                return json.map(value => {{{.}}}FromJSONTyped(value, true));
+                return json.map(value => {{{.}}}FromJSON(value));
             }
     {{#-last}}
         }

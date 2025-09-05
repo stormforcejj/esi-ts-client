@@ -407,9 +407,8 @@ export class {{classname}} extends runtime.BaseAPI {
      {{/isDeprecated}}
      */
     {{^useSingleRequestParameter}}
-    async {{nickname}}({{#allParams}}{{^isXCompatibilityDate}}{{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/isXCompatibilityDate}}{{/allParams}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EsiResponse<{{{returnType}}}>{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+    async {{nickname}}({{#allParams}}{{^isXCompatibilityDate}}{{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/isXCompatibilityDate}}{{/allParams}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}>{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}> {
         try {
-        {{#returnType}}
             const response = await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
             {{#isResponseOptional}}
             switch (response.raw.status) {
@@ -417,9 +416,9 @@ export class {{classname}} extends runtime.BaseAPI {
                 {{#is2xx}}
                 case {{code}}:
                     {{#dataType}}
-                    const value = await response.value();
-                    const esiResponse : EsiResponse<{{{returnType}}}> = {
-                        data: value,
+                    {{#returnType}}const value = await response.value();{{/returnType}}
+                    const esiResponse : EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}> = {
+                        data: {{#returnType}}value{{/returnType}}{{^returnType}}undefined{{/returnType}},
                         headers: Object.fromEntries(response.raw.headers.entries()),
                         status: response.raw.status,
                     }
@@ -429,9 +428,9 @@ export class {{classname}} extends runtime.BaseAPI {
                 {{/is2xx}}
                 {{/responses}}
                 default:
-                    const value = await response.value();
-                    const esiResponse : EsiResponse<{{{returnType}}}> = {
-                        data: value,
+                    {{#returnType}}const value = await response.value();{{/returnType}}
+                    const esiResponse : EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}> = {
+                        data: {{#returnType}}value{{/returnType}}{{^returnType}}undefined{{/returnType}},
                         headers: Object.fromEntries(response.raw.headers.entries()),
                         status: response.raw.status,
                     }
@@ -440,19 +439,15 @@ export class {{classname}} extends runtime.BaseAPI {
             {{/isResponseOptional}}
             {{^isResponseOptional}}
 
-            const value = await response.value();
-            const esiResponse : EsiResponse<{{{returnType}}}> = {
-                data: value,
+            {{#returnType}}const value = await response.value();{{/returnType}}
+            const esiResponse : EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}> = {
+                data: {{#returnType}}value{{/returnType}}{{^returnType}}undefined{{/returnType}},
                 headers: Object.fromEntries(response.raw.headers.entries()),
                 status: response.raw.status,
             }
             return esiResponse;
         
         {{/isResponseOptional}}
-        {{/returnType}}
-        {{^returnType}}
-            await this.{{nickname}}Raw({{#allParams.0}}{ {{#allParams}}{{^isXCompatibilityDate}}{{paramName}}: {{paramName}}{{^-last}}, {{/-last}}{{/isXCompatibilityDate}}{{/allParams}} }, {{/allParams.0}}initOverrides);
-        {{/returnType}}
         } catch (err : any) {
             if(err instanceof runtime.ResponseError) {
                 const esiError : EsiError = {
@@ -467,9 +462,8 @@ export class {{classname}} extends runtime.BaseAPI {
     }
     {{/useSingleRequestParameter}}
     {{#useSingleRequestParameter}}
-    async {{nickname}}({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request{{^hasRequiredParams}} = {}{{/hasRequiredParams}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EsiResponse<{{{returnType}}}>{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}{{^returnType}}void{{/returnType}}> {
+    async {{nickname}}({{#allParams.0}}requestParameters: {{#prefixParameterInterfaces}}{{classname}}{{/prefixParameterInterfaces}}{{operationIdCamelCase}}Request{{^hasRequiredParams}} = {}{{/hasRequiredParams}}, {{#hasAuthMethods}}accessToken: string, {{/hasAuthMethods}}{{/allParams.0}}initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}>{{#returnType}}{{#isResponseOptional}} | null | undefined {{/isResponseOptional}}{{/returnType}}> {
         try {
-        {{#returnType}}
             const response = await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}{{#hasAuthMethods}}accessToken, {{/hasAuthMethods}}initOverrides);
             {{#isResponseOptional}}
             switch (response.raw.status) {
@@ -477,9 +471,9 @@ export class {{classname}} extends runtime.BaseAPI {
                 {{#is2xx}}
                 case {{code}}:
                     {{#dataType}}
-                    const value = await response.value();
-                    const esiResponse : EsiResponse<{{{returnType}}}> = {
-                        data: value,
+                    {{#returnType}}const value = await response.value();{{/returnType}}
+                    const esiResponse : EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}> = {
+                        data: {{#returnType}}value{{/returnType}}{{^returnType}}undefined{{/returnType}},
                         headers: Object.fromEntries(response.raw.headers.entries()),
                         status: response.raw.status,
                     }
@@ -487,9 +481,9 @@ export class {{classname}} extends runtime.BaseAPI {
                 {{/is2xx}}
                 {{/responses}}
                 default:
-                    const value = await response.value();
-                    const esiResponse : EsiResponse<{{{returnType}}}> = {
-                        data: value,
+                    const value = {{#returnType}}await response.value();{{/returnType}}
+                    const esiResponse : EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}> = {
+                        data: {{#returnType}}value{{/returnType}}{{^returnType}}undefined{{/returnType}},
                         headers: Object.fromEntries(response.raw.headers.entries()),
                         status: response.raw.status,
                     }
@@ -497,19 +491,15 @@ export class {{classname}} extends runtime.BaseAPI {
             }
         {{/isResponseOptional}}
         {{^isResponseOptional}}
-            const value = await response.value();
-            const esiResponse : EsiResponse<{{{returnType}}}> = {
-                data: value,
+            {{#returnType}}const value = await response.value();{{/returnType}}
+                const esiResponse : EsiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}> = {
+                    data: {{#returnType}}value{{/returnType}}{{^returnType}}undefined{{/returnType}},
                 headers: Object.fromEntries(response.raw.headers.entries()),
                 status: response.raw.status,
             }
             return esiResponse;
         
         {{/isResponseOptional}}
-        {{/returnType}}
-        {{^returnType}}
-            await this.{{nickname}}Raw({{#allParams.0}}requestParameters, {{/allParams.0}}initOverrides);
-        {{/returnType}}
         } catch (err : any) {
             if(err instanceof runtime.ResponseError) {
                 const esiError : EsiError = {
