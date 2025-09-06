@@ -14,6 +14,7 @@ import dotenv from 'dotenv';
 {{#apiInfo.apis}}
 import { {{classname}} } from "./apis/{{classFilename}}";
 {{/apiInfo.apis}}
+import { SSO } from "./apis/SSO"
 
 export * from "./models";
 export * from "./apis";
@@ -22,6 +23,8 @@ export class EsiClient {
 {{#apiInfo.apis}}
   public readonly {{#lambda.camelcase}}{{classname}}{{/lambda.camelcase}} : {{classname}};
 {{/apiInfo.apis}}
+
+  public readonly sso : SSO;
 
   private cacheStrategy : EsiCacheStrategy;
 
@@ -54,8 +57,15 @@ export class EsiClient {
       middleware: middleware,
     });
 
+    const ssoConfiguration = new Configuration({
+        middleware: [headersConfigMiddleware(fullUserAgent)],
+        basePath: "https://login.eveonline.com",
+    });
+
 {{#apiInfo.apis}}
     this.{{#lambda.camelcase}}{{classname}}{{/lambda.camelcase}} = new {{classname}}(configuration);
 {{/apiInfo.apis}}
+
+    this.sso = new SSO(ssoConfiguration);
   }
 }

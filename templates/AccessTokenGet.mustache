@@ -1,0 +1,45 @@
+export interface AccessTokenGet {
+    /**
+     * New access token
+     * @type {string}
+     * @memberof AccessTokenGet
+     */
+    access_token: string;
+    /**
+     * Refresh token
+     * @type {string}
+     * @memberof AccessTokenGet
+     */
+    refresh_token: string;
+    /**
+     * How long till the access token expires
+     * @type {string}
+     * @memberof AccessTokenGet
+     */
+    expires_in: number;
+}
+
+export function instanceOfAccessTokenGet(value: object): value is AccessTokenGet {
+    if(!('access_token' in value) || value['access_token'] === undefined) return false;
+    if (!("refresh_token" in value) || value["refresh_token"] === undefined)
+        return false;
+    if (!("expires_in" in value) || value["expires_in"] === undefined)
+        return false;
+    return true
+}
+
+export function AccessTokenGetFromJSON(json: any): AccessTokenGet {
+    return AccessTokenGetFromJSONTyped(json, false);
+}
+
+function AccessTokenGetFromJSONTyped(json: any, ignoreDiscriminator: boolean): AccessTokenGet {
+    if(json == null) {
+        return json;
+    }
+
+    return {
+        'access_token': json['access_token'],
+        'refresh_token': json['refresh_token'],
+        'expires_in': json['expires_in']
+    }
+}

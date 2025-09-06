@@ -1,0 +1,66 @@
+import * as runtime from "../runtime";
+import { EsiResponse, EsiError } from "../../types/responses";
+import { AccessTokenGet, AccessTokenGetFromJSON } from "../models/AccessTokenGet";
+
+export interface GetAccessTokenRequest {
+    refreshToken: string,
+    clientId: string,
+    clientSecret: string,
+}
+
+export class SSO extends runtime.BaseAPI {
+    private async getAccessTokenRaw(requestParameters: GetAccessTokenRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AccessTokenGet>> {
+        const urlPath = "/v2/oauth/token"
+
+        const queryParameters: any = {};
+        
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters["Authorization"] =
+            "Basic " +
+            Buffer.from(
+                `${requestParameters.clientId}:${requestParameters.clientSecret}`
+            ).toString("base64");
+
+        headerParameters['Content-Type'] = "application/x-www-form-urlencoded"
+
+        const body = new URLSearchParams({
+            grant_type: "refresh_token",
+            refresh_token: requestParameters.refreshToken
+        })
+
+        const response = await this.request({
+            path: urlPath,
+            method:'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: body.toString(), 
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AccessTokenGetFromJSON(jsonValue))
+    }
+
+    async getAccessToken(requestParameters: GetAccessTokenRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EsiResponse<AccessTokenGet>> {
+        try {
+            const response = await this.getAccessTokenRaw(requestParameters, initOverrides);
+            const value = await response.value();
+
+            const esiResponse : EsiResponse<AccessTokenGet> = {
+                data: value,
+                headers: Object.fromEntries(response.raw.headers.entries()),
+                status: response.raw.status
+            }
+            return esiResponse;
+        } catch (err : any) {
+            if(err instanceof runtime.ResponseError) {
+                const esiError : EsiError = {
+                    error: err.message,
+                    response: err.response,
+                    status: err.response.status
+                }
+                throw esiError;
+            }
+            throw err;
+        }
+    }
+}

@@ -2,3 +2,7 @@
 files:
   esi-client.mustache:
     destinationFilename: esi-client.ts
+  AccessTokenGet.mustache:
+    destinationFilename: models/AccessTokenGet.ts
+  SSO.mustache:
+    destinationFilename: apis/SSO.ts
