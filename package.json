@@ -16,6 +16,7 @@
         "@keyv/redis": "^5.1.1",
         "bottleneck": "^2.19.5",
         "dotenv": "^17.2.2",
+        "jwt-decode": "^4.0.0",
         "keyv": "^5.5.0"
     },
     "devDependencies": {

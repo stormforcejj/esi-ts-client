@@ -2,6 +2,7 @@ import Keyv from "keyv";
 import KeyvRedis from "@keyv/redis";
 import { EsiCacheStrategy } from "../types/config";
 import crypto from 'crypto'
+import { jwtDecode } from "jwt-decode";
 
 let cacheInstance: Keyv<any> | null = null;
 
@@ -64,8 +65,6 @@ export function expiryToTTL(expiry : Date) {
 }
 
 export function generateCacheHeaderHash(context: RequestInit) {
-    let headerHash = "";
-
     if (context.headers) {
         const headers: Record<string, string> = {};
 
@@ -84,9 +83,22 @@ export function generateCacheHeaderHash(context: RequestInit) {
             Object.assign(headers, context.headers);
         }
 
+        let sub = ""
+
+        try {
+            const authHeader = headers["Authorization"] ?? "";
+
+            const rawToken = authHeader.startsWith("Bearer ")
+                ? authHeader.slice(7)
+                : authHeader;
+
+            const decodedToken = jwtDecode(rawToken);
+            sub = decodedToken.sub || ""
+        } catch {}
+        
         const relevantHeaders = {
             "Accept-Language": headers["Accept-Language"] ?? "",
-            Authorization: headers["Authorization"] ?? "",
+            Authorization: sub,
         };
 
         const headerString = JSON.stringify(relevantHeaders);
@@ -96,4 +108,6 @@ export function generateCacheHeaderHash(context: RequestInit) {
             .update(headerString)
             .digest("base64");
     }
+
+    return "";
 }
