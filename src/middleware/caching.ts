@@ -1,21 +1,19 @@
+import Keyv from "keyv";
 import { FetchParams, Middleware, RequestContext, ResponseContext } from "../generated";
-import { expiryToTTL, generateCacheHeaderHash, getCache } from "../lib/caching";
+import { expiryToTTL, generateCacheHeaderHash } from "../lib/caching";
 
-export function cachingMiddleware() : Middleware {
-
+export function cachingMiddleware(cache: Keyv<any>): Middleware {
     return {
-        pre: async (context: RequestContext) : Promise<FetchParams> => {
-            const cache = getCache();
+        pre: async (context: RequestContext): Promise<FetchParams> => {
+            if (context.init.method === "GET") {
+                const headerHash = generateCacheHeaderHash(context.init);
 
-            if(context.init.method === "GET") {
-                const headerHash = generateCacheHeaderHash(context.init)
-
-                const cacheKey = `GET:${context.url}:${headerHash}`
+                const cacheKey = `GET:${context.url}:${headerHash}`;
 
                 const cachedString = await cache.get(cacheKey);
 
                 if (cachedString) {
-                    const cachedData = JSON.parse(cachedString)
+                    const cachedData = JSON.parse(cachedString);
 
                     const headers = new Headers(cachedData.headers);
                     const response = new Response(
@@ -34,18 +32,19 @@ export function cachingMiddleware() : Middleware {
                 }
             }
 
-            return { url: context.url, init: context.init }
+            return { url: context.url, init: context.init };
         },
         post: async (context: ResponseContext): Promise<Response> => {
-            const response = context.response.clone()
-            const cache = getCache();
+            const response = context.response.clone();
 
-            if(context.init.method !== "GET") {
+            if (context.init.method !== "GET") {
                 return response;
             }
 
-            const expiryHeader = response.headers.get("expires")
-            const expiry = expiryHeader ? new Date(expiryHeader) : new Date(Date.now() + 60 * 1000)
+            const expiryHeader = response.headers.get("expires");
+            const expiry = expiryHeader
+                ? new Date(expiryHeader)
+                : new Date(Date.now() + 60 * 1000);
 
             const headerHash = generateCacheHeaderHash(context.init);
 
@@ -61,11 +60,15 @@ export function cachingMiddleware() : Middleware {
                 statusText: response.statusText,
                 headers: headers,
                 body: await response.clone().json(),
-            }
+            };
 
-            cache.set(cacheKey, JSON.stringify(cachedResponse), expiryToTTL(expiry))
+            cache.set(
+                cacheKey,
+                JSON.stringify(cachedResponse),
+                expiryToTTL(expiry)
+            );
 
             return response;
-        }
-    }
+        },
+    };
 }

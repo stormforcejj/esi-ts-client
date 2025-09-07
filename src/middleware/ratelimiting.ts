@@ -5,7 +5,7 @@ interface RetryRequestInit extends RequestInit {
     retries?: number;
 }
 
-export function ratelimitingMiddleware() : Middleware {
+export function ratelimitingMiddleware(maxRetries = 3) : Middleware {
     const standardLimiter = new Bottleneck({
         maxConcurrent: 1,
         minTime: 1000
@@ -54,7 +54,7 @@ export function ratelimitingMiddleware() : Middleware {
 
             return response;
         },
-        onError(context: ErrorContext) : Promise<Response> {
+        async onError(context: ErrorContext) : Promise<Response> {
             if(context.response) {
                 const response = context.response;
                 const status = response.status;
@@ -68,11 +68,19 @@ export function ratelimitingMiddleware() : Middleware {
 
                 if (status === 429 || (status && status >= 500 && status < 600)) {
                     const init = context.init as RetryRequestInit;
+                    init.retries = (init.retries || 0) + 1;
 
-                    if(init.retries! >= 3) {
+                    if (init.retries > maxRetries) {
                         throw context.error;
                     }
-                    init.retries!++;
+
+                    const delay = Math.min(
+                        1000 * Math.pow(2, init.retries),
+                        10000
+                    );
+
+                    await new Promise((r) => setTimeout(r, delay));
+
                     return context.fetch(context.url, init);
                 }
             }

@@ -6,10 +6,12 @@ import { Configuration, Middleware } from "./";
 import { headersConfigMiddleware } from "../middleware/userAgent";
 import { ratelimitingMiddleware } from "../middleware/ratelimiting";
 import { cachingMiddleware } from "../middleware/caching";
+import { initCache } from "../lib/caching";
 
 import { EsiClientConfig, EsiCacheStrategy } from "../types/config";
 
 import dotenv from 'dotenv';
+import Keyv from "keyv";
 
 {{#apiInfo.apis}}
 import { {{classname}} } from "./apis/{{classFilename}}";
@@ -27,6 +29,7 @@ export class EsiClient {
   public readonly sso : SSO;
 
   private cacheStrategy : EsiCacheStrategy;
+  private cache: Keyv<any> | undefined;
 
   constructor(config?: EsiClientConfig) {
     const packageJson = require("../../package.json");
@@ -45,12 +48,13 @@ export class EsiClient {
                 packageJson.version || "X.X.X"
             } (+https://github.com/stormforcejj/esi-ts-client discord:stormforcejj esi-client@stormforcejj.co.uk)`;
 
-    let middleware : Middleware[] = [headersConfigMiddleware(fullUserAgent), ratelimitingMiddleware()]
+    let middleware : Middleware[] = [headersConfigMiddleware(fullUserAgent), ratelimitingMiddleware(config?.retries ?? 3)].concat(config?.middleware || []);
 
     this.cacheStrategy = !process.env.ESI_CACHE_STRATEGY ? EsiCacheStrategy.MEMORY : process.env.ESI_CACHE_STRATEGY as EsiCacheStrategy  
 
-    if(this.cacheStrategy !== EsiCacheStrategy.NONE) {
-        middleware.push(cachingMiddleware())
+    if (this.cacheStrategy !== EsiCacheStrategy.NONE && !config?.bypassCache) {
+        this.cache = initCache();
+        middleware.push(cachingMiddleware(this.cache));
     }
 
     const configuration = new Configuration({

@@ -1,3 +1,5 @@
+import { Middleware } from "../generated";
+
 export enum EsiCacheStrategy {
     NONE = "none",
     MEMORY = "memory",
@@ -5,5 +7,8 @@ export enum EsiCacheStrategy {
 }
 
 export interface EsiClientConfig {
-    bypassCache?: boolean
+    bypassCache?: boolean,
+    middleware?: Middleware[]
+    userAgentOverride?: string,
+    retries?: number,
 }

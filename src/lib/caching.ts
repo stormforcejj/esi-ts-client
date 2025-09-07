@@ -4,7 +4,7 @@ import { EsiCacheStrategy } from "../types/config";
 import crypto from 'crypto'
 import { jwtDecode } from "jwt-decode";
 
-let cacheInstance: Keyv<any> | null = null;
+// let cacheInstance: Keyv<any> | null = null;
 
 function createMemoryCache() {
     return new Keyv({ ttl: 60000 })
@@ -38,25 +38,23 @@ function createRedisCache() {
     return new Keyv({ store, ttl: 60000})
 }
 
-function initCache() {
-    if (cacheInstance) return cacheInstance;
+export function initCache() {
+    // if (cacheInstance) return cacheInstance;
 
     const strategy = (process.env.ESI_CACHE_STRATEGY as EsiCacheStrategy) || EsiCacheStrategy.MEMORY
     
     switch (strategy) {
         case EsiCacheStrategy.REDIS:
-            cacheInstance = createRedisCache()
-            break;
+            return createRedisCache()
         default:
-            cacheInstance = createMemoryCache();
-            break;
+            return createMemoryCache();
     }
 }
 
-export function getCache() {
-    if(!cacheInstance) initCache();
-    return cacheInstance!;
-}
+// export function getCache() {
+//     if(!cacheInstance) initCache();
+//     return cacheInstance!;
+// }
 
 export function expiryToTTL(expiry : Date) {
     const ttl = expiry.getTime() - Date.now();
