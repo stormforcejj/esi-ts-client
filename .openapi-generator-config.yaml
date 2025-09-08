@@ -6,3 +6,5 @@ files:
     destinationFilename: models/AccessTokenGet.ts
   SSO.mustache:
     destinationFilename: apis/SSO.ts
+  README.mustache:
+    destinationFilename: README.md
