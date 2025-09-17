@@ -34,8 +34,17 @@ function createRedisCache() {
     const redisUrl = `${protocol}://${auth}@${host}:${port}`
 
     const store = new KeyvRedis(redisUrl);
+    const cache = new Keyv({ store, ttl: 60000 });
 
-    return new Keyv({ store, ttl: 60000})
+    store.on("error", (err) => {
+        throw err;
+    });
+
+    cache.on("error", (err) => {
+        throw err;
+    });
+
+    return cache;
 }
 
 export function initCache() {

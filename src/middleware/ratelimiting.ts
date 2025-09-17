@@ -8,7 +8,7 @@ interface RetryRequestInit extends RequestInit {
 export function ratelimitingMiddleware(maxRetries = 3) : Middleware {
     const standardLimiter = new Bottleneck({
         maxConcurrent: 1,
-        minTime: 1000
+        minTime: 10
     });
 
     const specialLimiter = new Bottleneck({
