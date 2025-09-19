@@ -22,4 +22,17 @@ describe("User Agent", () => {
         process.env.ESI_USER_AGENT = uA;
         fetchSpy.mockRestore()
     });
+
+    test('should not expect an empty string', async () => {
+        const uA = process.env.ESI_USER_AGENT;
+        process.env.ESI_USER_AGENT = "";
+
+        const t = () => {
+            const esi = new EsiClient();
+        }
+
+        expect(t).toThrow()
+
+        process.env.ESI_USER_AGENT = uA;
+    })
 });
