@@ -61,40 +61,24 @@ export function ratelimitingMiddleware(maxRetries = 3) : Middleware {
                 errorLimitResetTime = Date.now() + resetSec * 1000;
             }
 
-            return response;
-        },
-        async onError(context: ErrorContext) : Promise<Response> {
-            if(context.response) {
-                const response = context.response;
-                const status = response.status;
+            const status = response.status;
 
-                const remaining = parseInt(response.headers.get("X-ESI-Error-Limit-Remain") || "1", 10);
-                const resetSec = parseInt(response.headers.get("X-ESI-Error-Limit-Reset") || "0", 10);
+            if (status === 429 || (status && status >= 500 && status < 600)) {
+                const init = context.init as RetryRequestInit;
+                init.retries = (init.retries || 0) + 1;
 
-                if (remaining <= 0 && resetSec > 0) {
-                    errorLimitResetTime = Date.now() + resetSec * 1000;
+                if (init.retries > maxRetries) {
+                    return response;
                 }
 
-                if (status === 429 || (status && status >= 500 && status < 600)) {
-                    const init = context.init as RetryRequestInit;
-                    init.retries = (init.retries || 0) + 1;
+                const delay = Math.min(1000 * Math.pow(2, init.retries), 10000);
 
-                    if (init.retries > maxRetries) {
-                        throw context.error;
-                    }
+                await new Promise((r) => setTimeout(r, delay));
 
-                    const delay = Math.min(
-                        1000 * Math.pow(2, init.retries),
-                        10000
-                    );
-
-                    await new Promise((r) => setTimeout(r, delay));
-
-                    return context.fetch(context.url, init);
-                }
+                return context.fetch(context.url, init);
             }
 
-            throw context.error;
-        },
+            return response;
+        }
     }
 }

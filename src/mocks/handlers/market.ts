@@ -22,7 +22,13 @@ export const marketHandlers = [
                 {
                     error: "Not Found",
                 },
-                { status: 404 }
+                { 
+                    status: 404, 
+                    headers: [
+                        ['X-ESI-Error-Limit-Remain', id.toString()],
+                        ["X-ESI-Error-Limit-Reset", type_id.toString()]
+                    ]
+                }
             );
         }
 

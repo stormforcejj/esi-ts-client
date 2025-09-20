@@ -1,5 +1,6 @@
 import { describe, expect, test } from "@jest/globals";
 import { EsiClient } from "../src";
+import { assertEsiError } from "./utils/assertEsiError";
 
 describe("Ratelimiting", () => {
     const esi = new EsiClient({bypassCache: true});
@@ -127,4 +128,60 @@ describe("Ratelimiting", () => {
 
         expect(elapsed).toBeGreaterThanOrEqual(1800);
     }, 200000);
+})
+
+describe('Error Limits', () => {
+    const esi = new EsiClient({bypassCache: true})
+
+    test('should have the second request wait longer until error limit resets', async () => {
+        const start = Date.now();
+
+        try {
+            await esi.marketApi.getMarketsRegionHistory({regionId: 0, typeId: 5})
+        } catch (err) {
+            assertEsiError(err);
+        }
+        await esi.marketApi.getMarketsRegionHistory({ regionId: 1, typeId: 2 });
+
+        const elapsed = Date.now() - start;
+
+        expect(elapsed).toBeGreaterThanOrEqual(5000);
+    }, 200000)
+
+    test("should apply globally across the client", async () => {
+        const start = Date.now();
+
+        try {
+            await esi.marketApi.getMarketsRegionHistory({
+                regionId: 0,
+                typeId: 5,
+            });
+        } catch (err) {
+            assertEsiError(err);
+        }
+        await esi.statusApi.getStatus();
+
+        const elapsed = Date.now() - start;
+
+        expect(elapsed).toBeGreaterThanOrEqual(5000);
+    }, 200000);
+})
+
+describe('Error retries', () => {
+    const esi = new EsiClient({bypassCache: true, userAgentOverride: "500"})
+
+    test('retries failed 5xx errors automatically', async () => {
+        const fetchSpy = jest.spyOn(esi.statusApi as any, 'fetchApi');
+
+        try {
+            const response = await esi.statusApi.getStatus()
+        } catch (err) {
+            assertEsiError(err)
+            expect(err.status).toBe(500)
+        }
+
+        expect(fetchSpy).toHaveBeenCalledTimes(3);
+
+        fetchSpy.mockRestore();
+    })
 })

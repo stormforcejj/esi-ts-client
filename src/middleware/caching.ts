@@ -37,6 +37,10 @@ export function cachingMiddleware(cache: Keyv<any>): Middleware {
         post: async (context: ResponseContext): Promise<Response> => {
             const response = context.response.clone();
 
+            if(response.status < 200 || response.status >= 300) {
+                return response;
+            }
+
             if (context.init.method !== "GET") {
                 return response;
             }
