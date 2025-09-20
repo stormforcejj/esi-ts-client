@@ -197,7 +197,39 @@ describe("ESI Client", () => {
 
     describe("Mail API", () => {});
 
-    describe("Market API", () => {});
+    describe("Market API", () => {
+        test("should return market history for a region id", async () => {
+            const response = await esi.marketApi.getMarketsRegionHistory({
+                regionId: 1,
+                typeId: 2
+            });
+
+            assertEsiResponse(response);
+
+            expect(response.status).toBe(200);
+            expect(response.data).toEqual([{
+                average: 0,
+                date: new Date("2019-08-24"),
+                highest: 0,
+                lowest: 0,
+                orderCount: 0,
+                volume: 0
+            }]);
+        });
+
+        test("should return 400 when providing an region ID that is not a number", async () => {
+            try {
+                const response = await esi.marketApi.getMarketsRegionHistory({
+                    regionId: Number('a'),
+                    typeId: 2,
+                });
+                expect(response.status).not.toBe(200);
+            } catch (err) {
+                assertEsiError(err);
+                expect(err.status).toBe(400);
+            }
+        });
+    });
 
     describe("Planetary Interaction API", () => {});
 

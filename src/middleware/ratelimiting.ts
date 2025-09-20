@@ -1,20 +1,13 @@
 import Bottleneck from "bottleneck";
 import { ErrorContext, FetchParams, Middleware, RequestContext, ResponseContext } from "../generated";
+import { generateCacheHeaderHash } from "../lib/caching";
 
 interface RetryRequestInit extends RequestInit {
     retries?: number;
 }
 
 export function ratelimitingMiddleware(maxRetries = 3) : Middleware {
-    const standardLimiter = new Bottleneck({
-        maxConcurrent: 1,
-        minTime: 10
-    });
-
-    const specialLimiter = new Bottleneck({
-        maxConcurrent: 1,
-        minTime: 200
-    });
+    const limiters : Record<string, Bottleneck> = {}
 
     let errorLimitResetTime : number | null = null;
 
@@ -28,17 +21,33 @@ export function ratelimitingMiddleware(maxRetries = 3) : Middleware {
                 errorLimitResetTime = null;
             }
 
+            const urlPath = new URL(context.url).pathname
+
+            let limiter = limiters[urlPath]
+
+            if(!limiter) {
+                if(urlPath.includes('history')) {
+                    limiter = new Bottleneck({
+                        maxConcurrent: 1,
+                        minTime: 200
+                    });
+                } else {
+                    limiter = new Bottleneck({
+                        maxConcurrent: 1,
+                        minTime: 10
+                    });
+                }
+
+                limiters[urlPath] = limiter
+            }
+            
             const init = context.init as RetryRequestInit;
             if (init.retries === undefined) {
                 init.retries = 0;
             }
             context.init = init;
             
-            if(context.url.includes("history")) {
-                await specialLimiter.schedule(() => Promise.resolve())
-            } else {
-                await standardLimiter.schedule(() => Promise.resolve())
-            }
+            await limiter.schedule(() => Promise.resolve())
 
             return { url: context.url, init: init}
         },
