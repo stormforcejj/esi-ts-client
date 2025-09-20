@@ -168,10 +168,17 @@ describe('Error Limits', () => {
 })
 
 describe('Error retries', () => {
-    const esi = new EsiClient({bypassCache: true, userAgentOverride: "500"})
+    
 
     test('retries failed 5xx errors automatically', async () => {
+        const esi = new EsiClient({
+            bypassCache: true,
+            userAgentOverride: "500",
+        });
+
         const fetchSpy = jest.spyOn(esi.statusApi as any, 'fetchApi');
+
+        const start = Date.now()
 
         try {
             const response = await esi.statusApi.getStatus()
@@ -180,8 +187,37 @@ describe('Error retries', () => {
             expect(err.status).toBe(500)
         }
 
-        expect(fetchSpy).toHaveBeenCalledTimes(3);
+        const elapsed = Date.now() - start;
+
+        expect(fetchSpy).toHaveBeenCalledTimes(4);
+        expect(elapsed).toBeGreaterThan(14000)
 
         fetchSpy.mockRestore();
-    })
+    }, 20000)
+
+    test("override retries setting to be respected", async () => {
+        const esi = new EsiClient({
+            bypassCache: true,
+            userAgentOverride: "500",
+            retries: 1
+        });
+
+        const fetchSpy = jest.spyOn(esi.statusApi as any, "fetchApi");
+
+        const start = Date.now();
+
+        try {
+            const response = await esi.statusApi.getStatus();
+        } catch (err) {
+            assertEsiError(err);
+            expect(err.status).toBe(500);
+        }
+
+        const elapsed = Date.now() - start;
+
+        expect(fetchSpy).toHaveBeenCalledTimes(2);
+        expect(elapsed).toBeGreaterThan(2000);
+
+        fetchSpy.mockRestore();
+    }, 20000);
 })

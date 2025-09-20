@@ -36,7 +36,7 @@ export class EsiClient {
     
     dotenv.config({quiet: true})
 
-    const userAgent = process.env.ESI_USER_AGENT;
+    const userAgent = config?.userAgentOverride ? config.userAgentOverride : process.env.ESI_USER_AGENT;;
 
     if(!userAgent || userAgent === "") {
         throw Error("User agent must be specified in the env file")

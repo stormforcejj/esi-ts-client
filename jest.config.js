@@ -19,7 +19,14 @@ module.exports = {
         },
     },
     verbose: true,
-    testPathIgnorePatterns: ["/node_modules/"],
+    coveragePathIgnorePatterns: [
+        "/node_modules/",
+        "/src/generated/apis/",
+        "/src/generated/models/",
+    ],
+    testPathIgnorePatterns: [
+        "/node_modules/",
+    ],
     roots: ["<rootDir>/src", "<rootDir>/tests"],
     setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 };
