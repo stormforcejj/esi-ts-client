@@ -103,7 +103,7 @@ export const calendarHandlers = [
 
             if (
                 charId !== 90000001 ||
-                JSON.stringify((body as any).response) !== JSON.stringify("accepted")
+                JSON.stringify((body as any).response) !== JSON.stringify("accepted") || eventId !== 0
             ) {
                 return HttpResponse.json(
                     {
@@ -113,7 +113,7 @@ export const calendarHandlers = [
                 );
             }
 
-            return HttpResponse.json({ status: 204 });
+            return HttpResponse.json({}, { status: 204 });
         }
     ),
 ];

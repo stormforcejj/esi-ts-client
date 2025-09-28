@@ -52,6 +52,7 @@ export const assetHandlers = [
 
     http.post<{ id: string}>(`${baseUrl}/characters/:id/assets/names`, async ({ params, request }) => {
         const body = await request.json()
+        console.log(body)
 
         const id = parseInt(params.id);
 
@@ -67,10 +68,11 @@ export const assetHandlers = [
             return HttpResponse.json({ error: "Forbidden" }, { status: 403 });
         }
 
-        if(!body ||
-        typeof body !== "object" ||
-        !("item_ids" in body) ||
-        !Array.isArray((body as any).item_ids)) {
+        if (
+            !body ||
+            !Array.isArray(body) ||
+            !body.every((item) => typeof item === "number")
+        ) {
             return HttpResponse.json(
                 {
                     error: "Bad Request",
@@ -88,7 +90,7 @@ export const assetHandlers = [
             );
         }
 
-        if (id !== 90000001 || JSON.stringify((body as any).item_ids) !== JSON.stringify([1])) {
+        if (id !== 90000001 || JSON.stringify((body as any)) !== JSON.stringify([1])) {
             return HttpResponse.json(
                 {
                     error: "Not Found",

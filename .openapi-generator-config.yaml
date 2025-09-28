@@ -8,3 +8,5 @@ files:
     destinationFilename: apis/SSO.ts
   README.mustache:
     destinationFilename: README.md
+additionalProperties:
+  withoutRuntimeChecks: false

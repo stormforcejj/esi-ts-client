@@ -48,122 +48,525 @@ describe("ESI Client", () => {
     })
 
     describe("Assets API", () => {
-        test("should return asset information for a valid character id", async () => {
-            const response = await esi.assetsApi.getCharacterAssets({
-                characterId: 90000001
-            }, "token");
-
-            assertEsiResponse(response);
-
-            expect(response.status).toBe(200);
-            expect(response.data).toEqual([
-                {
-                    isBlueprintCopy: true,
-                    isSingleton: true,
-                    itemId: 0,
-                    locationFlag: "AssetSafety",
-                    locationId: 0,
-                    locationType: "station",
-                    quantity: 0,
-                    typeId: 0,
-                },
-            ]);
-        });
-
-        test("should return 400 when providing a character ID that is not a number", async () => {
-            try {
+        describe('get character assets', () => {
+            test("should return asset information for a valid character id", async () => {
                 const response = await esi.assetsApi.getCharacterAssets(
                     {
                         characterId: 90000001,
                     },
                     "token"
                 );
-                //expect(response.status).not.toBe(200);
-            } catch (err) {
-                assertEsiError(err);
-                expect(err.status).toBe(400);
-            }
-        });
 
-        test("should return 400 when providing a page that is not a number", async () => {
-            try {
-                const response = await esi.assetsApi.getCharacterAssets(
+                assertEsiResponse(response);
+
+                expect(response.status).toBe(200);
+                expect(response.data).toEqual([
                     {
-                        characterId: 90000001,
-                        page: Number('a')
+                        isBlueprintCopy: true,
+                        isSingleton: true,
+                        itemId: 0,
+                        locationFlag: "AssetSafety",
+                        locationId: 0,
+                        locationType: "station",
+                        quantity: 0,
+                        typeId: 0,
                     },
-                    "token"
-                );
-                expect(response.status).not.toBe(200);
-            } catch (err) {
-                assertEsiError(err);
-                expect(err.status).toBe(400);
-            }
+                ]);
+            });
+
+            test("should return 400 when providing a character ID that is not a number", async () => {
+                try {
+                    const response = await esi.assetsApi.getCharacterAssets(
+                        {
+                            characterId: Number('a'),
+                        },
+                        "token"
+                    );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    console.log(err)
+                    assertEsiError(err);
+                    expect(err.status).toBe(400);
+                }
+            });
+
+            test("should return 400 when providing a page that is not a number", async () => {
+                try {
+                    const response = await esi.assetsApi.getCharacterAssets(
+                        {
+                            characterId: 90000001,
+                            page: Number("a"),
+                        },
+                        "token"
+                    );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(400);
+                }
+            });
+
+            test("should return 404 for an character ID that does not exist", async () => {
+                try {
+                    const response = await esi.assetsApi.getCharacterAssets(
+                        {
+                            characterId: 1,
+                        },
+                        "token"
+                    );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 404 for an page that does not exist", async () => {
+                try {
+                    const response = await esi.assetsApi.getCharacterAssets(
+                        {
+                            characterId: 90000001,
+                            page: 0,
+                        },
+                        "token"
+                    );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 401 if no token", async () => {
+                try {
+                    const response = await esi.assetsApi.getCharacterAssets(
+                        {
+                            characterId: 90000001,
+                        },
+                        undefined!
+                    );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(401);
+                }
+            });
+
+            test('should return 403 if token is not not "valid"', async () => {
+                try {
+                    const response = await esi.assetsApi.getCharacterAssets(
+                        {
+                            characterId: 90000001,
+                        },
+                        "eeeeeeeeee"
+                    );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(403);
+                }
+            });
         })
 
-        test("should return 404 for an character ID that does not exist", async () => {
-            try {
-                const response = await esi.assetsApi.getCharacterAssets(
+        describe('post character asset names', () => {
+            test("should return asset names for a valid character id and body", async () => {
+                const response = await esi.assetsApi.postCharacterAssetsNames(
                     {
-                        characterId: 1,
+                        characterId: 90000001,
+                        requestBody: new Set([1])
                     },
                     "token"
                 );
-                expect(response.status).not.toBe(200);
-            } catch (err) {
-                assertEsiError(err);
-                expect(err.status).toBe(404);
-            }
-        });
 
-        test("should return 404 for an page that does not exist", async () => {
-            try {
-                const response = await esi.assetsApi.getCharacterAssets(
+                assertEsiResponse(response);
+
+                expect(response.status).toBe(200);
+                expect(response.data).toEqual([
+                    {
+                        itemId: 0,
+                        name: "string"
+                    },
+                ]);
+            });
+
+            test("should return 400 when providing a character ID that is not a number", async () => {
+                try {
+                    const response =
+                        await esi.assetsApi.postCharacterAssetsNames(
+                            {
+                                characterId: Number('a'),
+                                requestBody: new Set([1]),
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(400);
+                }
+            });
+
+            test("should return 400 when providing a body that is not an integer set", async () => {
+                try {
+                    const response =
+                        await esi.assetsApi.postCharacterAssetsNames(
+                            {
+                                characterId: 90000001,
+                                requestBody: new Set([Number('a')]),
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(400);
+                }
+            });
+
+            test("should return 404 for an character ID that does not exist", async () => {
+                try {
+                    const response =
+                        await esi.assetsApi.postCharacterAssetsNames(
+                            {
+                                characterId: 90000002,
+                                requestBody: new Set([1]),
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 404 for an body not containing id 1", async () => {
+                try {
+                    const response =
+                        await esi.assetsApi.postCharacterAssetsNames(
+                            {
+                                characterId: 90000001,
+                                requestBody: new Set([2]),
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 401 if no token", async () => {
+                try {
+                    const response =
+                        await esi.assetsApi.postCharacterAssetsNames(
+                            {
+                                characterId: 90000001,
+                                requestBody: new Set([1]),
+                            },
+                            undefined!
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(401);
+                }
+            });
+
+            test('should return 403 if token is not not "valid"', async () => {
+                try {
+                    const response = await esi.assetsApi.postCharacterAssetsNames(
                     {
                         characterId: 90000001,
-                        page: 0
+                        requestBody: new Set([1])
                     },
-                    "token"
+                    "e"
                 );
-                expect(response.status).not.toBe(200);
-            } catch (err) {
-                assertEsiError(err);
-                expect(err.status).toBe(404);
-            }
-        });
-
-        test("should return 401 if no token", async () => {
-            try {
-                const response = await esi.assetsApi.getCharacterAssets(
-                    {
-                        characterId: 90000001,
-                    },
-                    undefined!
-                );
-                expect(response.status).not.toBe(200);
-            } catch (err) {
-                assertEsiError(err)
-                expect(err.status).toBe(401);
-            }
-        });
-
-        test('should return 403 if token is not not "valid"', async () => {
-            try {
-                const response = await esi.assetsApi.getCharacterAssets(
-                    {
-                        characterId: 90000001,
-                    },
-                    "eeeeeeeeee"
-                );
-                expect(response.status).not.toBe(200);
-            } catch (err) {
-                assertEsiError(err);
-                expect(err.status).toBe(403);
-            }
-        });
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(403);
+                }
+            });
+        })
+        
     });
 
-    describe("Calendar API", () => {});
+    describe("Calendar API", () => {
+        describe("get event", () => {
+            test("should return an event for a valid event id", async () => {
+                const response = await esi.calendarApi.getCharacterCalendarEvent(
+                    {
+                        characterId: 90000001,
+                        eventId: 0
+                    },
+                    "token"
+                );
+
+                assertEsiResponse(response);
+
+                expect(response.status).toBe(200);
+                expect(response.data).toEqual(
+                    {
+                        date: new Date("2019-08-24T14:15:22Z"),
+                        duration: 0,
+                        eventId: 0,
+                        importance: 0,
+                        ownerId: 0,
+                        ownerName: "string",
+                        ownerType: "eve_server",
+                        response: "string",
+                        text: "string",
+                        title: "string",
+                    },
+                );
+            });
+
+            test("should return 400 when providing a character ID that is not a number", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.getCharacterCalendarEvent(
+                            {
+                                characterId: Number('a'),
+                                eventId: 0,
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    console.log(err);
+                    assertEsiError(err);
+                    expect(err.status).toBe(400);
+                }
+            });
+
+            test("should return 400 when providing an event ID that is not a number", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.getCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: Number('a'),
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(400);
+                }
+            });
+
+            test("should return 404 for an character ID that does not exist", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.getCharacterCalendarEvent(
+                            {
+                                characterId: 0,
+                                eventId: 0,
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 404 for an event ID that does not exist", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.getCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: -1,
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 401 if no token", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.getCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: 0,
+                            },
+                            undefined!
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(401);
+                }
+            });
+
+            test('should return 403 if token is not not "valid"', async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.getCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: 0,
+                            },
+                            "e"
+                        );
+                    expect(response.status).not.toBe(200);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(403);
+                }
+            });
+        })
+
+        describe("put event", () => {
+            test("should return 204 for a valid event response", async () => {
+                const response =
+                    await esi.calendarApi.putCharacterCalendarEvent(
+                        {
+                            characterId: 90000001,
+                            eventId: 0,
+                            putCharacterCalendarEventRequest: {
+                                response: "accepted"
+                            }
+                        },
+                        "token"
+                    );
+
+                assertEsiResponse(response);
+
+                expect(response.status).toBe(204);
+            });
+
+            test("should return 400 when providing an invalid response", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.putCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: 0,
+                                putCharacterCalendarEventRequest: {
+                                    response: undefined!
+                                },
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(204);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(400);
+                }
+            });
+
+            test("should return 404 for an character ID that does not exist", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.putCharacterCalendarEvent(
+                            {
+                                characterId: 0,
+                                eventId: 0,
+                                putCharacterCalendarEventRequest: {
+                                    response: "accepted",
+                                },
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(204);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 404 for an event ID that does not exist", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.putCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: 1,
+                                putCharacterCalendarEventRequest: {
+                                    response: "accepted",
+                                },
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(204);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 404 for an response that is not accepted", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.putCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: 1,
+                                putCharacterCalendarEventRequest: {
+                                    response: "declined",
+                                },
+                            },
+                            "token"
+                        );
+                    expect(response.status).not.toBe(204);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(404);
+                }
+            });
+
+            test("should return 401 if no token", async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.putCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: 0,
+                                putCharacterCalendarEventRequest: {
+                                    response: "accepted",
+                                },
+                            },
+                            undefined!
+                        );
+                    expect(response.status).not.toBe(204);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(401);
+                }
+            });
+
+            test('should return 403 if token is not not "valid"', async () => {
+                try {
+                    const response =
+                        await esi.calendarApi.putCharacterCalendarEvent(
+                            {
+                                characterId: 90000001,
+                                eventId: 0,
+                                putCharacterCalendarEventRequest: {
+                                    response: "accepted",
+                                },
+                            },
+                            "e"
+                        );
+                    expect(response.status).not.toBe(204);
+                } catch (err) {
+                    assertEsiError(err);
+                    expect(err.status).toBe(403);
+                }
+            });
+        });
+    });
 
     describe("Character API", () => {});
 
