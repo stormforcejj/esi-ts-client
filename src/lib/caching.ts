@@ -31,7 +31,7 @@ function createRedisCache() {
         throw new Error("ESI Client: Redis host must be specified in .env to use the redis strategy")
     }
 
-    const redisUrl = `${protocol}://${auth}@${host}:${port}`
+    const redisUrl = `${protocol}://${auth}${host}:${port}`
 
     const store = new KeyvRedis(redisUrl);
     const cache = new Keyv({ store, ttl: 60000 });
