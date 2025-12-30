@@ -1,16 +1,39 @@
 {
-    "name": "esi-ts-client",
+    "name": "@indipsyno/esi",
     "version": "1.0.0",
-    "description": "A typescript client for the EvE Online ESI API with caching and rate limiting. Intended for backend use.",
-    "main": "index.ts",
+    "description": "An opinionated typescript client for the EvE Online ESI API with caching and rate limiting. Intended for backend use.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+        }
+    },
     "scripts": {
         "test": "jest",
         "generate:api": "openapi-generator-cli generate -i ./esi.json -g typescript-fetch -o ./src/generated -t ./templates -c .openapi-generator-config.yaml",
         "fetch-esi": "ts-node scripts/fetchEsiSpec",
-        "prebuild": "ts-node scripts/prebuild",
-        "e": "ts-node src/test.ts"
+        "prebuild": "ts-node scripts/prebuild"
     },
-    "author": "stormforcejj",
+    "author": "James (https://stormforcejj.co.uk)",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stormforcejj/esi-ts-client.git"
+    },
+    "bugs": {
+        "url": "https://github.com/stormforcejj/esi-ts-client/issues"
+    },
+    "homepage": "https://github.com/stormforcejj/esi-ts-client",
+    "keywords": [
+        "esi",
+        "eve",
+        "eve online",
+        "typescript",
+        "api client",
+        "indipsyno"
+    ],
     "license": "ISC",
     "dependencies": {
         "@keyv/redis": "^5.1.1",

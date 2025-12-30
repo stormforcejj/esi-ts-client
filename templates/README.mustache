@@ -1,14 +1,130 @@
-## {{npmName}}@{{npmVersion}}
+# @indipsyno/esi
 
-Description
+An opinionated typescript API client for the EvE Online API (ESI). 
 
+## Features
+
+## Installation
+Install the package from npm:
+```
+npm install @indipsyno/esi
+```
+## Usage
+Before using the client, make sure the required user agent environment variable is set in your .env file:
+```
+ESI_USER_AGENT="My user agent"
+```
+
+This user agent will be appended with details of the client package, so to avoid duplicating details do not mention this in your user agent.
+
+For more information on what you should put in your user agent see the [ESI Documentation](https://developers.eveonline.com/docs/services/esi/best-practices/#user-agents)
+
+For other environment variables please see the [configuration section](#config)
+
+In most use cases, you can use the `getEsiClient` function. It takes care of creating and reusing a singleton client with a default configuration suitable for most applications.
+
+```typescript
+import { getEsiClient } from '@indipsyno/esi'
+
+const esi = getEsiClient()
+```
+
+More advanced use cases, you may want to create and manage your own client instance. The `EsiClient` class is exported directly for this purpose:
+
+```typescript
+import { EsiClient } from '@indipsyno/esi'
+
+const esi = new EsiClient()
+```
+
+The `EsiClient` class supports several configuration options that let you customize its behavior. See the [configuration section](#config) for further details:
+
+```typescript
+import { EsiClient } from "@indipsyno/esi";
+
+const esi = new EsiClient({
+    bypassCache: false, // boolean, default: false
+    middleware: [], // Middleware[], adds custom middleware to client
+    retries: 3, // number, default: 3
+    userAgentOverride: "Override" // string, overrides whole user agent string
+})
+```
+>[!WARNING]
+>Store your `EsiClient` as a singleton. Caching and rate limiting only apply within a single instance. While it’s possible to use separate clients for completely distinct use cases, this should be minimized to avoid unnecessary overhead.
+
+All API methods are available through the `EsiClient` instance. For example:
+
+```typescript
+import { getEsiClient, EsiResponse, StatusGet } from '@indipsyno/esi'
+
+const esi = getEsiClient()
+
+const status : EsiResponse<StatusGet> = await esi.statusApi.getStatus();
+```
+
+When a request succeeds an `EsiResponse<T>` will be returned, or for a non-2xx status code an `EsiError` will be thrown.
+
+```typescript
+interface EsiResponse<TData> {
+    data: TData;
+    headers: Record<string, string>;
+    status: number;
+}
+
+interface EsiError {
+    error: string;
+    response: Response;
+    status: number;
+}
+```
+
+All methods are fully typed, so will take a parameters object and return a corresponding object as the `EsiResponse` data.
+
+```typescript
+import { getEsiClient, EsiResponse, CharacterGet } from '@indipsyno/esi'
+
+const esi = getEsiClient()
+
+const character : EsiResponse<CharacterGet> = await esi.characterApi.getCharacter({
+    characterId: 9000000
+})
+```
+
+<a id="config"></a>
+## Config
+### Environment Variables
+
+| Variable | Description | Default | Required | Notes |
+|----------|----------|----------|----------|----------|
+| `ESI_USER_AGENT` | ESI client user agent string. | -  | ✅ | Must follow [ESI best practices](https://developers.eveonline.com/docs/services/esi/best-practices/#user-agents). |
+| `ESI_CACHE_STRATEGY` | Cache strategy to use for ESI client. | `memory` | ❌ | Options: `redis`, `memory`, `none`. |
+| `ESI_REDIS_HOST`   | Redis host address. | - | ✅\* | Required only if cache strategy is `redis`. |
+| `ESI_REDIS_USER`   | Redis username. | - | ❌ | Optional. |
+| `ESI_REDIS_PASSWORD` | Redis password. | - | ❌ | Optional. |
+| `ESI_REDIS_PORT`   | Redis port. | `6379`   | ❌ | Optional. |
+| `ESI_REDIS_TLS`    | Whether to use TLS for Redis connection. | `false`  | ❌ | Optional. |
+
+> You can copy these variables into a `.env` file or use the provided `.env.example` as a template.
+
+### `EsiClient` Options
+The `EsiClient` class supports several optional configuration options that let you customize its behavior:
+
+| Option | Type | Default | Description |
+|---------|---------|---------|---------|
+| `bypassCache`     | `boolean`      | `true`  | Whether to bypass caching.                                 |
+| `middleware`      | `Middleware[]` | `[]`    | Array of middleware functions to customize requests. For examples of middleware please see the middleware folder in the repository |
+| `retries`         | `number`       | `3`     | Number of retry attempts for failed requests. Time between retires is exponential. |
+| `userAgentOverride` | `string`     | `undefined` | Overrides the entire User-Agent header for requests.      |
+
+## Examples
 Examples
 
 <a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
+# SHOW ACCESS_TOKEN PROPERTY
+
 {{^authMethods}}Endpoints do not require authorization.{{/authMethods}}
-{{#hasAuthMethods}}Authentication schemes defined for the API:{{/hasAuthMethods}}
 {{#authMethods}}
 <a id="{{name}}"></a>
 ### {{{name}}}
@@ -17,12 +133,35 @@ Examples
 - **Type**: OAuth
 - **Flow**: {{{flow}}}
 - **Authorization URL**: {{{authorizationUrl}}}
-- **Scopes**: {{^scopes}}N/A{{/scopes}}
-{{#scopes}} - **{{{scope}}}**: {{{description}}}
+
+For additional documentation see:
+- [https://developers.eveonline.com/docs/services/sso/](https://developers.eveonline.com/docs/services/sso/)
+
+<details>
+    <summary>Scopes</summary>
+    
+{{#scopes}} 
+- **{{{scope}}}**: {{{description}}}
 {{/scopes}}
+</details>
+
+This package **does not** implement the full EvE SSO flow, however a function under the `sso` class is provided to get an up to date access token for the esi, as seen below. It is the responsibility of the application to handle the issuing and storage of refresh tokens.
+
+```typescript
+import { getEsiClient } from '@indipsyno/esi'
+
+const esi = getEsiClient()
+
+const token = await esi.sso.getAccessToken({
+    clientId: "Your Client ID",
+    clientSecret: "Your Client Secret",
+    refreshToken: "Characters Refresh Token"
+})
+```
+
 {{/isOAuth}}
 
-AUTH INSTRUCTIONS
+
 
 {{/authMethods}}
 
@@ -32,10 +171,18 @@ All URIs are relative to *{{{basePath}}}*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-{{#apiInfo}}{{#apis}}{{#operations}}{{#operation}}*{{classname}}* | **{{operationId}}** | **{{httpMethod}}** {{path}} | {{summary}}
+{{#apiInfo}}{{#apis}}{{#operations}}{{#operation}}*{{#lambda.camelcase}}{{classname}}{{/lambda.camelcase}}* | **{{operationId}}** | **{{httpMethod}}** {{path}} | {{{summary}}}
 {{/operation}}{{/operations}}{{/apis}}{{/apiInfo}}
 
+Endpoint URIs relative to *https://login.eveonline.com*
+
+Class | Method | HTTP Request | Description
+------------ | ------------- | ------------- | -------------
+*sso* | **getAccessToken** | **GET** /v2/oauth/token | Retrives an access token
+
 ## Building
+
+# ADD BUILD INSTRUCTIONS BEFORE LAUNCH
 
 To build and compile the typescript sources to javascript use:
 ```

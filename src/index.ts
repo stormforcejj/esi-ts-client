@@ -1,4 +1,5 @@
 export * from "./generated/esi-client";
+export * from "./generated";
 export * from "./types/responses"
 export * from "./types/config"
 

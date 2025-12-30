@@ -54,7 +54,7 @@ export class EsiClient {
 
     if (this.cacheStrategy !== EsiCacheStrategy.NONE && !config?.bypassCache) {
         this.cache = initCache();
-        middleware.push(cachingMiddleware(this.cache));
+        middleware.unshift(cachingMiddleware(this.cache));
     }
 
     const configuration = new Configuration({

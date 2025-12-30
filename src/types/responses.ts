@@ -4,7 +4,6 @@
 
 export interface EsiResponse<TData> {
     data: TData;
-    // headers: THeaders;
     headers: Record<string, string>;
     status: number;
 }
