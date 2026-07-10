@@ -1,0 +1,6 @@
+allowBuilds:
+  '@nestjs/core': false
+  '@openapitools/openapi-generator-cli': true
+  esbuild: false
+  msw: false
+  unrs-resolver: false

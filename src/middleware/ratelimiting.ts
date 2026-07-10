@@ -10,6 +10,8 @@ export function ratelimitingMiddleware(maxRetries = 3) : Middleware {
     const limiters : Record<string, Bottleneck> = {}
 
     let errorLimitResetTime : number | null = null;
+    let tokenBucketRemaining: number | null = null;
+    let tokenBucketRetryUntil: number | null = null;
 
     return {
         pre: async (context: RequestContext) : Promise<FetchParams> => {
@@ -19,6 +21,22 @@ export function ratelimitingMiddleware(maxRetries = 3) : Middleware {
                     await new Promise(resolve => setTimeout(resolve, errorLimitResetTime! - now));
                 }
                 errorLimitResetTime = null;
+            }
+
+            if (tokenBucketRetryUntil) {
+                const now = Date.now();
+
+                if (now < tokenBucketRetryUntil) {
+                    await new Promise((resolve) =>
+                        setTimeout(resolve, tokenBucketRetryUntil! - now),
+                    );
+                }
+
+                tokenBucketRetryUntil = null;
+            }
+
+            if (tokenBucketRemaining !== null && tokenBucketRemaining < 20) {
+                await new Promise((resolve) => setTimeout(resolve, 250));
             }
 
             const urlPath = new URL(context.url).pathname

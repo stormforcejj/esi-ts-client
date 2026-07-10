@@ -1,20 +1,12 @@
 {{#hasImports}}
-{{#oneOfArrays}}
+{{#oneOf}}
 import type { {{{.}}} } from './{{.}}{{importFileExtension}}';
 import {
     instanceOf{{{.}}},
     {{{.}}}FromJSON,
     {{{.}}}ToJSON,
 } from './{{.}}{{importFileExtension}}';
-{{/oneOfArrays}}
-{{#oneOfModels}}
-import type { {{{.}}} } from './{{.}}{{importFileExtension}}';
-import {
-    instanceOf{{{.}}},
-    {{{.}}}FromJSON,
-    {{{.}}}ToJSON,
-} from './{{.}}{{importFileExtension}}';
-{{/oneOfModels}}
+{{/oneOf}}
 
 {{/hasImports}}
 {{>modelOneOfInterfaces}}

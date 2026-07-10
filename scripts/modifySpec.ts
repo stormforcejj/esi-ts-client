@@ -125,4 +125,6 @@ export async function modifySpec() {
         path.resolve(__dirname, "../esi.json"),
         JSON.stringify(cleaned, null, 2)
     );
+
+    console.log("ESI spec modified");
 }
