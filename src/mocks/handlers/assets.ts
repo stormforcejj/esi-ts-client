@@ -52,7 +52,6 @@ export const assetHandlers = [
 
     http.post<{ id: string}>(`${baseUrl}/characters/:id/assets/names`, async ({ params, request }) => {
         const body = await request.json()
-        console.log(body)
 
         const id = parseInt(params.id);
 

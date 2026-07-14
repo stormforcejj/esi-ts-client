@@ -84,7 +84,6 @@ describe("ESI Client", () => {
                     );
                     expect(response.status).not.toBe(200);
                 } catch (err) {
-                    console.log(err)
                     assertEsiError(err);
                     expect(err.status).toBe(400);
                 }
@@ -335,7 +334,6 @@ describe("ESI Client", () => {
                         );
                     expect(response.status).not.toBe(200);
                 } catch (err) {
-                    console.log(err);
                     assertEsiError(err);
                     expect(err.status).toBe(400);
                 }

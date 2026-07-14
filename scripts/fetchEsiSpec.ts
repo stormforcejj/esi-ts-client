@@ -23,5 +23,3 @@ export async function fetchEsiSpec() {
         console.error("Error fetching ESI spec:", error);
     }
 }
-
-fetchEsiSpec();
